@@ -96,7 +96,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv(r"D:\Desktop\job_listings.csv", index=False, encoding="utf-8-sig")
+df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
 
 print("Data saved to job_listings.csv")
 
