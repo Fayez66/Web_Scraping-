@@ -67,7 +67,7 @@ Job_Link = []
 # Open dropdown
 
 #Job = driver.find_element(By.XPATH, '//article')
-# Posted_date = Job.find_element(By.XPATH, './/small/span[2]')                                                           #
+# Posted_date = Job.find_element(By.XPATH, './/small/span[2]')
 # title = Job.find_element(By.XPATH, './/h2/a')
 # job_type =Job.find_element(By.XPATH, './/ul/li[1]')
 # experience_level =Job.find_element(By.XPATH, './/ul/li[2]')
