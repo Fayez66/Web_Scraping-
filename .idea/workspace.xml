@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4adae52c-1952-45a6-8592-66e88861921a" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Description.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Description.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UpWork Scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/UpWork Scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/job_listings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/job_listings.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Description.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/UpWork Scraping.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/job_listings.csv" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
