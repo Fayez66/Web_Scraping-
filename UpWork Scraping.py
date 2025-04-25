@@ -92,6 +92,7 @@ for category in categories:
 
 # Prepare data dictionary
 data = {
+    "ID": list(range(1, len(titles) + 1)),
     "Title": titles,
     "Link": links,
     "Posted": times,
@@ -107,6 +108,17 @@ df = pd.DataFrame(data)
 # Save to CSV
 df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
 
+# Prepare data dictionary
+data = {
+    "ID": list(range(1, len(titles) + 1)),
+    "Description": descriptions,
+}
+
+# Convert to DataFrame
+df = pd.DataFrame(data)
+
+# Save to CSV
+df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Description.csv", index=False, encoding="utf-8-sig")
 print("Data saved to job_listings.csv")
 
 
