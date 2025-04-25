@@ -23,7 +23,7 @@ tags = []
 field = []
 
 for category in categories:
-    for j in range(1, 100):
+    for j in range(1, 2):
         url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={categories[i]}&nbs=1&per_page=50&sort=recency&page={j}"
         service = Service(executable_path=path)
         driver = webdriver.Chrome(service=service)

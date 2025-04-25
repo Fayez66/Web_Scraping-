@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4adae52c-1952-45a6-8592-66e88861921a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UpWork Scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/UpWork Scraping.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
       <workItem from="1745531008459" duration="347000" />
       <workItem from="1745531374335" duration="528000" />
       <workItem from="1745531927224" duration="213000" />
-      <workItem from="1745532161719" duration="10748000" />
+      <workItem from="1745532161719" duration="11470000" />
     </task>
     <servers />
   </component>
