@@ -132,6 +132,3 @@ for category in categories:
 
 total_time = time.time() - start_all
 print(f"====> All Categories Done in {total_time:.2f} seconds")
-
-df = pd.read_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\job_listings.csv")
-
