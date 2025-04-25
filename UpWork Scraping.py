@@ -76,11 +76,17 @@ for category in categories:
 
             #Job Type
             try:
-                jobtype = tile.find_element(By.XPATH, './/ul/li[1]').text
+                jobtype = tile.find_element(By.CSS_SELECTOR, '[data-test="job-type-label"]').text
                 job_type.append(typr.strip())
             except:
                 job_type.append("")
-            
+            # Duration
+            try:
+                due = tile.find_element(By.CSS_SELECTOR, '[data-test="duration-label"]').text
+                duration.append(due.strip())
+            except:
+                duration.append("")
+
             #Tags (skills)
             try:
                 skill_elements = tile.find_elements(By.CSS_SELECTOR, '[data-test="token"] span')
@@ -118,7 +124,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
+df.to_csv(r"E:\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
 
 # Prepare data dictionary
 data = {
@@ -130,7 +136,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Description.csv", index=False, encoding="utf-8-sig")
+df.to_csv(r"E:\GItHubRebo\Web_Scraping-\Description.csv", index=False, encoding="utf-8-sig")
 print("Data saved to job_listings.csv")
 
 
