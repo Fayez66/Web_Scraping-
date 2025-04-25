@@ -21,6 +21,8 @@ budgets = []
 experience_levels = []
 tags = []
 field = []
+job_type =[]
+duration =[]
 
 for category in categories:
     for j in range(1, 2):
@@ -72,7 +74,14 @@ for category in categories:
             except:
                 experience_levels.append("")
 
-            # Tags (skills)
+            #Job Type
+            try:
+                jobtype = tile.find_element(By.XPATH, './/ul/li[1]').text
+                job_type.append(typr.strip())
+            except:
+                job_type.append("")
+            
+            #Tags (skills)
             try:
                 skill_elements = tile.find_elements(By.CSS_SELECTOR, '[data-test="token"] span')
                 skills = [tag.text.strip() for tag in skill_elements]
@@ -93,11 +102,14 @@ for category in categories:
 # Prepare data dictionary
 data = {
     "ID": list(range(1, len(titles) + 1)),
+    'Category': field,
+    'job_type': job_type,
     "Title": titles,
-    "Link": links,
     "Posted": times,
+    "Link": links,
     "Experience Level": experience_levels,
     "Budget": budgets,
+    'duration': duration,
     "Description": descriptions,
     "Tags": [", ".join(tag_list) for tag_list in tags]  # join tags into one string
 }
