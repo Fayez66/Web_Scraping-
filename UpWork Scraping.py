@@ -25,7 +25,7 @@ job_type =[]
 duration =[]
 
 for category in categories:
-    for j in range(1, 2):
+    for j in range(1, 100):
         url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={categories[i]}&nbs=1&per_page=50&sort=recency&page={j}"
         service = Service(executable_path=path)
         driver = webdriver.Chrome(service=service)
@@ -77,9 +77,10 @@ for category in categories:
             #Job Type
             try:
                 jobtype = tile.find_element(By.CSS_SELECTOR, '[data-test="job-type-label"]').text
-                job_type.append(typr.strip())
+                job_type.append(jobtype.strip())
             except:
                 job_type.append("")
+
             # Duration
             try:
                 due = tile.find_element(By.CSS_SELECTOR, '[data-test="duration-label"]').text
@@ -116,7 +117,6 @@ data = {
     "Experience Level": experience_levels,
     "Budget": budgets,
     'duration': duration,
-    "Description": descriptions,
     "Tags": [", ".join(tag_list) for tag_list in tags]  # join tags into one string
 }
 
@@ -124,7 +124,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv(r"E:\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
+df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\job_listings.csv", index=False, encoding="utf-8-sig")
 
 # Prepare data dictionary
 data = {
@@ -136,7 +136,7 @@ data = {
 df = pd.DataFrame(data)
 
 # Save to CSV
-df.to_csv(r"E:\GItHubRebo\Web_Scraping-\Description.csv", index=False, encoding="utf-8-sig")
+df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Description.csv", index=False, encoding="utf-8-sig")
 print("Data saved to job_listings.csv")
 
 
