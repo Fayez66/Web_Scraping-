@@ -28,9 +28,9 @@ start_all = time.time()
 
 for category in categories:
     category_start = time.time()
-    for j in range(1, 101):
+    for page in range(1, 101):
         page_start = time.time()
-        url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={categories[i]}&nbs=1&per_page=50&sort=recency&page={j}"
+        url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={categories[i]}&nbs=1&per_page=50&sort=recency&page={page}"
         service = Service(executable_path=path)
         driver = webdriver.Chrome(service=service)
 
@@ -122,7 +122,7 @@ for category in categories:
         df_desc.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Upwork\Description.csv", index=False, encoding="utf-8-sig")
 
         page_time = time.time() - page_start
-        print(f"Category: {category_name} | Page {j} done in {page_time:.2f} seconds")
+        print(f"Category: {category_name} | Page {page} done in {page_time:.2f} seconds")
 
         driver.quit()
 
