@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4adae52c-1952-45a6-8592-66e88861921a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Web_Scraping-.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Upwork/UpWork Scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Upwork/UpWork Scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mostaqel/Description.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/Description.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mostaqel/Mostaql Scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/Mostaql Scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mostaqel/job_listings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/job_listings.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +86,9 @@
       <workItem from="1745532161719" duration="11470000" />
       <workItem from="1745600025207" duration="9598000" />
       <workItem from="1745612481977" duration="84000" />
+      <workItem from="1745617582081" duration="46000" />
+      <workItem from="1745617631444" duration="247000" />
+      <workItem from="1745617909816" duration="3125000" />
     </task>
     <servers />
   </component>
@@ -96,7 +99,7 @@
     <SUITE FILE_PATH="coverage/Web_Scraping_$expanding_data.coverage" NAME="expanding_data Coverage Results" MODIFIED="1745571232149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Upwork" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$tesy.coverage" NAME="tesy Coverage Results" MODIFIED="1745541035180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$Test.coverage" NAME="Test Coverage Results" MODIFIED="1745553382501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$Mostaql_Scraping.coverage" NAME="Mostaql Scraping Coverage Results" MODIFIED="1745609960514" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mostaqel" />
+    <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$Mostaql_Scraping.coverage" NAME="Mostaql Scraping Coverage Results" MODIFIED="1745620741938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mostaqel" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$UpWork_Scraping.coverage" NAME="UpWork Scraping Coverage Results" MODIFIED="1745560908770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$Data_Cleaning.coverage" NAME="Data Cleaning Coverage Results" MODIFIED="1745571131571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Upwork" />
   </component>
