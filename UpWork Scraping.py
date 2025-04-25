@@ -7,6 +7,8 @@ import pandas as pd
 
 path = r"E:\Apps\chromedriver-win64\chromedriver.exe"
 categories = [531770282580668420,531770282580668418,531770282580668419]
+categories_name = {531770282580668420: "Data Science & Analytics", 531770282580668418: "Web, Mobile & Software Dev",
+                   531770282580668419: "IT & NETWORKING"}  # Add more categories as needed
 i=0
 j=1
 
@@ -18,9 +20,10 @@ descriptions = []
 budgets = []
 experience_levels = []
 tags = []
+field = []
 
 for category in categories:
-    for j in range(1, 2):
+    for j in range(1, 100):
         url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={categories[i]}&nbs=1&per_page=50&sort=recency&page={j}"
         service = Service(executable_path=path)
         driver = webdriver.Chrome(service=service)
@@ -76,8 +79,14 @@ for category in categories:
                 tags.append(skills)
             except:
                 tags.append([])
+
+            # Convert dict to list of tuples and get the (key, value) pair at index i
+            category_id, category_name = list(categories_name.items())[i]
+            field.append(category_name)  # adds a tuple (ID, name)]
+        category_id, category_name = list(categories_name.items())[i]
+        print(f"Category: {category_name} Page: {j} \t ((Done))\n")
+        driver.quit()
         j += 1
-        print(f"Category: {categories[i]} Page: {j} \t ((Done))\n")
     i += 1
 
 
