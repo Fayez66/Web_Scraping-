@@ -8,6 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mostaqel/Description.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/Description.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Mostaqel/Mostaql Scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/Mostaql Scraping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Mostaqel/job_listings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/job_listings.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +89,6 @@
       <workItem from="1745617582081" duration="46000" />
       <workItem from="1745617631444" duration="247000" />
       <workItem from="1745617909816" duration="3125000" />
-      <workItem from="1745703128231" duration="14000" />
     </task>
     <servers />
   </component>
