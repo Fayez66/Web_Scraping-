@@ -7,7 +7,16 @@ import pandas as pd
 import time
 
 path = r"E:\Apps\chromedriver-win64\chromedriver.exe"
-splits = ['/?fixed=true&fixed_min=0&fixed_max=100','/?fixed=true&fixed_min=100&fixed_max=500','/?fixed=true&fixed_min=500','/?hourly=true']
+splits = ['/?hourly=true']
+
+'''they are put on order please don't change the order'''
+#['/?fixed=true&fixed_min=0&fixed_max=100', '/?fixed=true&fixed_min=100&fixed_max=500'  ,'/?fixed=true&fixed_min=500',]
+
+pages=[ 37]
+
+'''they are put on order please don't change the order'''
+#[56, 57,25,]
+
 # Containers for data
 titles = []
 links = []
@@ -19,8 +28,9 @@ days_left = []
 bids = []
 
 for split in splits:
-    page = 1
-    while True:
+    index = pages[int(splits.index(split))]
+    """change the page number here"""
+    for page in range(36,index):
         page_start = time.time()
         url = f"https://www.freelancer.com/jobs/{page}{split}"
         service = Service(executable_path=path)
@@ -35,9 +45,6 @@ for split in splits:
         wait = WebDriverWait(driver, 1)
         #jobs = wait.until(EC.presence_of_all_elements_located((By.CLASS_NAME, 'JobSearchCard-item')))
         jobs = wait.until(EC.presence_of_all_elements_located((By.XPATH, '//div[@class="JobSearchCard-item "]')))
-
-        if not jobs:
-            break           # No jobs found, stop the loop for this category
 
         for job in jobs:
             #title & link
@@ -91,9 +98,6 @@ for split in splits:
 
             #tags
             try:
-                # skill_elements = job.find_elements(By.CLASS_NAME, "JobSearchCard-primary-tags")
-                # skills = [tag.text.strip() for tag in skill_elements]
-                # tags.append(skills)
                 skill_elements = job.find_elements(By.XPATH, './/a[contains(@class, "JobSearchCard-primary-tags")]')
                 skills = [tag.text.strip() for tag in skill_elements if tag.text.strip()]
                 tags.append(skills)
@@ -122,7 +126,6 @@ for split in splits:
         df_desc.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\freelancer\Description.csv", index=False, encoding="utf-8-sig")
         page_time = time.time() - page_start
         print(f"Scraped page {page} with {len(jobs)} jobs in time {page_time:.2f} seconds.")
-        page += 1
 
         driver.quit()
     print(f"==> Finished\n")
