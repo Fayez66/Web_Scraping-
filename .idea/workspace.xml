@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4adae52c-1952-45a6-8592-66e88861921a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freelancer/Description.csv" beforeDir="false" afterPath="$PROJECT_DIR$/freelancer/Description.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freelancer/freelancer scraping.py" beforeDir="false" afterPath="$PROJECT_DIR$/freelancer/freelancer scraping.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/freelancer/job_listings.csv" beforeDir="false" afterPath="$PROJECT_DIR$/freelancer/job_listings.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,32 +45,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Python.Data Cleaning.executor": "Run",
-    "Python.Mostaql Scraping.executor": "Run",
-    "Python.Test.executor": "Run",
-    "Python.UpWork Scraping.executor": "Run",
-    "Python.expanding_data.executor": "Run",
-    "Python.freelancer scraping.executor": "Run",
-    "Python.python.executor": "Run",
-    "Python.test.executor": "Run",
-    "Python.tesy.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "E:/Apps/GItHubRebo/Web_Scraping-",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Python.Data Cleaning.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Mostaql Scraping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.Test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.UpWork Scraping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.expanding_data.executor&quot;: &quot;Run&quot;,
+    &quot;Python.freelancer scraping.executor&quot;: &quot;Run&quot;,
+    &quot;Python.python.executor&quot;: &quot;Run&quot;,
+    &quot;Python.test.executor&quot;: &quot;Run&quot;,
+    &quot;Python.tesy.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Apps/GItHubRebo/Web_Scraping-&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Python.test">
     <configuration name="freelancer scraping" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Web_Scraping-" />
@@ -161,6 +158,7 @@
       <workItem from="1745937849902" duration="10445000" />
       <workItem from="1745949207170" duration="86000" />
       <workItem from="1745967279355" duration="8985000" />
+      <workItem from="1745976509139" duration="33000" />
     </task>
     <servers />
   </component>
