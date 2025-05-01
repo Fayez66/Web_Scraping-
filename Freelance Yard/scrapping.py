@@ -15,3 +15,5 @@ descriptions = []
 prices = []
 tags = []
 days_left = []
+pages = 455
+url ='https://www.freelanceyard.com/en/jobs?filter[category_id]=2&page={page}]'
