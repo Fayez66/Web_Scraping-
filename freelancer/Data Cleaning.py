@@ -4,74 +4,69 @@ import numpy as np
 import datetime
 from dateutil.relativedelta import relativedelta
 
+# Load dataset
 df = pd.read_csv("job_listings.csv")
 
-# Remove duplicates and add ID
-df = df.drop_duplicates(subset=['Title'])
+# Assign unique ID
 df['ID'] = range(1, len(df) + 1)
 
+# Remove duplicates based on 'Title'
+df = df.drop_duplicates(subset=['Title'])
+
+# Move the last column to the front
 last_col = df.columns[-1]
 df = df[[last_col] + list(df.columns[:-1])]
 
+# Rename column for consistency
 df.rename(columns={'Days Left to pid': 'Days Left to Bid'}, inplace=True)
-#
-#
+
+# Drop rows with missing Bids or Price
 df.dropna(subset=['Bids', 'Price'], inplace=True)
-#
-#
+
+# Remove entries that indicate private projects or contests
 df = df[~df['Title'].str.contains("Private project or contest", case=False, na=False)]
-#
 
-df['Bids'] = df['Bids'].astype(str).apply(lambda x: int(re.search(r'\d+', x).group()) if re.search(r'\d+', x) else 0)
+# Extract numeric values from Bids
+df['Bids'] = df['Bids'].astype(str).apply(
+    lambda x: int(re.search(r'\d+', x).group()) if re.search(r'\d+', x) else 0
+)
 
-
-# Clean 'Days Left to pid' column:
-# Replace hours with 0, extract days, convert to int
-
-# df['Days Left to Bid'] = df['Days Left to Bid'].apply(
-#     lambda x: 0 if pd.isna(x) or 'hour' in x.lower() else int(re.search(r'\d+', x).group())
-# )
-
-
-def extract_value(column):
-    # Regex to match values followed by hours (e.g., '6 days', '2 hours', etc.)
+def extract_value(column: str) -> int | None:
+    """
+    Extract the number of days from a text string. If 'hour' is found, return 0.
+    Returns None if no match is found.
+    """
     match = re.search(r'(\d+)\s*(days?|hours?)', column, re.IGNORECASE)
-
     if match:
-        value = int(match.group(1))  # Extract the numerical value
-
-        # Check if the match contains 'hours'
+        value = int(match.group(1))
         if 'hour' in match.group(2).lower():
-            value = 0  # Replace with 0 if hours are found
-
+            return 0
         return value
-    else:
-        return None  # If no match is found
+    return None
 
-
-# Example usage:
-
+# Apply extraction logic to 'Days Left to Bid'
 df['Days Left to Bid'] = df['Days Left to Bid'].apply(extract_value)
 
-
-def clean_price(value):
-    # Remove dollar signs and text (keep only digits, dot, and dash)
+def clean_price(value: str) -> float | None:
+    """
+    Cleans a price string by removing currency symbols and text.
+    If the string contains a range, returns the average of the two numbers.
+    """
     cleaned = re.sub(r'[^0-9\-.]', '', str(value))
-
     if '-' in cleaned:
         parts = cleaned.split('-')
         try:
             return (float(parts[0]) + float(parts[1])) / 2
-        except:
+        except (ValueError, IndexError):
             return None
-    else:
-        try:
-            return float(cleaned)
-        except:
-            return None
+    try:
+        return float(cleaned)
+    except ValueError:
+        return None
 
-
-# Apply the cleaning function to the 'Price' column
+# Apply price cleaning
 df['Price'] = df['Price'].apply(clean_price)
+
+# Display info and export cleaned data
 print(df.info())
 df.to_csv("Cleaned.csv", index=False, encoding="utf-8-sig")
