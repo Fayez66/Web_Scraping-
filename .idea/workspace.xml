@@ -7,9 +7,12 @@
     <list default="true" id="4adae52c-1952-45a6-8592-66e88861921a" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Mostaqel/Data analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/Mostaqel/Data analysis.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Upwork/job_listings_cleaned.csv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Upwork/jobs_expanded.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Upwork/jobs_expanded.csv" afterDir="false" />
+=======
+>>>>>>> 6b3cf970e9fa2a63615792ead7a16ef17bbb37e8
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -179,6 +182,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
+<<<<<<< HEAD
     <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$python.coverage" NAME="python Coverage Results" MODIFIED="1745629241909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Desktop" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_py$expanding_data.coverage" NAME="expanding_data Coverage Results" MODIFIED="1746139337108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/All data" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$Test.coverage" NAME="Test Coverage Results" MODIFIED="1745553382501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
@@ -195,5 +199,21 @@
     <SUITE FILE_PATH="coverage/Web_Scraping_$UpWork_Scraping.coverage" NAME="UpWork Scraping Coverage Results" MODIFIED="1745560908770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Web_Scraping_$Data_Cleaning.coverage" NAME="Data Cleaning Coverage Results" MODIFIED="1745571131571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Upwork" />
     <SUITE FILE_PATH="coverage/Data_Cleaning_py$freelancer_scraping.coverage" NAME="freelancer scraping Coverage Results" MODIFIED="1746124377518" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/freelancer" />
+=======
+    <SUITE FILE_PATH="coverage/Web_Scraping_$Data_Cleaning.coverage" NAME="Data Cleaning Coverage Results" MODIFIED="1745571131571" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Upwork" />
+    <SUITE FILE_PATH="coverage/freelancer_scraping_py$freelancer_scraping.coverage" NAME="freelancer scraping Coverage Results" MODIFIED="1746063321955" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/freelancer" />
+    <SUITE FILE_PATH="coverage/scrapping_py$Data_analysis.coverage" NAME="Data analysis Coverage Results" MODIFIED="1746071794600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mostaqel" />
+    <SUITE FILE_PATH="coverage/scrapping_py$Data_Cleaning.coverage" NAME="Data Cleaning Coverage Results" MODIFIED="1746074248902" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Freelance Yard" />
+    <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$freelancer_scraping.coverage" NAME="freelancer scraping Coverage Results" MODIFIED="1745949091596" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/freelancer" />
+    <SUITE FILE_PATH="coverage/Web_Scraping_$UpWork_Scraping.coverage" NAME="UpWork Scraping Coverage Results" MODIFIED="1745560908770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$python.coverage" NAME="python Coverage Results" MODIFIED="1745629241909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="D:/Desktop" />
+    <SUITE FILE_PATH="coverage/Web_Scraping_$tesy.coverage" NAME="tesy Coverage Results" MODIFIED="1745541035180" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/freelancer_scraping_py$test.coverage" NAME="test Coverage Results" MODIFIED="1746050354466" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/freelancer" />
+    <SUITE FILE_PATH="coverage/freelancer_scraping_py$Data_Cleaning.coverage" NAME="Data Cleaning Coverage Results" MODIFIED="1746074187430" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/freelancer" />
+    <SUITE FILE_PATH="coverage/scrapping_py$scrapping.coverage" NAME="scrapping Coverage Results" MODIFIED="1746065391898" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Freelance Yard" />
+    <SUITE FILE_PATH="coverage/Web_Scraping_$Test.coverage" NAME="Test Coverage Results" MODIFIED="1745553382501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Web_Scraping_$expanding_data.coverage" NAME="expanding_data Coverage Results" MODIFIED="1745571232149" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Upwork" />
+    <SUITE FILE_PATH="coverage/Mostaql_Scraping_py$Mostaql_Scraping.coverage" NAME="Mostaql Scraping Coverage Results" MODIFIED="1745622141196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Mostaqel" />
+>>>>>>> 6b3cf970e9fa2a63615792ead7a16ef17bbb37e8
   </component>
 </project>

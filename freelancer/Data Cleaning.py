@@ -2,7 +2,6 @@ import re
 import pandas as pd
 import numpy as np
 import datetime
-from dateutil.relativedelta import relativedelta
 
 # Load dataset
 df = pd.read_csv("job_listings.csv")
