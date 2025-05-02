@@ -1,0 +1,45 @@
+table Mostaql_Skills
+	lineageTag: 8fad8dff-2811-40f4-9b5c-5f2e7c245e40
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: f557a856-1155-4e79-97d1-ce4d0026e23d
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tags_en
+		dataType: string
+		lineageTag: 18aa1d49-6ffd-4234-9795-f9c7a97acf1e
+		summarizeBy: none
+		sourceColumn: Tags_en
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tags
+		dataType: string
+		lineageTag: e5828dc4-ce9f-4a27-8414-0652b7c95c5f
+		summarizeBy: none
+		sourceColumn: Tags
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mostaql_Skills = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Mostaqel\jobs_expanded.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"ID", "Tags_en", "Tags"})
+				in
+				    #"Removed Other Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

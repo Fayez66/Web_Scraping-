@@ -1,0 +1,92 @@
+table Freelance_Yard
+	lineageTag: ee207195-6c3f-4814-a5f8-fe972b49312b
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: e640c5a9-5816-40dd-83ad-3837cdf43b59
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: f5b125f2-7914-4250-accc-eb58e741f5b1
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: 4cfa75d3-083e-48e2-82fc-18c3f3217847
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'client name'
+		dataType: string
+		lineageTag: b12c28d9-d192-4059-aed2-602a9af80015
+		summarizeBy: none
+		sourceColumn: client name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 9e10a70a-9c62-4f80-a8c0-f38c061bc276
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget
+		dataType: double
+		lineageTag: 168e3edd-8aac-4f43-9cc2-380e20e1edc7
+		summarizeBy: sum
+		sourceColumn: Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Category
+		dataType: string
+		lineageTag: 838d848d-e73b-42e4-9acc-4751189c7ca1
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Date Posted'
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 3720ce37-4a18-4613-b0e4-958023d8420b
+		summarizeBy: none
+		sourceColumn: Date Posted
+
+		variation Variation
+			isDefault
+			relationship: 65edaad1-a5e8-446c-9508-9c94331ef92f
+			defaultHierarchy: LocalDateTable_90ceed3a-51e2-4344-a376-4dc41c08675e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition Freelance_Yard = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Freelance Yard\job_listings_cleaned.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Link", type text}, {"client name", type text}, {"Type", type text}, {"Budget", type number}, {"Category", type text}, {"Date Posted", type date}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

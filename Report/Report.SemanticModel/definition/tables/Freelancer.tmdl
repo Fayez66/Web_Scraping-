@@ -1,0 +1,94 @@
+table Freelancer
+	lineageTag: f9111af4-c020-4d3d-b3ec-146d3b638aad
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5a14b66b-2aa9-485e-b32d-c1582731dad2
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: f4d620d8-f04e-41db-8b59-81d87eb32bda
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Bids
+		dataType: int64
+		formatString: 0
+		lineageTag: cb95dc01-378c-4c3d-87dc-007d4b18a801
+		summarizeBy: sum
+		sourceColumn: Bids
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Days Left to Bid'
+		dataType: int64
+		formatString: 0
+		lineageTag: a1670908-860b-46ca-bb76-e2755ebc2132
+		summarizeBy: sum
+		sourceColumn: Days Left to Bid
+
+		annotation SummarizationSetBy = Automatic
+
+	column Price
+		dataType: double
+		lineageTag: 24d87b72-3bad-42c4-9fc0-6fb5acb10ea2
+		summarizeBy: sum
+		sourceColumn: Price
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Type
+		dataType: string
+		lineageTag: 5c9611ab-3d3d-44ff-8822-5b17d8ed990d
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Skills
+		dataType: string
+		lineageTag: f77dda29-7a53-410a-a670-fdc8aa44241a
+		summarizeBy: none
+		sourceColumn: Skills
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: 48b719e6-3697-4472-bd66-5e6e8f706608
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 006a5407-a884-429a-a838-832215be5a67
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Freelancer = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\freelancer\Cleaned.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Bids", Int64.Type}, {"Days Left to Bid", Int64.Type}, {"Price", type number}, {"Type", type text}, {"Skills", type text}, {"Link", type text}, {"Category", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
