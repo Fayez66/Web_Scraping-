@@ -70,13 +70,13 @@ df['Price'] = df['Price'].apply(clean_price)
 print(df.info())
 
 
-#
-# # Load the CSV files
-# job_df = df
-# classified_df = pd.read_csv('jobs_category.csv')
-#
-# # Merge category from classified_df into job_df based on ID
-# merged_df = job_df.merge(classified_df[['ID', 'Category']], on='ID', how='left')
+
+#Load the CSV files
+job_df = df
+classified_df = pd.read_csv('jobs_category.csv')
+
+# Merge category from classified_df into job_df based on ID
+merged_df = job_df.merge(classified_df[['ID', 'Category']], on='ID', how='left')
 
 # Save the result
 
