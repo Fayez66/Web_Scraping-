@@ -1,0 +1,144 @@
+table UpWork
+	lineageTag: 8bb9bee1-2593-4485-99da-ac5bbf641cc8
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: aed5d3f5-dc00-4bdd-b65b-93e214ff7b9c
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 56f84393-2bed-4353-a6f9-0bcaae04a42e
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category.1'
+		dataType: string
+		lineageTag: 9b8a9c6e-a86a-4ab7-a32c-cbbe9f3f99dd
+		summarizeBy: none
+		sourceColumn: Category.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column job_type
+		dataType: string
+		lineageTag: d34adb97-4da8-4277-9ee7-def162901030
+		summarizeBy: none
+		sourceColumn: job_type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: c2b452b8-4633-40b6-9897-e104501793f3
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posted
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 23b2f006-cc99-43c4-958d-82a20e74def0
+		summarizeBy: none
+		sourceColumn: Posted
+
+		variation Variation
+			isDefault
+			relationship: 4d09756a-c1e8-40ff-a8d6-c478499f80ea
+			defaultHierarchy: LocalDateTable_cf6888e5-b6c7-448a-8109-1e2e53c496a8.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'Experience Level'
+		dataType: string
+		lineageTag: b0656392-b0bb-479e-890a-eee4de638ef2
+		summarizeBy: none
+		sourceColumn: Experience Level
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget
+		dataType: double
+		lineageTag: 33fd576e-d5d0-40b6-9568-e3d55c78b278
+		summarizeBy: sum
+		sourceColumn: Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'est. budget'
+		dataType: double
+		lineageTag: 0edf3fb5-393d-45c3-afec-8ded9f1422a5
+		summarizeBy: sum
+		sourceColumn: est. budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column 'est. time'
+		dataType: string
+		lineageTag: 59c1194d-f949-4e4b-ba2f-7512157fc6a5
+		summarizeBy: none
+		sourceColumn: est. time
+
+		annotation SummarizationSetBy = Automatic
+
+	column hours/week
+		dataType: string
+		lineageTag: 351d7058-bb4f-41db-b817-d642e04ff827
+		summarizeBy: none
+		sourceColumn: hours/week
+
+		annotation SummarizationSetBy = Automatic
+
+	column duration
+		dataType: string
+		lineageTag: e210388f-c81f-4816-a1e2-640e00ab5371
+		summarizeBy: none
+		sourceColumn: duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tags
+		dataType: string
+		lineageTag: b9170ed1-3968-4ddd-a591-3cac21b17715
+		summarizeBy: none
+		sourceColumn: Tags
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: d915e1f8-ae17-4bef-8103-55fb3f98aeca
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UpWork = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\up job_listings_cleaned.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}})
+				in
+				    #"Changed Type"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

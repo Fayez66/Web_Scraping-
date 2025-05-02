@@ -1,0 +1,37 @@
+table UpWork_Skills
+	lineageTag: 51a8d46f-a769-4eef-80b7-8e3f28c09ba0
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: f674e710-877b-43a8-9c4c-b03328b617dc
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tags
+		dataType: string
+		lineageTag: 5f1b1ace-2084-41e7-b178-161cb866bb4b
+		summarizeBy: none
+		sourceColumn: Tags
+
+		annotation SummarizationSetBy = Automatic
+
+	partition UpWork_Skills = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\jobs_expanded.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}}),
+				    #"Removed Other Columns" = Table.SelectColumns(#"Changed Type",{"ID", "Tags"})
+				in
+				    #"Removed Other Columns"
+
+	changedProperty = Name
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

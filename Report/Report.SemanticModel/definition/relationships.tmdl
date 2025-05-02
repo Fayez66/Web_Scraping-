@@ -1,0 +1,5 @@
+relationship 4d09756a-c1e8-40ff-a8d6-c478499f80ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UpWork.Posted
+	toColumn: LocalDateTable_cf6888e5-b6c7-448a-8109-1e2e53c496a8.Date
+
