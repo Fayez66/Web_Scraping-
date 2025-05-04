@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "ce27cccdee0055d10077",
+  "name": "7c2560ed6ced1012000d",
   "position": {
-    "x": 510,
-    "y": 123,
-    "z": 2000,
-    "height": 288,
-    "width": 483,
-    "tabOrder": 2000
+    "x": 731,
+    "y": 421,
+    "z": 7000,
+    "height": 282,
+    "width": 539,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mostaql"
+                      "Entity": "Mostaql_Skills"
                     }
                   },
-                  "Property": "category_arabic"
+                  "Property": "Tags_en"
                 }
               },
-              "queryRef": "Mostaql.category_arabic",
-              "nativeQueryRef": "category_arabic",
+              "queryRef": "Mostaql_Skills.Tags_en",
+              "nativeQueryRef": "Count of Tags_en",
               "active": true
             }
           ]
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaql_Skills"
                         }
                       },
-                      "Property": "category_arabic"
+                      "Property": "Tags_en"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.category_arabic)",
-              "nativeQueryRef": "Count of category_arabic"
+              "queryRef": "CountNonNull(Mostaql_Skills.Tags_en)",
+              "nativeQueryRef": "Count of Tags_en1"
             }
           ]
         }
@@ -65,10 +65,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Mostaql"
+                        "Entity": "Mostaql_Skills"
                       }
                     },
-                    "Property": "category_arabic"
+                    "Property": "Tags_en"
                   }
                 },
                 "Function": 5
@@ -81,16 +81,29 @@
       }
     },
     "objects": {
-      "categoryAxis": [
+      "legend": [
         {
           "properties": {
-            "switchAxisPosition": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
             "concatenateLabels": {
               "expr": {
                 "Literal": {
@@ -109,6 +122,17 @@
               "expr": {
                 "Literal": {
                   "Value": "10D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
                 }
               }
             },
@@ -133,17 +157,6 @@
                 }
               }
             },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
-                }
-              }
-            },
             "titleColor": {
               "solid": {
                 "color": {
@@ -155,10 +168,17 @@
                 }
               }
             },
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'المجالات'"
+                  "Value": "'المهارات'"
                 }
               }
             }
@@ -189,6 +209,17 @@
                 }
               }
             },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
+                }
+              }
+            },
             "titleFontFamily": {
               "expr": {
                 "Literal": {
@@ -200,17 +231,6 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
                 }
               }
             },
@@ -239,7 +259,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الوظائف'"
+                  "Value": "'عدد مرات الطلب'"
                 }
               }
             }
@@ -247,6 +267,69 @@
         }
       ],
       "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Mostaql_Skills"
+                                }
+                              },
+                              "Property": "Tags_en"
+                            }
+                          },
+                          "Function": 5
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#FBABB1'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#390006'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        },
         {
           "properties": {
             "fill": {
@@ -492,89 +575,6 @@
               }
             ]
           }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Mostaql"
-                                }
-                              },
-                              "Property": "category_arabic"
-                            }
-                          },
-                          "Function": 5
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#FBABB1'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#390006'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
         }
       ],
       "labels": [
@@ -583,14 +583,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'Auto'"
+                  "Value": "'InsideEnd'"
                 }
               }
             }
@@ -602,21 +602,7 @@
       "title": [
         {
           "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "bold": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -634,6 +620,27 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -644,14 +651,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الوظائف  في مجال'"
+                  "Value": "'عدد الطلب لمهاره '"
                 }
               }
             }
           }
         }
       ],
-      "dropShadow": [
+      "background": [
         {
           "properties": {
             "show": {
@@ -661,15 +668,10 @@
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -713,6 +715,31 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -720,15 +747,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8c1560933299ae403b41",
+        "name": "c48d134f0c709573a969",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mostaql"
+                "Entity": "Mostaql_Skills"
               }
             },
-            "Property": "Category_English"
+            "Property": "Tags_en"
           }
         },
         "type": "TopN",
@@ -744,7 +771,7 @@
                     "From": [
                       {
                         "Name": "m",
-                        "Entity": "Mostaql",
+                        "Entity": "Mostaql_Skills",
                         "Type": 0
                       }
                     ],
@@ -756,7 +783,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "Category_English"
+                          "Property": "Tags_en"
                         },
                         "Name": "field"
                       }
@@ -773,7 +800,7 @@
                                     "Source": "m"
                                   }
                                 },
-                                "Property": "Category_English"
+                                "Property": "Tags_en"
                               }
                             },
                             "Function": 5
@@ -789,7 +816,7 @@
             },
             {
               "Name": "m",
-              "Entity": "Mostaql",
+              "Entity": "Mostaql_Skills",
               "Type": 0
             }
           ],
@@ -805,7 +832,7 @@
                             "Source": "m"
                           }
                         },
-                        "Property": "Category_English"
+                        "Property": "Tags_en"
                       }
                     }
                   ],
@@ -818,8 +845,143 @@
               }
             }
           ]
+        }
+      },
+      {
+        "name": "5dbc1b6f326602024ecc",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mostaql_Skills"
+              }
+            },
+            "Property": "Tags_en"
+          }
         },
-        "howCreated": "User"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mostaql_Skills",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "Tags_en"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Application development'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Application programming'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Create a website'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Design a website'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Site programming'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Software development'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'programming'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Software engineering'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Site design'"
+                            }
+                          }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'Applications design'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }

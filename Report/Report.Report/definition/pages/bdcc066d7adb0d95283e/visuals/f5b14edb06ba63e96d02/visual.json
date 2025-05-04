@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "ce27cccdee0055d10077",
+  "name": "f5b14edb06ba63e96d02",
   "position": {
-    "x": 510,
+    "x": 15,
     "y": 123,
-    "z": 2000,
+    "z": 5000,
     "height": 288,
-    "width": 483,
-    "tabOrder": 2000
+    "width": 488,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -44,14 +44,14 @@
                           "Entity": "Mostaql"
                         }
                       },
-                      "Property": "category_arabic"
+                      "Property": "Avg offer"
                     }
                   },
-                  "Function": 5
+                  "Function": 1
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.category_arabic)",
-              "nativeQueryRef": "Count of category_arabic"
+              "queryRef": "Sum(Mostaql.Avg offer)",
+              "nativeQueryRef": "Average of Avg offer"
             }
           ]
         }
@@ -68,10 +68,10 @@
                         "Entity": "Mostaql"
                       }
                     },
-                    "Property": "category_arabic"
+                    "Property": "Avg offer"
                   }
                 },
-                "Function": 5
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -84,13 +84,6 @@
       "categoryAxis": [
         {
           "properties": {
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
             "concatenateLabels": {
               "expr": {
                 "Literal": {
@@ -112,27 +105,6 @@
                 }
               }
             },
-            "titleFontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "titleBold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -144,6 +116,27 @@
                 }
               }
             },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "titleBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "titleColor": {
               "solid": {
                 "color": {
@@ -152,6 +145,13 @@
                       "Value": "'#3C2F13'"
                     }
                   }
+                }
+              }
+            },
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -189,6 +189,17 @@
                 }
               }
             },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
+                }
+              }
+            },
             "titleFontFamily": {
               "expr": {
                 "Literal": {
@@ -199,18 +210,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
+                  "Value": "11D"
                 }
               }
             },
@@ -239,7 +239,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الوظائف'"
+                  "Value": "'متوسط العروض'"
                 }
               }
             }
@@ -509,10 +509,10 @@
                                   "Entity": "Mostaql"
                                 }
                               },
-                              "Property": "category_arabic"
+                              "Property": "Avg offer"
                             }
                           },
-                          "Function": 5
+                          "Function": 1
                         }
                       },
                       "FillRule": {
@@ -560,14 +560,14 @@
       "legend": [
         {
           "properties": {
-            "showGradientLegend": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "show": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -583,14 +583,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "false"
+                  "Value": "true"
                 }
               }
             },
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'Auto'"
+                  "Value": "'InsideEnd'"
                 }
               }
             }
@@ -602,21 +602,7 @@
       "title": [
         {
           "properties": {
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "bold": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -634,6 +620,27 @@
                 }
               }
             },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
             "alignment": {
               "expr": {
                 "Literal": {
@@ -644,14 +651,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الوظائف  في مجال'"
+                  "Value": "'متوسط العروض في مجال'"
                 }
               }
             }
           }
         }
       ],
-      "dropShadow": [
+      "background": [
         {
           "properties": {
             "show": {
@@ -661,15 +668,10 @@
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
                 }
               }
             }
@@ -713,6 +715,31 @@
             }
           }
         }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -720,7 +747,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "8c1560933299ae403b41",
+        "name": "70962dea92a80639e730",
         "field": {
           "Column": {
             "Expression": {
@@ -728,7 +755,7 @@
                 "Entity": "Mostaql"
               }
             },
-            "Property": "Category_English"
+            "Property": "category_arabic"
           }
         },
         "type": "TopN",
@@ -756,7 +783,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "Category_English"
+                          "Property": "category_arabic"
                         },
                         "Name": "field"
                       }
@@ -773,7 +800,7 @@
                                     "Source": "m"
                                   }
                                 },
-                                "Property": "Category_English"
+                                "Property": "Avg offer"
                               }
                             },
                             "Function": 5
@@ -805,7 +832,7 @@
                             "Source": "m"
                           }
                         },
-                        "Property": "Category_English"
+                        "Property": "category_arabic"
                       }
                     }
                   ],
@@ -818,8 +845,80 @@
               }
             }
           ]
+        }
+      },
+      {
+        "name": "61762fc0174ee0e34106",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Mostaql"
+              }
+            },
+            "Property": "category_arabic"
+          }
         },
-        "howCreated": "User"
+        "type": "Categorical",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "Mostaql",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "In": {
+                      "Expressions": [
+                        {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "m"
+                              }
+                            },
+                            "Property": "category_arabic"
+                          }
+                        }
+                      ],
+                      "Values": [
+                        [
+                          {
+                            "Literal": {
+                              "Value": "'غير معروف'"
+                            }
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User",
+        "objects": {
+          "general": [
+            {
+              "properties": {
+                "isInvertedSelectionMode": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "true"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
       }
     ]
   }
