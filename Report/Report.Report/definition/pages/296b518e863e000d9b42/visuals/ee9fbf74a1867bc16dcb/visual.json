@@ -3,10 +3,10 @@
   "name": "ee9fbf74a1867bc16dcb",
   "position": {
     "x": 930,
-    "y": 231,
+    "y": 238.88888888888889,
     "z": 2000,
-    "height": 193,
-    "width": 343,
+    "height": 193.33333333333331,
+    "width": 333.33333333333331,
     "tabOrder": 2000
   },
   "visual": {
@@ -239,8 +239,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FBFFEE'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }

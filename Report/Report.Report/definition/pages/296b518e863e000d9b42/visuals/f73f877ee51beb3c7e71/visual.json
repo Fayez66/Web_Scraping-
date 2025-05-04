@@ -3,11 +3,11 @@
   "name": "f73f877ee51beb3c7e71",
   "position": {
     "x": 560,
-    "y": 231,
-    "z": 7000,
-    "height": 193,
+    "y": 238.88888888888889,
+    "z": 9000,
+    "height": 193.33333333333331,
     "width": 360,
-    "tabOrder": 7000
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "donutChart",
@@ -276,8 +276,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FBFFEE'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }

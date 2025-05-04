@@ -3,11 +3,11 @@
   "name": "78f3f2aa0174d1226157",
   "position": {
     "x": 560,
-    "y": 8,
-    "z": 11000,
+    "y": 15.777777777777777,
+    "z": 13000,
     "height": 203,
     "width": 360,
-    "tabOrder": 11000
+    "tabOrder": 13000
   },
   "visual": {
     "visualType": "barChart",
@@ -216,8 +216,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FBFFEE'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }

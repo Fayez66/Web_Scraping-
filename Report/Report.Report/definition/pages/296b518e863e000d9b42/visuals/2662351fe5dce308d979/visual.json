@@ -3,11 +3,11 @@
   "name": "2662351fe5dce308d979",
   "position": {
     "x": 930,
-    "y": 8,
-    "z": 8000,
-    "height": 203,
-    "width": 343,
-    "tabOrder": 8000
+    "y": 15.555555555555555,
+    "z": 10000,
+    "height": 203.33333333333331,
+    "width": 333.33333333333331,
+    "tabOrder": 10000
   },
   "visual": {
     "visualType": "columnChart",
@@ -216,8 +216,9 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "Literal": {
-                      "Value": "'#FBFFEE'"
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
                     }
                   }
                 }

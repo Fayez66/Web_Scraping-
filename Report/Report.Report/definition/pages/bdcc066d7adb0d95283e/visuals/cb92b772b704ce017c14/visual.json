@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "f5b14edb06ba63e96d02",
+  "name": "cb92b772b704ce017c14",
   "position": {
-    "x": 15,
+    "x": 510,
     "y": 123,
-    "z": 5000,
+    "z": 1000,
     "height": 288,
-    "width": 488,
-    "tabOrder": 5000
+    "width": 483,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -44,14 +44,14 @@
                           "Entity": "Mostaql"
                         }
                       },
-                      "Property": "Avg offer"
+                      "Property": "category_arabic"
                     }
                   },
-                  "Function": 1
+                  "Function": 5
                 }
               },
-              "queryRef": "Sum(Mostaql.Avg offer)",
-              "nativeQueryRef": "Average of Avg offer"
+              "queryRef": "CountNonNull(Mostaql.category_arabic)",
+              "nativeQueryRef": "Count of category_arabic"
             }
           ]
         }
@@ -68,10 +68,10 @@
                         "Entity": "Mostaql"
                       }
                     },
-                    "Property": "Avg offer"
+                    "Property": "category_arabic"
                   }
                 },
-                "Function": 1
+                "Function": 5
               }
             },
             "direction": "Descending"
@@ -84,6 +84,13 @@
       "categoryAxis": [
         {
           "properties": {
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "concatenateLabels": {
               "expr": {
                 "Literal": {
@@ -105,6 +112,27 @@
                 }
               }
             },
+            "titleFontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
+            "titleFontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "titleBold": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
             "labelColor": {
               "solid": {
                 "color": {
@@ -116,27 +144,6 @@
                 }
               }
             },
-            "titleFontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
-                }
-              }
-            },
-            "titleFontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "12D"
-                }
-              }
-            },
-            "titleBold": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "titleColor": {
               "solid": {
                 "color": {
@@ -145,13 +152,6 @@
                       "Value": "'#3C2F13'"
                     }
                   }
-                }
-              }
-            },
-            "switchAxisPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
                 }
               }
             },
@@ -189,17 +189,6 @@
                 }
               }
             },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
-                }
-              }
-            },
             "titleFontFamily": {
               "expr": {
                 "Literal": {
@@ -210,7 +199,18 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "11D"
+                  "Value": "14D"
+                }
+              }
+            },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
                 }
               }
             },
@@ -239,7 +239,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'متوسط العروض'"
+                  "Value": "'عدد الوظائف'"
                 }
               }
             }
@@ -509,10 +509,10 @@
                                   "Entity": "Mostaql"
                                 }
                               },
-                              "Property": "Avg offer"
+                              "Property": "category_arabic"
                             }
                           },
-                          "Function": 1
+                          "Function": 5
                         }
                       },
                       "FillRule": {
@@ -560,14 +560,14 @@
       "legend": [
         {
           "properties": {
-            "show": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showGradientLegend": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -583,14 +583,14 @@
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             },
             "labelPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'InsideEnd'"
+                  "Value": "'Auto'"
                 }
               }
             }
@@ -602,21 +602,10 @@
       "title": [
         {
           "properties": {
-            "titleWrap": {
+            "fontFamily": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3C2F13'"
-                    }
-                  }
+                  "Value": "'Arial'"
                 }
               }
             },
@@ -634,10 +623,14 @@
                 }
               }
             },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3C2F13'"
+                    }
+                  }
                 }
               }
             },
@@ -651,14 +644,14 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'متوسط العروض في مجال'"
+                  "Value": "'عدد الوظائف  في مجال'"
                 }
               }
             }
           }
         }
       ],
-      "background": [
+      "dropShadow": [
         {
           "properties": {
             "show": {
@@ -668,10 +661,15 @@
                 }
               }
             },
-            "transparency": {
-              "expr": {
-                "Literal": {
-                  "Value": "0D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
@@ -715,31 +713,6 @@
             }
           }
         }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
       ]
     },
     "drillFilterOtherVisuals": true
@@ -747,7 +720,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "70962dea92a80639e730",
+        "name": "8c1560933299ae403b41",
         "field": {
           "Column": {
             "Expression": {
@@ -755,7 +728,7 @@
                 "Entity": "Mostaql"
               }
             },
-            "Property": "category_arabic"
+            "Property": "Category_English"
           }
         },
         "type": "TopN",
@@ -783,7 +756,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "category_arabic"
+                          "Property": "Category_English"
                         },
                         "Name": "field"
                       }
@@ -800,7 +773,7 @@
                                     "Source": "m"
                                   }
                                 },
-                                "Property": "Avg offer"
+                                "Property": "Category_English"
                               }
                             },
                             "Function": 5
@@ -832,7 +805,7 @@
                             "Source": "m"
                           }
                         },
-                        "Property": "category_arabic"
+                        "Property": "Category_English"
                       }
                     }
                   ],
@@ -845,80 +818,8 @@
               }
             }
           ]
-        }
-      },
-      {
-        "name": "61762fc0174ee0e34106",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mostaql"
-              }
-            },
-            "Property": "category_arabic"
-          }
         },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "Mostaql",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "m"
-                              }
-                            },
-                            "Property": "category_arabic"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'غير معروف'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }

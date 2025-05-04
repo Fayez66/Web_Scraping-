@@ -1,12 +1,12 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "050c84a424137b42ed6a",
+  "name": "02c2e2a0709ce0da2008",
   "position": {
-    "x": 1103,
-    "y": 121,
+    "x": 0,
+    "y": 10,
     "z": 0,
-    "height": 599,
-    "width": 177,
+    "height": 113,
+    "width": 1063,
     "tabOrder": 0
   },
   "visual": {
@@ -15,6 +15,25 @@
       "queryState": {
         "Data": {
           "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mostaql"
+                        }
+                      },
+                      "Property": "Avg offer"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(Mostaql.Avg offer)2",
+              "nativeQueryRef": "Sum of Avg offer"
+            },
             {
               "field": {
                 "Aggregation": {
@@ -109,7 +128,7 @@
                     "Property": "Avg offer"
                   }
                 },
-                "Function": 4
+                "Function": 0
               }
             },
             "direction": "Descending"
@@ -176,7 +195,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#644F22'"
+                      "Value": "'#8D484F'"
                     }
                   }
                 }
@@ -201,7 +220,14 @@
             "orientation": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
+                }
+              }
+            },
+            "cellPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0L"
                 }
               }
             }
@@ -298,7 +324,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "12D"
+                  "Value": "14D"
                 }
               }
             },
@@ -324,6 +350,90 @@
           "selector": {
             "id": "default"
           }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'مجموع العروض'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mostaql.Avg offer)2"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'اكبر عرض '"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mostaql.Avg offer)1"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'متوسط العروض'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mostaql.Avg offer)"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'متوسط عدد العروض'"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mostaql.Number of Offers)"
+          }
+        },
+        {
+          "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'عدد الوظائف'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "14D"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(Mostaql.ID)"
+          }
         }
       ],
       "shapeCustomRectangle": [
@@ -340,6 +450,22 @@
               "expr": {
                 "Literal": {
                   "Value": "15L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "paddingSelection": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Narrow'"
                 }
               }
             }

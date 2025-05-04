@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "3a14d7cf33e10242d880",
+  "name": "5b0d31450de3084d85a2",
   "position": {
-    "x": 1103,
-    "y": 0,
-    "z": 1000,
-    "height": 134,
-    "width": 177,
-    "tabOrder": 1000
+    "x": 1077,
+    "y": 27,
+    "z": 7000,
+    "height": 79,
+    "width": 194,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "image",
@@ -20,7 +20,7 @@
                 "ResourcePackageItem": {
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
-                  "ItemName": "Mostaql12015480144919677.png"
+                  "ItemName": "Mostaql6583142590221952.png"
                 }
               }
             }
@@ -34,21 +34,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Fill'"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
-    "visualContainerObjects": {
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
                 }
               }
             }
