@@ -247,7 +247,7 @@
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "1D"
+                  "Value": "2D"
                 }
               }
             },
@@ -256,7 +256,7 @@
                 "color": {
                   "expr": {
                     "Literal": {
-                      "Value": "'#0070C3'"
+                      "Value": "'#519E31'"
                     }
                   }
                 }
