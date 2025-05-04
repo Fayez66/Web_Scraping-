@@ -273,47 +273,41 @@
               "solid": {
                 "color": {
                   "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Mostaql"
+                    "Conditional": {
+                      "Cases": [
+                        {
+                          "Condition": {
+                            "Comparison": {
+                              "ComparisonKind": 3,
+                              "Left": {
+                                "Aggregation": {
+                                  "Expression": {
+                                    "Column": {
+                                      "Expression": {
+                                        "SourceRef": {
+                                          "Entity": "Mostaql"
+                                        }
+                                      },
+                                      "Property": "Avg offer"
+                                    }
+                                  },
+                                  "Function": 0
                                 }
                               },
-                              "Property": "Avg offer"
-                            }
-                          },
-                          "Function": 1
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#FBABB1'"
+                              "Right": {
+                                "Literal": {
+                                  "Value": "0D"
+                                }
                               }
                             }
                           },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#390006'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
+                          "Value": {
+                            "Literal": {
+                              "Value": "'#DEEFFF'"
                             }
                           }
                         }
-                      }
+                      ]
                     }
                   }
                 }
