@@ -104,6 +104,13 @@
       "categoryAxis": [
         {
           "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'المهارات'"
+                }
+              }
+            },
             "concatenateLabels": {
               "expr": {
                 "Literal": {
@@ -146,7 +153,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
@@ -174,13 +181,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'المهارات'"
-                }
-              }
             }
           }
         }
@@ -188,6 +188,13 @@
       "valueAxis": [
         {
           "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'عدد مرات الطلب'"
+                }
+              }
+            },
             "invertAxis": {
               "expr": {
                 "Literal": {
@@ -230,7 +237,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "11D"
                 }
               }
             },
@@ -255,13 +262,6 @@
                   }
                 }
               }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد مرات الطلب'"
-                }
-              }
             }
           }
         }
@@ -280,13 +280,13 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Mostaql_Skills"
+                                  "Entity": "Mostaql"
                                 }
                               },
-                              "Property": "Tags_en"
+                              "Property": "Avg offer"
                             }
                           },
-                          "Function": 5
+                          "Function": 1
                         }
                       },
                       "FillRule": {
@@ -602,6 +602,13 @@
       "title": [
         {
           "properties": {
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'عدد الطلب لمهاره '"
+                }
+              }
+            },
             "titleWrap": {
               "expr": {
                 "Literal": {
@@ -617,6 +624,13 @@
                       "Value": "'#3C2F13'"
                     }
                   }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'right'"
                 }
               }
             },
@@ -638,20 +652,6 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'right'"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الطلب لمهاره '"
                 }
               }
             }
