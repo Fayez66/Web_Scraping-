@@ -3,6 +3,7 @@
   "name": "5b7316c68ee0ccee9830",
   "position": {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "x": 1042,
     "y": 124,
     "z": 9000,
@@ -10,12 +11,17 @@
     "width": 231,
     "tabOrder": 9000
 =======
+=======
+>>>>>>> Stashed changes
     "x": 230.72319201995012,
     "y": 0,
     "z": 10000,
     "height": 149.92518703241896,
     "width": 316.90773067331668,
     "tabOrder": 10000
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   },
   "visual": {
