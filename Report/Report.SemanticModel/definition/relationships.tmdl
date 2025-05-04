@@ -24,10 +24,6 @@ relationship 45487c0a-302f-f057-4357-ae01a8a09d6e
 	fromColumn: AllData_Skills.ID
 	toColumn: 'All Data'.ID
 
-relationship f70bb96f-ded5-8161-fa62-589b68c6a17e
-	fromColumn: Mostaql_Skills.ID
-	toColumn: Mostaql.ID
-
 relationship 0158870d-bcd1-98f6-6aa3-1122bf4c48bf
 	fromColumn: UpWork_Skills.ID
 	toColumn: UpWork.ID

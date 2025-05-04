@@ -7,7 +7,7 @@
       "type": "SharedResources"
     }
   },
-  "layoutOptimization": "None",
+  "layoutOptimization": "PhonePortrait",
   "objects": {
     "section": [
       {
@@ -28,7 +28,7 @@
           "expanded": {
             "expr": {
               "Literal": {
-                "Value": "true"
+                "Value": "false"
               }
             }
           }
@@ -55,6 +55,11 @@
         {
           "name": "UpWork35167358072108634.png",
           "path": "UpWork35167358072108634.png",
+          "type": "Image"
+        },
+        {
+          "name": "Mostaql12015480144919677.png",
+          "path": "Mostaql12015480144919677.png",
           "type": "Image"
         }
       ]
