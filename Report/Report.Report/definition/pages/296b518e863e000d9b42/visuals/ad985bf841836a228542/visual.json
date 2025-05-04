@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "CountNonNull(UpWork.ID)",
-              "nativeQueryRef": "Count of ID1"
+              "nativeQueryRef": "Count of Jobs",
+              "displayName": "Count of Jobs"
             }
           ]
         }
@@ -60,6 +61,41 @@
         ],
         "isDefaultSort": true
       }
+    },
+    "objects": {
+      "labels": [
+        {
+          "properties": {
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "25D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryLabels": [
+        {
+          "properties": {
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
     },
     "drillFilterOtherVisuals": true
   }

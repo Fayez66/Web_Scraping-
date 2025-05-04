@@ -111,7 +111,23 @@ def normalize_hours(text):
     return text
 
 df['hours/week'] = df['hours/week'].apply(normalize_hours)
+def duration_numbers(text):
+    if isinstance(text, (int, float)):
+        return text
+    # Replace dash variants with a space to split properly
+    text = str(text).replace(',', '').replace('–', '-').replace('—', '-').strip()
 
+    # Explicitly match ranges like '2 - 3' or '2 to 3' or '1,000 - 3,000'
+    range_match = re.findall(r'\d+(?:\.\d+)?', text)
+
+    if range_match:
+        nums = list(map(float, range_match))
+        if len(nums) == 1:
+            return nums[0]
+        elif len(nums) >= 2:
+            return f"{nums[0]} to {nums[1]}"  # average of first two numbers
+
+    return None
 # --- Normalize duration ---
 def normalize_duration(text):
     if not isinstance(text, str):
@@ -122,7 +138,7 @@ def normalize_duration(text):
         return '>6'
     elif 'to' in text:
         text = text.replace('to', '-')
-        return extract_numbers(text)
+        return duration_numbers(text)
     return text
 
 df['duration'] = df['duration'].apply(normalize_duration)
@@ -141,5 +157,6 @@ df.index = df.index + 1
 df = df.drop(columns=['ID'])
 df = df.rename(columns={'index': 'ID'})
 # Save to new file
-df.to_csv("jobs_expanded.csv", index=False, encoding="utf-8-sig")
+expanded = df[['ID' , 'Tags']]
+expanded.to_csv("jobs_expanded.csv", index=True, encoding="utf-8-sig")
 

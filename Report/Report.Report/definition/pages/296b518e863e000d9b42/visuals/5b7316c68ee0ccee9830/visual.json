@@ -7,9 +7,10 @@
 <<<<<<< Updated upstream
     "x": 1042,
     "y": 124,
-    "z": 9000,
-    "height": 81,
+    "z": 6000,
+    "height": 66,
     "width": 231,
+<<<<<<< HEAD
     "tabOrder": 9000
 =======
 =======
@@ -29,6 +30,9 @@
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+    "tabOrder": 6000
+>>>>>>> 9e14879cea46cc6b35cf3990a20c30adb5082d53
   },
   "visual": {
     "visualType": "slicer",

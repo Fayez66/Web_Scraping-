@@ -68,13 +68,12 @@ table UpWork
 
 	column Budget
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 33fd576e-d5d0-40b6-9568-e3d55c78b278
 		summarizeBy: sum
 		sourceColumn: Budget
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'est. budget'
 		dataType: double
@@ -131,9 +130,10 @@ table UpWork
 				let
 				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\job_listings_cleaned.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type",".0","",Replacer.ReplaceText,{"duration"})
 				in
-				    #"Changed Type"
+				    #"Replaced Value"
 
 	annotation PBI_NavigationStepName = Navigation
 
