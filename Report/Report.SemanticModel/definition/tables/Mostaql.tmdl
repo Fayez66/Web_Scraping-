@@ -52,12 +52,14 @@ table Mostaql
 
 	column 'Avg offer'
 		dataType: double
-		formatString: \$#,0;(\$#,0);\$#,0
+		formatString: 0
 		lineageTag: b24ae3de-74c9-41e9-8355-fdf5c4b289c9
 		summarizeBy: sum
 		sourceColumn: Avg offer
 
 		annotation SummarizationSetBy = User
+
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column Duration(Days)
 		dataType: int64

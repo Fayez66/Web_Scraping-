@@ -2,19 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "ce27cccdee0055d10077",
   "position": {
-<<<<<<< HEAD
-    "x": 510,
-    "y": 123,
-    "z": 2000,
-    "height": 288,
-    "width": 483,
-=======
     "x": 17,
     "y": 17,
     "z": 2000,
     "height": 209,
     "width": 547,
->>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
     "tabOrder": 2000
   },
   "visual": {
@@ -130,7 +122,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
@@ -138,35 +130,6 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
-                }
-              }
-            },
-            "titleColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3C2F13'"
-                    }
-                  }
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'المجالات'"
                 }
               }
             }
@@ -207,7 +170,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "11D"
                 }
               }
             },
@@ -241,13 +204,6 @@
                       "Value": "'#3C2F13'"
                     }
                   }
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الوظائف'"
                 }
               }
             }
@@ -500,109 +456,6 @@
               }
             ]
           }
-        },
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Mostaql"
-                                }
-                              },
-                              "Property": "category_arabic"
-                            }
-                          },
-                          "Function": 5
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#FBABB1'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#390006'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        }
-      ],
-      "legend": [
-        {
-          "properties": {
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "labelPosition": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Auto'"
-                }
-              }
-            }
-          }
         }
       ]
     },
@@ -620,7 +473,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
@@ -639,20 +492,6 @@
                       "Value": "'#3C2F13'"
                     }
                   }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'right'"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الوظائف  في مجال'"
                 }
               }
             }
@@ -789,7 +628,7 @@
                         }
                       }
                     ],
-                    "Top": 9
+                    "Top": 5
                   }
                 }
               },

@@ -3,17 +3,11 @@
   "name": "ee9fbf74a1867bc16dcb",
   "position": {
     "x": 930,
-<<<<<<< HEAD
-    "y": 212,
-    "z": 3000,
-    "height": 223,
-=======
     "y": 231,
     "z": 2000,
     "height": 193,
->>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
     "width": 343,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "donutChart",

@@ -2,19 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "2b74b59706d50438414c",
   "position": {
-<<<<<<< HEAD
-    "x": 259,
-    "y": 421,
-    "z": 3000,
-    "height": 282,
-    "width": 462,
-=======
     "x": 576,
     "y": 17,
     "z": 3000,
     "height": 273,
     "width": 527,
->>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
     "tabOrder": 3000
   },
   "visual": {
@@ -370,21 +362,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'right'"
-                }
-              }
-            },
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الوظائف خلال الشهر'"
+                  "Value": "12D"
                 }
               }
             }
