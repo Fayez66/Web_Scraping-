@@ -14,7 +14,7 @@ table UpWork_Skills
 		dataType: int64
 		formatString: 0
 		lineageTag: a9ef25a9-b073-4b0d-a091-1680a34181dc
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic

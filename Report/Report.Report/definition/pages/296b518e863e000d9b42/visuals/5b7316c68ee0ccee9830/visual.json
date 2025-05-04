@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "5b7316c68ee0ccee9830",
   "position": {
-    "x": 306,
-    "y": 0,
-    "z": 8002,
-    "height": 150,
-    "width": 317,
-    "tabOrder": 8002
+    "x": 1042,
+    "y": 124,
+    "z": 9000,
+    "height": 81,
+    "width": 231,
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "slicer",
@@ -38,20 +38,6 @@
       "data": [
         {
           "properties": {
-            "numericStart": {
-              "expr": {
-                "Literal": {
-                  "Value": "269162.1962616822D"
-                }
-              }
-            },
-            "numericEnd": {
-              "expr": {
-                "Literal": {
-                  "Value": "734206.0186915888D"
-                }
-              }
-            },
             "mode": {
               "expr": {
                 "Literal": {
@@ -64,71 +50,62 @@
       ],
       "general": [
         {
-          "properties": {
-            "filter": {
-              "filter": {
-                "Version": 2,
-                "From": [
-                  {
-                    "Name": "u",
-                    "Entity": "UpWork",
-                    "Type": 0
-                  }
-                ],
-                "Where": [
-                  {
-                    "Condition": {
-                      "And": {
-                        "Left": {
-                          "Comparison": {
-                            "ComparisonKind": 2,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "u"
-                                  }
-                                },
-                                "Property": "Budget"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "269162.1962616822D"
-                              }
-                            }
-                          }
-                        },
-                        "Right": {
-                          "Comparison": {
-                            "ComparisonKind": 4,
-                            "Left": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "u"
-                                  }
-                                },
-                                "Property": "Budget"
-                              }
-                            },
-                            "Right": {
-                              "Literal": {
-                                "Value": "734206.0186915888D"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          }
+          "properties": {}
         }
       ]
     },
     "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "48d4ba14a0c48a4d236c",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "UpWork"
+              }
+            },
+            "Property": "Budget"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "u",
+              "Entity": "UpWork",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Comparison": {
+                  "ComparisonKind": 3,
+                  "Left": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Source": "u"
+                        }
+                      },
+                      "Property": "Budget"
+                    }
+                  },
+                  "Right": {
+                    "Literal": {
+                      "Value": "200000L"
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
   }
 }
