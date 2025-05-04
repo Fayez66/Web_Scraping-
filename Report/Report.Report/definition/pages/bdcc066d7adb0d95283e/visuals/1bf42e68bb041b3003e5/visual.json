@@ -2,11 +2,19 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "1bf42e68bb041b3003e5",
   "position": {
+<<<<<<< HEAD
     "x": 15,
     "y": 422,
     "z": 4000,
     "height": 281,
     "width": 235,
+=======
+    "x": 17,
+    "y": 235,
+    "z": 4000,
+    "height": 340,
+    "width": 547,
+>>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
     "tabOrder": 4000
   },
   "visual": {
@@ -15,6 +23,23 @@
       "queryState": {
         "Values": {
           "projections": [
+<<<<<<< HEAD
+=======
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Mostaql"
+                    }
+                  },
+                  "Property": "Duration(Days)"
+                }
+              },
+              "queryRef": "Mostaql.Duration(Days)",
+              "nativeQueryRef": "Duration(Days)"
+            },
+>>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
             {
               "field": {
                 "Aggregation": {
@@ -32,6 +57,7 @@
                 }
               },
               "queryRef": "CountNonNull(Mostaql.Duration(Days))",
+<<<<<<< HEAD
               "nativeQueryRef": "عدد الوظائف",
               "displayName": "عدد الوظائف"
             },
@@ -49,6 +75,9 @@
               "queryRef": "Mostaql.Duration(Days)",
               "nativeQueryRef": "الايام المطلوبه",
               "displayName": "الايام المطلوبه"
+=======
+              "nativeQueryRef": "Count of Duration(Days)"
+>>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
             }
           ]
         }
@@ -345,6 +374,7 @@
       ]
     },
     "drillFilterOtherVisuals": true
+<<<<<<< HEAD
   },
   "filterConfig": {
     "filters": [
@@ -452,5 +482,7 @@
       }
     ],
     "filterSortOrder": "Custom"
+=======
+>>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
   }
 }

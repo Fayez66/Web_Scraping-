@@ -1,25 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "2662351fe5dce308d979",
+  "name": "d7c7c74a620cb401e0a8",
   "position": {
-<<<<<<< HEAD
-    "x": 808.18181818181813,
-    "y": 445.45454545454544,
-    "z": 13000,
-    "height": 250.90909090909088,
-    "width": 369.09090909090907,
-    "tabOrder": 13000
-=======
-    "x": 930,
+    "x": 242,
     "y": 8,
-    "z": 8000,
-    "height": 203,
-    "width": 343,
-    "tabOrder": 8000
->>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
+    "z": 12000,
+    "height": 416,
+    "width": 302,
+    "tabOrder": 12000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -32,11 +23,11 @@
                       "Entity": "UpWork"
                     }
                   },
-                  "Property": "duration"
+                  "Property": "Category.1"
                 }
               },
-              "queryRef": "UpWork.duration",
-              "nativeQueryRef": "duration",
+              "queryRef": "UpWork.Category.1",
+              "nativeQueryRef": "Category.1",
               "active": true
             }
           ]
@@ -93,14 +84,47 @@
       "legend": [
         {
           "properties": {
-            "show": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "categoryAxis": [
+        {
+          "properties": {
+            "concatenateLabels": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "showGradientLegend": {
+            "switchAxisPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "logAxisScale": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -127,18 +151,30 @@
                                   "Entity": "UpWork"
                                 }
                               },
-                              "Property": "est. budget"
+                              "Property": "ID"
                             }
                           },
-                          "Function": 1
+                          "Function": 5
                         }
                       },
                       "FillRule": {
-                        "linearGradient2": {
+                        "linearGradient3": {
                           "min": {
                             "color": {
                               "Literal": {
-                                "Value": "'#70D944'"
+                                "Value": "'#70DA45'"
+                              }
+                            }
+                          },
+                          "mid": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#008300'"
+                              }
+                            },
+                            "value": {
+                              "Literal": {
+                                "Value": "4000D"
                               }
                             }
                           },
@@ -172,6 +208,75 @@
                 }
               }
             ]
+          }
+        }
+      ],
+      "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "labelPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'OutsideEnd'"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableBackground": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "labelContentLayout": {
+              "expr": {
+                "Literal": {
+                  "Value": "'SingleLine'"
+                }
+              }
+            },
+            "horizontalAlignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            }
           }
         }
       ]
@@ -304,7 +409,8 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "270b7ff25bd9535952e2",
+        "name": "5f11b4e5160e86c60d15",
+        "ordinal": 0,
         "field": {
           "Column": {
             "Expression": {
@@ -312,13 +418,65 @@
                 "Entity": "UpWork"
               }
             },
-            "Property": "duration"
+            "Property": "Category.1"
           }
         },
-        "type": "Categorical",
+        "type": "TopN",
         "filter": {
           "Version": 2,
           "From": [
+            {
+              "Name": "subquery",
+              "Expression": {
+                "Subquery": {
+                  "Query": {
+                    "Version": 2,
+                    "From": [
+                      {
+                        "Name": "u",
+                        "Entity": "UpWork",
+                        "Type": 0
+                      }
+                    ],
+                    "Select": [
+                      {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "u"
+                            }
+                          },
+                          "Property": "Category.1"
+                        },
+                        "Name": "field"
+                      }
+                    ],
+                    "OrderBy": [
+                      {
+                        "Direction": 2,
+                        "Expression": {
+                          "Aggregation": {
+                            "Expression": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "u"
+                                  }
+                                },
+                                "Property": "ID"
+                              }
+                            },
+                            "Function": 5
+                          }
+                        }
+                      }
+                    ],
+                    "Top": 10
+                  }
+                }
+              },
+              "Type": 2
+            },
             {
               "Name": "u",
               "Entity": "UpWork",
@@ -328,52 +486,22 @@
           "Where": [
             {
               "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "u"
-                              }
-                            },
-                            "Property": "duration"
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "u"
                           }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "null"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "''"
-                            }
-                          }
-                        ]
-                      ]
+                        },
+                        "Property": "Category.1"
+                      }
                     }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
+                  ],
+                  "Table": {
+                    "SourceRef": {
+                      "Source": "subquery"
                     }
                   }
                 }
@@ -381,7 +509,28 @@
             }
           ]
         }
+      },
+      {
+        "name": "d9801717b8006b0cc8ee",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "UpWork"
+                  }
+                },
+                "Property": "ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
-    ]
+    ],
+    "filterSortOrder": "Custom"
   }
 }

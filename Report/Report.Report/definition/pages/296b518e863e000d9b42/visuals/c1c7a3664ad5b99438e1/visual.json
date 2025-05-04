@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "ad985bf841836a228542",
+  "name": "c1c7a3664ad5b99438e1",
   "position": {
     "x": 0,
-    "y": 148,
-    "z": 0,
-    "height": 104,
+    "y": 395,
+    "z": 9000,
+    "height": 173,
     "width": 220,
-    "tabOrder": 0
+    "tabOrder": 9000
   },
   "visual": {
     "visualType": "card",
@@ -17,49 +17,20 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "UpWork"
-                        }
-                      },
-                      "Property": "ID"
+                    "SourceRef": {
+                      "Entity": "UpWork"
                     }
                   },
-                  "Function": 2
+                  "Property": "Most in-demand skill"
                 }
               },
-              "queryRef": "CountNonNull(UpWork.ID)",
-              "nativeQueryRef": "Count of Jobs",
-              "displayName": "Count of Jobs"
+              "queryRef": "UpWork.Most in-demand skill",
+              "nativeQueryRef": "Most in-demand skill"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "UpWork"
-                      }
-                    },
-                    "Property": "ID"
-                  }
-                },
-                "Function": 2
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
@@ -98,9 +69,60 @@
       ]
     },
     "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FBFFEE'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
       "border": [
         {
           "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
@@ -146,23 +168,6 @@
                     "ThemeDataColor": {
                       "ColorId": 1,
                       "Percent": 0
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#FBFFEE'"
                     }
                   }
                 }

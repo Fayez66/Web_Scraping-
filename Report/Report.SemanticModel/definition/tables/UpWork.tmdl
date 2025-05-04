@@ -1,6 +1,27 @@
 table UpWork
 	lineageTag: 8bb9bee1-2593-4485-99da-ac5bbf641cc8
 
+	measure 'Most in-demand skill' = ```
+			
+			VAR SummaryTable =
+			    ADDCOLUMNS (
+			        SUMMARIZE ( 'UpWork_Skills', 'UpWork_Skills'[Tags] ),
+			        "TopSkill", CALCULATE ( count ( 'UpWork_Skills'[Tags] ) )
+			    )
+			VAR TopProduct =
+			    TOPN ( 1, SummaryTable, [TopSkill] , DESC )
+			RETURN
+			    CONCATENATEX (
+			        TopProduct,
+			        'UpWork_Skills'[Tags] & " " & FORMAT ([TopSkill], "#,##0" ),","
+			        
+			    )
+			
+			
+			
+			```
+		lineageTag: 6ad546ab-b55f-44a2-8e37-f898b8bad1bf
+
 	column ID
 		dataType: int64
 		formatString: 0
@@ -68,7 +89,7 @@ table UpWork
 
 	column Budget
 		dataType: double
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		formatString: #,0.00
 		lineageTag: 33fd576e-d5d0-40b6-9568-e3d55c78b278
 		summarizeBy: sum
 		sourceColumn: Budget

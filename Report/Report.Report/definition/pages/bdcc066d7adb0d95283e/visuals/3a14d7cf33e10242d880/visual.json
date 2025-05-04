@@ -4,10 +4,10 @@
   "position": {
     "x": 1103,
     "y": 0,
-    "z": 1,
-    "height": 180,
+    "z": 1000,
+    "height": 134,
     "width": 177,
-    "tabOrder": 1
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "image",
@@ -21,6 +21,19 @@
                   "PackageName": "RegisteredResources",
                   "PackageType": 1,
                   "ItemName": "Mostaql12015480144919677.png"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "imageScaling": [
+        {
+          "properties": {
+            "imageScalingType": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Fill'"
                 }
               }
             }

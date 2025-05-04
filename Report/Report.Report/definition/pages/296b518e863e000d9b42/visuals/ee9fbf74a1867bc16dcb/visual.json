@@ -3,9 +3,15 @@
   "name": "ee9fbf74a1867bc16dcb",
   "position": {
     "x": 930,
+<<<<<<< HEAD
     "y": 212,
     "z": 3000,
     "height": 223,
+=======
+    "y": 231,
+    "z": 2000,
+    "height": 193,
+>>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
     "width": 343,
     "tabOrder": 3000
   },
@@ -80,6 +86,92 @@
         "isDefaultSort": true
       }
     },
+    "objects": {
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#008300'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "UpWork"
+                          }
+                        },
+                        "Property": "job_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Hourly'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#70D944'"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "UpWork"
+                          }
+                        },
+                        "Property": "job_type"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Fixed price'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
     "visualContainerObjects": {
       "border": [
         {
@@ -115,6 +207,48 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FBFFEE'"
+                    }
+                  }
                 }
               }
             }

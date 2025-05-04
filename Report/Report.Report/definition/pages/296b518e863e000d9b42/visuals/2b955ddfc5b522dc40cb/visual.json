@@ -1,25 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "5b7316c68ee0ccee9830",
+  "name": "2b955ddfc5b522dc40cb",
   "position": {
-<<<<<<< HEAD
-    "x": 1042,
-    "y": 124,
-    "z": 8000,
-    "height": 66,
-    "width": 231,
-    "tabOrder": 8000
-=======
-    "x": 0,
-    "y": 588,
-    "z": 5000,
-    "height": 107,
-    "width": 220,
-    "tabOrder": 5000
->>>>>>> 45d4dfe750e5e33b4c79fdc8c476ee7a3242ce6e
+    "x": 242,
+    "y": 443,
+    "z": 10000,
+    "height": 267,
+    "width": 116,
+    "tabOrder": 10000
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
         "Values": {
@@ -32,12 +23,11 @@
                       "Entity": "UpWork"
                     }
                   },
-                  "Property": "Budget"
+                  "Property": "job_type"
                 }
               },
-              "queryRef": "UpWork.Budget",
-              "nativeQueryRef": "Budget",
-              "active": true
+              "queryRef": "UpWork.job_type",
+              "nativeQueryRef": "job_type"
             }
           ]
         }
@@ -46,48 +36,13 @@
     "objects": {
       "data": [
         {
-          "properties": {
-            "mode": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Between'"
-                }
-              }
-            }
-          }
+          "properties": {}
         }
-      ]
-    },
-    "visualContainerObjects": {
-      "border": [
+      ],
+      "layout": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#0070C3'"
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
-            "width": {
+            "orientation": {
               "expr": {
                 "Literal": {
                   "Value": "1D"
@@ -97,6 +52,36 @@
           }
         }
       ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "15L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ]
+    },
+    "visualContainerObjects": {
       "title": [
         {
           "properties": {
@@ -104,6 +89,20 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
                 }
               }
             }
@@ -133,6 +132,44 @@
                   "expr": {
                     "Literal": {
                       "Value": "'#FBFFEE'"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "15D"
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#0070C3'"
                     }
                   }
                 }
@@ -172,7 +209,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "48d4ba14a0c48a4d236c",
+        "name": "5ca501cd0ae4866a0d82",
         "field": {
           "Column": {
             "Expression": {
@@ -180,10 +217,10 @@
                 "Entity": "UpWork"
               }
             },
-            "Property": "Budget"
+            "Property": "job_type"
           }
         },
-        "type": "Advanced",
+        "type": "Categorical",
         "filter": {
           "Version": 2,
           "From": [
@@ -196,23 +233,35 @@
           "Where": [
             {
               "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 3,
-                  "Left": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Source": "u"
+                "In": {
+                  "Expressions": [
+                    {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Source": "u"
+                          }
+                        },
+                        "Property": "job_type"
+                      }
+                    }
+                  ],
+                  "Values": [
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Fixed price'"
                         }
-                      },
-                      "Property": "Budget"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "200000L"
-                    }
-                  }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Hourly'"
+                        }
+                      }
+                    ]
+                  ]
                 }
               }
             }

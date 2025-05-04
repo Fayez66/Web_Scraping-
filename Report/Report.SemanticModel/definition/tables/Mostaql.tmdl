@@ -107,9 +107,10 @@ table Mostaql
 				let
 				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Mostaqel\job_listings_cleaned.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","الذكاء الاصطناعي / تعلم الآلة","الذكاء الاصطناعي",Replacer.ReplaceText,{"category_arabic"})
 				in
-				    #"Changed Type"
+				    #"Replaced Value"
 
 	annotation PBI_NavigationStepName = Navigation
 
