@@ -12,7 +12,7 @@ annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["UpWork","UpWork_Skills","Freelance_Yard","Mostaql","Mostaql_Skills","Freelancer","All Data","AllData_Skills"]
+annotation PBI_QueryOrder = ["UpWork","UpWork_Skills","Freelance_Yard","Mostaql","Freelancer","All Data","AllData_Skills","Mostaql_Skills"]
 
 ref table UpWork
 ref table DateTableTemplate_48e25418-8f1b-4085-88d2-5a60f4a8125b
@@ -21,12 +21,12 @@ ref table Freelance_Yard
 ref table LocalDateTable_90ceed3a-51e2-4344-a376-4dc41c08675e
 ref table Mostaql
 ref table LocalDateTable_7f46b7f4-1943-4377-8086-f60de42d36bc
-ref table Mostaql_Skills
 ref table Freelancer
 ref table 'All Data'
 ref table LocalDateTable_b6bef76d-b067-4db2-a815-725007c62b4a
 ref table AllData_Skills
 ref table UpWork_Skills
+ref table Mostaql_Skills
 
 ref cultureInfo en-US
 
