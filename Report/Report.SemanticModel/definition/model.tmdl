@@ -12,7 +12,7 @@ annotation PBIDesktopVersion = 2.142.928.0 (25.04)+de52df9f0bb74ad93a80d89c52d63
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
-annotation PBI_QueryOrder = ["UpWork","UpWork_Skills","Freelance_Yard","Mostaql","Freelancer","All Data","AllData_Skills","Mostaql_Skills"]
+annotation PBI_QueryOrder = ["UpWork","UpWork_Skills","Freelance_Yard","Mostaql","Mostaql_Skills","Freelancer","All Data","AllData_Skills"]
 
 ref table UpWork
 ref table DateTableTemplate_48e25418-8f1b-4085-88d2-5a60f4a8125b

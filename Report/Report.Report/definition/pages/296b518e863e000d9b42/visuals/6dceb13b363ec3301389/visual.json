@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "6dceb13b363ec3301389",
   "position": {
-    "x": 148.04878048780489,
-    "y": 445,
-    "z": 7000,
+    "x": 789,
+    "y": 443,
+    "z": 4000,
     "height": 267,
     "width": 484,
-    "tabOrder": 7000
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "barChart",
@@ -83,10 +83,24 @@
       "labels": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "labelPosition": {
               "expr": {
                 "Literal": {
                   "Value": "'OutsideEnd'"
+                }
+              }
+            },
+            "optimizeLabelDisplay": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             },
@@ -97,7 +111,7 @@
                 }
               }
             },
-            "optimizeLabelDisplay": {
+            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -112,13 +126,6 @@
               }
             },
             "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableBackground": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -191,14 +198,14 @@
       "categoryAxis": [
         {
           "properties": {
-            "switchAxisPosition": {
+            "concatenateLabels": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "concatenateLabels": {
+            "switchAxisPosition": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -211,20 +218,85 @@
       "valueAxis": [
         {
           "properties": {
-            "logAxisScale": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
             "invertAxis": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
+            },
+            "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
             }
+          }
+        }
+      ],
+      "dataPoint": [
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "UpWork_Skills"
+                                }
+                              },
+                              "Property": "Tags"
+                            }
+                          },
+                          "Function": 5
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#70D944'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#003400'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
           }
         }
       ]
@@ -273,6 +345,17 @@
                   "Value": "0D"
                 }
               }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#FBFFEE'"
+                    }
+                  }
+                }
+              }
             }
           }
         }
@@ -298,6 +381,31 @@
               "expr": {
                 "Literal": {
                   "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 1,
+                      "Percent": 0
+                    }
+                  }
                 }
               }
             }
