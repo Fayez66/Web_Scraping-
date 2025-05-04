@@ -37,8 +37,6 @@ table Mostaql_Skills
 				in
 				    #"Removed Other Columns"
 
-	changedProperty = Name
-
 	annotation PBI_NavigationStepName = Navigation
 
 	annotation PBI_ResultType = Table

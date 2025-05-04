@@ -28,9 +28,3 @@ relationship f70bb96f-ded5-8161-fa62-589b68c6a17e
 	fromColumn: Mostaql_Skills.ID
 	toColumn: Mostaql.ID
 
-relationship 89c65a76-d5ef-8ed3-5708-66938a61b970
-	crossFilteringBehavior: bothDirections
-	fromCardinality: one
-	fromColumn: UpWork_Skills.ID
-	toColumn: UpWork.ID
-

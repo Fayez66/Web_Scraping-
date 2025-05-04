@@ -41,7 +41,14 @@
             "numericStart": {
               "expr": {
                 "Literal": {
-                  "Value": "619066.5514018692D"
+                  "Value": "269162.1962616822D"
+                }
+              }
+            },
+            "numericEnd": {
+              "expr": {
+                "Literal": {
+                  "Value": "734206.0186915888D"
                 }
               }
             },
@@ -71,21 +78,45 @@
                 "Where": [
                   {
                     "Condition": {
-                      "Comparison": {
-                        "ComparisonKind": 2,
+                      "And": {
                         "Left": {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "u"
+                          "Comparison": {
+                            "ComparisonKind": 2,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "u"
+                                  }
+                                },
+                                "Property": "Budget"
                               }
                             },
-                            "Property": "Budget"
+                            "Right": {
+                              "Literal": {
+                                "Value": "269162.1962616822D"
+                              }
+                            }
                           }
                         },
                         "Right": {
-                          "Literal": {
-                            "Value": "619066.5514018692D"
+                          "Comparison": {
+                            "ComparisonKind": 4,
+                            "Left": {
+                              "Column": {
+                                "Expression": {
+                                  "SourceRef": {
+                                    "Source": "u"
+                                  }
+                                },
+                                "Property": "Budget"
+                              }
+                            },
+                            "Right": {
+                              "Literal": {
+                                "Value": "734206.0186915888D"
+                              }
+                            }
                           }
                         }
                       }
