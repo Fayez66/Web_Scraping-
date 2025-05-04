@@ -10,20 +10,20 @@ table Mostaql_Skills
 
 		annotation SummarizationSetBy = Automatic
 
+	column Tags_en
+		dataType: string
+		lineageTag: df11840b-692a-462b-9f0d-f0b60c0d4844
+		summarizeBy: none
+		sourceColumn: Tags_en
+
+		annotation SummarizationSetBy = Automatic
+
 	column ID_skills_jobs
 		dataType: int64
 		formatString: 0
 		lineageTag: 39cc1b65-40a3-41ef-9438-3000d8ed9aaa
 		summarizeBy: sum
 		sourceColumn: ID_skills_jobs
-
-		annotation SummarizationSetBy = Automatic
-
-	column Tags_en
-		dataType: string
-		lineageTag: df11840b-692a-462b-9f0d-f0b60c0d4844
-		summarizeBy: none
-		sourceColumn: Tags_en
 
 		annotation SummarizationSetBy = Automatic
 
@@ -36,8 +36,6 @@ table Mostaql_Skills
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"ID_skills_jobs", Int64.Type}, {"Tags_en", type text}})
 				in
 				    #"Changed Type"
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

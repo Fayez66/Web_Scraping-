@@ -1,14 +1,6 @@
 table UpWork_Skills
 	lineageTag: 3c0945db-dad1-410f-b595-7d0fa3b5a065
 
-	column Index
-		dataType: string
-		lineageTag: d85ee13b-0865-45a8-9d8a-5bbb927923e8
-		summarizeBy: none
-		sourceColumn: Index
-
-		annotation SummarizationSetBy = Automatic
-
 	column ID
 		dataType: string
 		lineageTag: a9ef25a9-b073-4b0d-a091-1680a34181dc
@@ -22,6 +14,14 @@ table UpWork_Skills
 		lineageTag: c2590ec0-5fb3-4238-ae50-97d225e8bffa
 		summarizeBy: none
 		sourceColumn: Tags
+
+		annotation SummarizationSetBy = Automatic
+
+	column Index
+		dataType: string
+		lineageTag: d85ee13b-0865-45a8-9d8a-5bbb927923e8
+		summarizeBy: none
+		sourceColumn: Index
 
 		annotation SummarizationSetBy = Automatic
 
