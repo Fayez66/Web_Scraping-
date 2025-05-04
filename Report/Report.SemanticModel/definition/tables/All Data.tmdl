@@ -5,7 +5,7 @@ table 'All Data'
 		dataType: int64
 		formatString: 0
 		lineageTag: 7471b6ab-88d7-4970-aa0c-35e2663c31ec
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic

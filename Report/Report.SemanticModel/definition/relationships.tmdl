@@ -18,3 +18,19 @@ relationship 2847e164-3ba4-489d-bcf8-4b34d636fb30
 	fromColumn: 'All Data'.Posted
 	toColumn: LocalDateTable_b6bef76d-b067-4db2-a815-725007c62b4a.Date
 
+relationship 45487c0a-302f-f057-4357-ae01a8a09d6e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AllData_Skills.ID
+	toColumn: 'All Data'.ID
+
+relationship f70bb96f-ded5-8161-fa62-589b68c6a17e
+	fromColumn: Mostaql_Skills.ID
+	toColumn: Mostaql.ID
+
+relationship 89c65a76-d5ef-8ed3-5708-66938a61b970
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: UpWork_Skills.ID
+	toColumn: UpWork.ID
+

@@ -21,9 +21,9 @@ def extract_numbers(text):
         return text
 
     # Replace dash variants with a space to split properly
-    text = str(text).replace('–', '-').replace('—', '-').strip()
+    text = str(text).replace(',', '').replace('–', '-').replace('—', '-').strip()
 
-    # Explicitly match ranges like '2 - 3' or '2 to 3'
+    # Explicitly match ranges like '2 - 3' or '2 to 3' or '1,000 - 3,000'
     range_match = re.findall(r'\d+(?:\.\d+)?', text)
 
     if range_match:
@@ -130,13 +130,16 @@ df['duration'] = df['duration'].apply(normalize_duration)
 # --- Save to CSV ---
 df.to_csv("job_listings_cleaned.csv", index=False, encoding="utf-8-sig")
 
-# First, split the tags into lists
-df['Tags'] = df['Tags'].str.split(',')
+df['Tags'] = df['Tags'].apply(lambda x: x.split(',') if isinstance(x, str) else x)
 
-# Optional: strip whitespace from each tag
-df['Tags'] = df['Tags'].apply(lambda x: [tag.strip() for tag in x])
+# Strip whitespace if it's a list
+df['Tags'] = df['Tags'].apply(lambda x: [tag.strip() for tag in x] if isinstance(x, list) else x)
 
-# Explode the Tags column into separate rows
-df = df.explode('Tags').reset_index(drop=True)
-
+# Explode into multiple rows
+df = df.explode('Tags').reset_index(drop=False)
+df.index = df.index + 1
+df = df.drop(columns=['ID'])
+df = df.rename(columns={'index': 'ID'})
+# Save to new file
 df.to_csv("jobs_expanded.csv", index=False, encoding="utf-8-sig")
+

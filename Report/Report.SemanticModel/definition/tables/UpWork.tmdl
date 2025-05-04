@@ -5,7 +5,7 @@ table UpWork
 		dataType: int64
 		formatString: 0
 		lineageTag: aed5d3f5-dc00-4bdd-b65b-93e214ff7b9c
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
@@ -78,13 +78,12 @@ table UpWork
 
 	column 'est. budget'
 		dataType: double
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 0edf3fb5-393d-45c3-afec-8ded9f1422a5
 		summarizeBy: sum
 		sourceColumn: est. budget
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'est. time'
 		dataType: string
@@ -130,13 +129,11 @@ table UpWork
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\up job_listings_cleaned.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\job_listings_cleaned.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}})
 				in
 				    #"Changed Type"
-
-	changedProperty = Name
 
 	annotation PBI_NavigationStepName = Navigation
 

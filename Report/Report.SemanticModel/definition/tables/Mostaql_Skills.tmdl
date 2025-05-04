@@ -5,7 +5,7 @@ table Mostaql_Skills
 		dataType: int64
 		formatString: 0
 		lineageTag: f557a856-1155-4e79-97d1-ce4d0026e23d
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic

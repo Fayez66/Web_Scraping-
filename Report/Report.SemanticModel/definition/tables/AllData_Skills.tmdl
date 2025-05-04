@@ -5,7 +5,7 @@ table AllData_Skills
 		dataType: int64
 		formatString: 0
 		lineageTag: fdaea467-c1c6-44c0-b0fb-face5a09e0f8
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic

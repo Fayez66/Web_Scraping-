@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "81ffd8e846d3ab6084c8",
+  "position": {
+    "x": 707.70731707317077,
+    "y": 72,
+    "z": 1000,
+    "height": 103.60975609756098,
+    "width": 371.41463414634148,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "card",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UpWork"
+                        }
+                      },
+                      "Property": "Budget"
+                    }
+                  },
+                  "Function": 1
+                }
+              },
+              "queryRef": "Sum(UpWork.Budget)",
+              "nativeQueryRef": "Average of Budget"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "UpWork"
+                      }
+                    },
+                    "Property": "Budget"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
+        "isDefaultSort": true
+      }
+    },
+    "drillFilterOtherVisuals": true
+  }
+}
