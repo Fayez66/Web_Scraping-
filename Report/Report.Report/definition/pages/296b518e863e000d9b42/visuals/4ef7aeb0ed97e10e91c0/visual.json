@@ -1,0 +1,127 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
+  "name": "4ef7aeb0ed97e10e91c0",
+  "position": {
+    "x": 640.09756097560978,
+    "y": 445.17073170731709,
+    "z": 2000,
+    "height": 266.92682926829269,
+    "width": 633.07317073170736,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "UpWork"
+                    }
+                  },
+                  "Property": "Title"
+                }
+              },
+              "queryRef": "UpWork.Title",
+              "nativeQueryRef": "Title"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "UpWork"
+                    }
+                  },
+                  "Property": "Experience Level"
+                }
+              },
+              "queryRef": "UpWork.Experience Level",
+              "nativeQueryRef": "Experience Level"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "UpWork"
+                    }
+                  },
+                  "Property": "Link"
+                }
+              },
+              "queryRef": "UpWork.Link",
+              "nativeQueryRef": "Link"
+            }
+          ]
+        }
+      }
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "275.6444016460614D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "UpWork.Title"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "266.3475064126193D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "UpWork.Link"
+          }
+        }
+      ],
+      "columnFormatting": [
+        {
+          "properties": {
+            "styleTotal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "UpWork.Link"
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

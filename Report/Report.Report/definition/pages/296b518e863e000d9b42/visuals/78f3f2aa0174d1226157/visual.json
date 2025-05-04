@@ -10,10 +10,10 @@
     "tabOrder": 13000
   },
   "visual": {
-    "visualType": "slicer",
+    "visualType": "barChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -29,37 +29,137 @@
               "queryRef": "UpWork.Experience Level",
               "nativeQueryRef": "Experience Level",
               "active": true
-            },
+            }
+          ]
+        },
+        "Y": {
+          "projections": [
             {
               "field": {
-                "Column": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "UpWork"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "UpWork"
+                        }
+                      },
+                      "Property": "est. budget"
                     }
                   },
-                  "Property": "est. budget"
+                  "Function": 1
                 }
               },
-              "queryRef": "UpWork.est. budget",
-              "nativeQueryRef": "Average of est. budget",
-              "active": false
+              "queryRef": "Sum(UpWork.est. budget)",
+              "nativeQueryRef": "Average of est. budget"
             }
           ]
         }
       },
       "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "UpWork"
+                      }
+                    },
+                    "Property": "est. budget"
+                  }
+                },
+                "Function": 1
+              }
+            },
+            "direction": "Descending"
+          }
+        ],
         "isDefaultSort": true
       }
     },
     "objects": {
-      "data": [
+      "dataPoint": [
         {
           "properties": {
-            "mode": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "UpWork"
+                                }
+                              },
+                              "Property": "est. budget"
+                            }
+                          },
+                          "Function": 1
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#70D944'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#003400'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
-                  "Value": "'Basic'"
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }

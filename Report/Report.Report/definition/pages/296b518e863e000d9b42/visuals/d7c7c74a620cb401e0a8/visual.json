@@ -10,7 +10,7 @@
     "tabOrder": 14000
   },
   "visual": {
-    "visualType": "areaChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -83,13 +83,28 @@
     "objects": {
       "legend": [
         {
-          "properties": {}
+          "properties": {
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "categoryAxis": [
         {
           "properties": {
             "concatenateLabels": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "switchAxisPosition": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -217,6 +232,13 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            },
+            "labelOverflow": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             },
@@ -488,6 +510,26 @@
             }
           ]
         }
+      },
+      {
+        "name": "d9801717b8006b0cc8ee",
+        "ordinal": 1,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "UpWork"
+                  }
+                },
+                "Property": "ID"
+              }
+            },
+            "Function": 5
+          }
+        },
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"

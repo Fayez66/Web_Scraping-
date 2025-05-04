@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "352bd11f891b86b53612",
+  "name": "f5b14edb06ba63e96d02",
   "position": {
-    "x": 731,
-    "y": 421,
-    "z": 6000,
-    "height": 282,
-    "width": 539,
-    "tabOrder": 6000
+    "x": 15,
+    "y": 123,
+    "z": 5000,
+    "height": 288,
+    "width": 488,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mostaql_Skills"
+                      "Entity": "Mostaql"
                     }
                   },
-                  "Property": "Tags_en"
+                  "Property": "category_arabic"
                 }
               },
-              "queryRef": "Mostaql_Skills.Tags_en",
-              "nativeQueryRef": "Count of Tags_en",
+              "queryRef": "Mostaql.category_arabic",
+              "nativeQueryRef": "category_arabic",
               "active": true
             }
           ]
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql_Skills"
+                          "Entity": "Mostaql"
                         }
                       },
-                      "Property": "Tags_en"
+                      "Property": "Avg offer"
                     }
                   },
-                  "Function": 5
+                  "Function": 1
                 }
               },
-              "queryRef": "CountNonNull(Mostaql_Skills.Tags_en)",
-              "nativeQueryRef": "Count of Tags_en1"
+              "queryRef": "Sum(Mostaql.Avg offer)",
+              "nativeQueryRef": "Average of Avg offer"
             }
           ]
         }
@@ -65,13 +65,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Mostaql_Skills"
+                        "Entity": "Mostaql"
                       }
                     },
-                    "Property": "Tags_en"
+                    "Property": "Avg offer"
                   }
                 },
-                "Function": 5
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -81,26 +81,6 @@
       }
     },
     "objects": {
-      "legend": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "showGradientLegend": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
       "categoryAxis": [
         {
           "properties": {
@@ -146,7 +126,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "12D"
                 }
               }
             },
@@ -178,7 +158,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'المهارات'"
+                  "Value": "'المجالات'"
                 }
               }
             }
@@ -230,7 +210,7 @@
             "titleFontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "14D"
+                  "Value": "11D"
                 }
               }
             },
@@ -259,7 +239,7 @@
             "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد مرات الطلب'"
+                  "Value": "'متوسط العروض'"
                 }
               }
             }
@@ -267,69 +247,6 @@
         }
       ],
       "dataPoint": [
-        {
-          "properties": {
-            "fill": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "FillRule": {
-                      "Input": {
-                        "Aggregation": {
-                          "Expression": {
-                            "Column": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Entity": "Mostaql_Skills"
-                                }
-                              },
-                              "Property": "Tags_en"
-                            }
-                          },
-                          "Function": 5
-                        }
-                      },
-                      "FillRule": {
-                        "linearGradient2": {
-                          "min": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#FBABB1'"
-                              }
-                            }
-                          },
-                          "max": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#390006'"
-                              }
-                            }
-                          },
-                          "nullColoringStrategy": {
-                            "strategy": {
-                              "Literal": {
-                                "Value": "'asZero'"
-                              }
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          },
-          "selector": {
-            "data": [
-              {
-                "dataViewWildcard": {
-                  "matchingOption": 1
-                }
-              }
-            ]
-          }
-        },
         {
           "properties": {
             "fill": {
@@ -575,6 +492,89 @@
               }
             ]
           }
+        },
+        {
+          "properties": {
+            "fill": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "FillRule": {
+                      "Input": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Entity": "Mostaql"
+                                }
+                              },
+                              "Property": "Avg offer"
+                            }
+                          },
+                          "Function": 1
+                        }
+                      },
+                      "FillRule": {
+                        "linearGradient2": {
+                          "min": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#FBABB1'"
+                              }
+                            }
+                          },
+                          "max": {
+                            "color": {
+                              "Literal": {
+                                "Value": "'#390006'"
+                              }
+                            }
+                          },
+                          "nullColoringStrategy": {
+                            "strategy": {
+                              "Literal": {
+                                "Value": "'asZero'"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "showGradientLegend": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
         }
       ],
       "labels": [
@@ -651,7 +651,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الطلب لمهاره '"
+                  "Value": "'متوسط العروض في مجال'"
                 }
               }
             }
@@ -747,15 +747,15 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "c48d134f0c709573a969",
+        "name": "70962dea92a80639e730",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mostaql_Skills"
+                "Entity": "Mostaql"
               }
             },
-            "Property": "Tags_en"
+            "Property": "category_arabic"
           }
         },
         "type": "TopN",
@@ -771,7 +771,7 @@
                     "From": [
                       {
                         "Name": "m",
-                        "Entity": "Mostaql_Skills",
+                        "Entity": "Mostaql",
                         "Type": 0
                       }
                     ],
@@ -783,7 +783,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "Tags_en"
+                          "Property": "category_arabic"
                         },
                         "Name": "field"
                       }
@@ -800,7 +800,7 @@
                                     "Source": "m"
                                   }
                                 },
-                                "Property": "Tags_en"
+                                "Property": "Avg offer"
                               }
                             },
                             "Function": 5
@@ -816,7 +816,7 @@
             },
             {
               "Name": "m",
-              "Entity": "Mostaql_Skills",
+              "Entity": "Mostaql",
               "Type": 0
             }
           ],
@@ -832,7 +832,7 @@
                             "Source": "m"
                           }
                         },
-                        "Property": "Tags_en"
+                        "Property": "category_arabic"
                       }
                     }
                   ],
@@ -848,15 +848,15 @@
         }
       },
       {
-        "name": "5dbc1b6f326602024ecc",
+        "name": "61762fc0174ee0e34106",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Mostaql_Skills"
+                "Entity": "Mostaql"
               }
             },
-            "Property": "Tags_en"
+            "Property": "category_arabic"
           }
         },
         "type": "Categorical",
@@ -865,7 +865,7 @@
           "From": [
             {
               "Name": "m",
-              "Entity": "Mostaql_Skills",
+              "Entity": "Mostaql",
               "Type": 0
             }
           ],
@@ -883,7 +883,7 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "Tags_en"
+                            "Property": "category_arabic"
                           }
                         }
                       ],
@@ -891,70 +891,7 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'Application development'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Application programming'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Create a website'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Design a website'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Site programming'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Software development'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'programming'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Software engineering'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Site design'"
-                            }
-                          }
-                        ],
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Applications design'"
+                              "Value": "'غير معروف'"
                             }
                           }
                         ]
