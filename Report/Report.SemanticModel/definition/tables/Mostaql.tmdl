@@ -5,7 +5,7 @@ table Mostaql
 		dataType: int64
 		formatString: 0
 		lineageTag: 507f7e0d-4a88-40d3-8f0c-1ae2b6d9dfa0
-		summarizeBy: none
+		summarizeBy: count
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
@@ -109,9 +109,12 @@ table Mostaql
 				let
 				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Mostaqel\job_listings_cleaned.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","Artificial Intelligence / Machine Learning","AI",Replacer.ReplaceText,{"Category_English"}),
+				    #"Replaced Value1" = Table.ReplaceValue(#"Replaced Value","AI","AI & ML",Replacer.ReplaceText,{"Category_English"}),
+				    #"Replaced Value2" = Table.ReplaceValue(#"Replaced Value1","الذكاء الاصطناعي / تعلم الآلة","الذكاء الاصطناعي",Replacer.ReplaceText,{"category_arabic"})
 				in
-				    #"Changed Type"
+				    #"Replaced Value2"
 
 	annotation PBI_NavigationStepName = Navigation
 
