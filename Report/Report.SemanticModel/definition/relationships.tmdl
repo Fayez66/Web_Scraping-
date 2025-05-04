@@ -1,0 +1,34 @@
+relationship 4d09756a-c1e8-40ff-a8d6-c478499f80ea
+	joinOnDateBehavior: datePartOnly
+	fromColumn: UpWork.Posted
+	toColumn: LocalDateTable_cf6888e5-b6c7-448a-8109-1e2e53c496a8.Date
+
+relationship 65edaad1-a5e8-446c-9508-9c94331ef92f
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Freelance_Yard.'Date Posted'
+	toColumn: LocalDateTable_90ceed3a-51e2-4344-a376-4dc41c08675e.Date
+
+relationship 67088b2a-8e64-44ab-92b3-1ea34a84ba8a
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Mostaql.Posted
+	toColumn: LocalDateTable_7f46b7f4-1943-4377-8086-f60de42d36bc.Date
+
+relationship 2847e164-3ba4-489d-bcf8-4b34d636fb30
+	joinOnDateBehavior: datePartOnly
+	fromColumn: 'All Data'.Posted
+	toColumn: LocalDateTable_b6bef76d-b067-4db2-a815-725007c62b4a.Date
+
+relationship 45487c0a-302f-f057-4357-ae01a8a09d6e
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: AllData_Skills.ID
+	toColumn: 'All Data'.ID
+
+relationship f70bb96f-ded5-8161-fa62-589b68c6a17e
+	fromColumn: Mostaql_Skills.ID
+	toColumn: Mostaql.ID
+
+relationship 0158870d-bcd1-98f6-6aa3-1122bf4c48bf
+	fromColumn: UpWork_Skills.ID
+	toColumn: UpWork.ID
+
