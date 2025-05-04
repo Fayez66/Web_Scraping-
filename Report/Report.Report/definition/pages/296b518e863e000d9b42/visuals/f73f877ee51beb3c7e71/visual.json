@@ -10,7 +10,7 @@
     "tabOrder": 9000
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "hundredPercentStackedBarChart",
     "query": {
       "queryState": {
         "Category": {
