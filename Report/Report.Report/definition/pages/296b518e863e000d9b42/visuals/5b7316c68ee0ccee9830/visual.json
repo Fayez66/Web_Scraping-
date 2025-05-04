@@ -2,12 +2,37 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "5b7316c68ee0ccee9830",
   "position": {
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
     "x": 1042,
     "y": 124,
     "z": 6000,
     "height": 66,
     "width": 231,
+<<<<<<< HEAD
+    "tabOrder": 9000
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+    "x": 230.72319201995012,
+    "y": 0,
+    "z": 10000,
+    "height": 149.92518703241896,
+    "width": 316.90773067331668,
+    "tabOrder": 10000
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
     "tabOrder": 6000
+>>>>>>> 9e14879cea46cc6b35cf3990a20c30adb5082d53
   },
   "visual": {
     "visualType": "slicer",
