@@ -67,6 +67,21 @@
               "queryRef": "All Data.Category.1",
               "nativeQueryRef": "Category.1",
               "active": true
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "AllData_Skills"
+                    }
+                  },
+                  "Property": "Tags"
+                }
+              },
+              "queryRef": "AllData_Skills.Tags",
+              "nativeQueryRef": "Tags",
+              "active": false
             }
           ]
         }
@@ -125,7 +140,25 @@
               "All Data.Category.1"
             ],
             "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "All Data"
+                    }
+                  },
+                  "Property": "Category.1"
+                }
+              }
+            ],
             "isPinned": true
+          },
+          {
+            "queryRefs": [
+              "AllData_Skills.Tags"
+            ],
+            "isCollapsed": true
           }
         ],
         "root": {
@@ -134,7 +167,7 @@
               "identityValues": [
                 {
                   "Literal": {
-                    "Value": "'Mostaql'"
+                    "Value": "'UpWork'"
                   }
                 }
               ],
@@ -155,6 +188,89 @@
                 }
               }
             }
+          }
+        }
+      ],
+      "insights": [
+        {
+          "properties": {
+            "isAINode": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "All Data"
+                          }
+                        },
+                        "Property": "UpWork"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'UpWork'"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "All Data"
+                          }
+                        },
+                        "Property": "Category.1"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Mobile Development'"
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "scopeId": {
+                  "Comparison": {
+                    "ComparisonKind": 0,
+                    "Left": {
+                      "Column": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "AllData_Skills"
+                          }
+                        },
+                        "Property": "Tags"
+                      }
+                    },
+                    "Right": {
+                      "Literal": {
+                        "Value": "'Python'"
+                      }
+                    }
+                  }
+                }
+              }
+            ]
           }
         }
       ]
