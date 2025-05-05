@@ -3,7 +3,7 @@ import pandas as pd
 import datetime
 from dateutil.relativedelta import relativedelta
 
-df = pd.read_csv("up job_listings_cleaned.csv")
+df = pd.read_csv("job_listings_cleaned.csv")
 
 # Split tags only if not null
 df['Tags'] = df['Tags'].apply(lambda x: x.split(',') if isinstance(x, str) else x)

@@ -4,10 +4,10 @@
   "position": {
     "x": 560,
     "y": 238.88888888888889,
-    "z": 8000,
+    "z": 9000,
     "height": 193.33333333333331,
     "width": 360,
-    "tabOrder": 8000
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "donutChart",
@@ -249,6 +249,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribution of Experience Level'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
                 }
               }
             }

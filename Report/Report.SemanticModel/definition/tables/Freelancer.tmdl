@@ -8,7 +8,7 @@ table Freelancer
 		summarizeBy: count
 		sourceColumn: ID
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column Title
 		dataType: string
@@ -22,7 +22,7 @@ table Freelancer
 		dataType: int64
 		formatString: 0
 		lineageTag: cb95dc01-378c-4c3d-87dc-007d4b18a801
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Bids
 
 		annotation SummarizationSetBy = Automatic
@@ -31,20 +31,21 @@ table Freelancer
 		dataType: int64
 		formatString: 0
 		lineageTag: a1670908-860b-46ca-bb76-e2755ebc2132
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Days Left to Bid
 
 		annotation SummarizationSetBy = Automatic
 
 	column Price
 		dataType: double
+		formatString: 0
 		lineageTag: 24d87b72-3bad-42c4-9fc0-6fb5acb10ea2
-		summarizeBy: sum
+		summarizeBy: none
 		sourceColumn: Price
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column Type
 		dataType: string

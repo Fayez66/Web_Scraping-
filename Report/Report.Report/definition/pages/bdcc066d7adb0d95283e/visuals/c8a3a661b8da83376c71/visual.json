@@ -4,10 +4,10 @@
   "position": {
     "x": 1001,
     "y": 123,
-    "z": 9000,
+    "z": 5000,
     "height": 288,
     "width": 270,
-    "tabOrder": 9000
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "donutChart",
@@ -300,7 +300,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'right'"
+                  "Value": "'center'"
                 }
               }
             },

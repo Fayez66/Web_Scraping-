@@ -4,7 +4,7 @@
   "position": {
     "x": 17.777777777777779,
     "y": 147.77777777777777,
-    "z": 0,
+    "z": 2000,
     "height": 104.44444444444444,
     "width": 202.22222222222223,
     "tabOrder": 0
@@ -32,8 +32,8 @@
                 }
               },
               "queryRef": "CountNonNull(UpWork.ID)",
-              "nativeQueryRef": "Count of Jobs",
-              "displayName": "Count of Jobs"
+              "nativeQueryRef": "Total Jobs",
+              "displayName": "Total Jobs"
             }
           ]
         }

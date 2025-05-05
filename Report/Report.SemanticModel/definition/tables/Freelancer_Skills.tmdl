@@ -1,0 +1,43 @@
+table Freelancer_Skills
+	lineageTag: 9ecb952d-dce1-4c0a-8560-8e4cfcb3e804
+
+	column index
+		dataType: int64
+		formatString: 0
+		lineageTag: 5ebeac5a-3704-4c8b-8ac8-d071d6150298
+		summarizeBy: sum
+		sourceColumn: index
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 91b9d1bb-38ca-4517-a7f1-ab1b02a17e45
+		summarizeBy: none
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Skills
+		dataType: string
+		lineageTag: 312e01e0-d04d-4c20-a600-90f947b38599
+		summarizeBy: none
+		sourceColumn: Skills
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Freelancer_Skills = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\freelancer\jobs_expanded.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"ID", Int64.Type}, {"Skills", type text}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

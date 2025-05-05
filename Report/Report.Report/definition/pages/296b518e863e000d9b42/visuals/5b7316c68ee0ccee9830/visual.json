@@ -4,7 +4,7 @@
   "position": {
     "x": 17.777777777777779,
     "y": 587.77777777777771,
-    "z": 5000,
+    "z": 7000,
     "height": 114.44444444444444,
     "width": 202.22222222222223,
     "tabOrder": 5000
@@ -38,11 +38,60 @@
       "data": [
         {
           "properties": {
+            "numericStart": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
             "mode": {
               "expr": {
                 "Literal": {
                   "Value": "'Between'"
                 }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {
+            "filter": {
+              "filter": {
+                "Version": 2,
+                "From": [
+                  {
+                    "Name": "u",
+                    "Entity": "UpWork",
+                    "Type": 0
+                  }
+                ],
+                "Where": [
+                  {
+                    "Condition": {
+                      "Comparison": {
+                        "ComparisonKind": 2,
+                        "Left": {
+                          "Column": {
+                            "Expression": {
+                              "SourceRef": {
+                                "Source": "u"
+                              }
+                            },
+                            "Property": "Budget"
+                          }
+                        },
+                        "Right": {
+                          "Literal": {
+                            "Value": "0D"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
               }
             }
           }
@@ -202,7 +251,7 @@
                   },
                   "Right": {
                     "Literal": {
-                      "Value": "200000L"
+                      "Value": "25000L"
                     }
                   }
                 }

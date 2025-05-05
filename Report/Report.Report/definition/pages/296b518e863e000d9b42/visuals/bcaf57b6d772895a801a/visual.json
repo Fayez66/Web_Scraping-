@@ -4,10 +4,10 @@
   "position": {
     "x": 370,
     "y": 451.11111111111109,
-    "z": 7000,
+    "z": 8000,
     "height": 251.11111111111111,
     "width": 407.77777777777777,
-    "tabOrder": 7000
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "lineChart",
@@ -205,6 +205,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Number of Jobs by Date'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

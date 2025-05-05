@@ -28,3 +28,13 @@ relationship 0158870d-bcd1-98f6-6aa3-1122bf4c48bf
 	fromColumn: UpWork_Skills.ID
 	toColumn: UpWork.ID
 
+relationship fad698ca-4e5c-bea5-0a83-dbc0efc86bfd
+	fromColumn: Freelancer_Skills.ID
+	toColumn: Freelancer.ID
+
+relationship 298a879f-e98f-ca1c-7b49-acf59ce5c0e9
+	crossFilteringBehavior: bothDirections
+	fromCardinality: one
+	fromColumn: Mostaql_Skills.ID
+	toColumn: Mostaql.ID
+

@@ -4,10 +4,10 @@
   "position": {
     "x": 229.82543640897754,
     "y": 15.261845386533665,
-    "z": 13000,
+    "z": 14000,
     "height": 416.55860349127181,
     "width": 314.214463840399,
-    "tabOrder": 13000
+    "tabOrder": 12000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -27,8 +27,9 @@
                 }
               },
               "queryRef": "UpWork.Category.1",
-              "nativeQueryRef": "Category.1",
-              "active": true
+              "nativeQueryRef": "Category",
+              "active": true,
+              "displayName": "Category"
             }
           ]
         },
@@ -110,6 +111,20 @@
                   "Value": "false"
                 }
               }
+            },
+            "maxMarginFactor": {
+              "expr": {
+                "Literal": {
+                  "Value": "35L"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "9D"
+                }
+              }
             }
           }
         }
@@ -125,6 +140,20 @@
               }
             },
             "logAxisScale": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "showAxisTitle": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -303,6 +332,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Categories by Jos'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

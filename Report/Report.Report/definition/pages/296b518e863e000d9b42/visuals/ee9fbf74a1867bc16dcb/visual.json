@@ -4,7 +4,7 @@
   "position": {
     "x": 930,
     "y": 238.88888888888889,
-    "z": 2000,
+    "z": 4000,
     "height": 193.33333333333331,
     "width": 333.33333333333331,
     "tabOrder": 2000
@@ -219,6 +219,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Distribution of Job Type'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

@@ -4,7 +4,7 @@
   "position": {
     "x": 788.88888888888891,
     "y": 451.11111111111109,
-    "z": 4000,
+    "z": 6000,
     "height": 251.11111111111111,
     "width": 474.44444444444446,
     "tabOrder": 4000
@@ -323,6 +323,27 @@
               "expr": {
                 "Literal": {
                   "Value": "'Arial'"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 5 Skills'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
                 }
               }
             }

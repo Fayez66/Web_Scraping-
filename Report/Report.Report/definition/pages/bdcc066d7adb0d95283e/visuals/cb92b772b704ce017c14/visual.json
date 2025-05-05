@@ -4,10 +4,10 @@
   "position": {
     "x": 510,
     "y": 123,
-    "z": 2000,
+    "z": 1000,
     "height": 288,
     "width": 483,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "clusteredBarChart",
@@ -637,7 +637,7 @@
             "alignment": {
               "expr": {
                 "Literal": {
-                  "Value": "'right'"
+                  "Value": "'center'"
                 }
               }
             },

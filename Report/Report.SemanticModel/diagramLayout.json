@@ -101,10 +101,24 @@
         },
         {
           "location": {
-            "x": 1284,
-            "y": 225
+            "x": 717,
+            "y": 441
           },
           "nodeIndex": "Mostaql_Skills",
+          "nodeLineageTag": "0185cfd3-517a-4361-b408-4b1d3cf9eb42",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 0
+        },
+        {
+          "location": {
+            "x": 335,
+            "y": 426
+          },
+          "nodeIndex": "Freelancer_Skills",
+          "nodeLineageTag": "9ecb952d-dce1-4c0a-8560-8e4cfcb3e804",
           "size": {
             "height": 152,
             "width": 234
