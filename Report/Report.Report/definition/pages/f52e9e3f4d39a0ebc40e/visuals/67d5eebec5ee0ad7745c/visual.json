@@ -1,19 +1,38 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "ea5e5138cd0b190e934a",
+  "name": "67d5eebec5ee0ad7745c",
   "position": {
-    "x": 232.77777777777783,
-    "y": 0,
-    "z": 2000,
-    "height": 94.444444444444443,
-    "width": 264.44444444444446,
-    "tabOrder": 1000
+    "x": 8.88888888888889,
+    "y": 123.33333333333333,
+    "z": 7000,
+    "height": 158.88888888888889,
+    "width": 631.11111111111109,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "lineChart",
     "query": {
       "queryState": {
-        "Values": {
+        "Category": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Freelancer"
+                    }
+                  },
+                  "Property": "Days Left to Bid"
+                }
+              },
+              "queryRef": "Freelancer.Days Left to Bid",
+              "nativeQueryRef": "Days Left to Bid",
+              "active": true
+            }
+          ]
+        },
+        "Y": {
           "projections": [
             {
               "field": {
@@ -25,15 +44,14 @@
                           "Entity": "Freelancer"
                         }
                       },
-                      "Property": "Price"
+                      "Property": "ID"
                     }
                   },
-                  "Function": 1
+                  "Function": 2
                 }
               },
-              "queryRef": "CountNonNull(Freelancer.Price)",
-              "nativeQueryRef": "Average of Price per Hour",
-              "displayName": "Average of Price per Hour"
+              "queryRef": "CountNonNull(Freelancer.ID)",
+              "nativeQueryRef": "Count of ID1"
             }
           ]
         }
@@ -50,10 +68,10 @@
                         "Entity": "Freelancer"
                       }
                     },
-                    "Property": "Price"
+                    "Property": "ID"
                   }
                 },
-                "Function": 1
+                "Function": 2
               }
             },
             "direction": "Descending"
@@ -63,9 +81,62 @@
       }
     },
     "objects": {
+      "categoryAxis": [
+        {
+          "properties": {
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "valueAxis": [
+        {
+          "properties": {
+            "invertAxis": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "lineStyles": [
+        {
+          "properties": {
+            "areaShow": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
       "labels": [
         {
           "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
             "fontFamily": {
               "expr": {
                 "Literal": {
@@ -79,17 +150,11 @@
                   "Value": "25D"
                 }
               }
-            }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "bold": {
+            },
+            "labelPrecision": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "0L"
                 }
               }
             }
@@ -102,6 +167,34 @@
         {
           "properties": {
             "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "bold": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -210,11 +303,10 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9f23c49f206a59c01d93",
   "filterConfig": {
     "filters": [
       {
-        "name": "2a4e8c5003d033e0857b",
+        "name": "20d61470644bd5b45306",
         "field": {
           "Column": {
             "Expression": {
@@ -222,7 +314,7 @@
                 "Entity": "Freelancer"
               }
             },
-            "Property": "Type"
+            "Property": "Days Left to Bid"
           }
         },
         "type": "Categorical",
@@ -247,7 +339,7 @@
                             "Source": "f"
                           }
                         },
-                        "Property": "Type"
+                        "Property": "Days Left to Bid"
                       }
                     }
                   ],
@@ -255,85 +347,53 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Hourly'"
+                          "Value": "0L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "1L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "2L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "3L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "4L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "5L"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "6L"
                         }
                       }
                     ]
                   ]
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "2b73221ed30e7e5bc3bb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Freelancer"
-              }
-            },
-            "Property": "Category"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "Freelancer",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "f"
-                              }
-                            },
-                            "Property": "Category"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Other'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
                 }
               }
             }

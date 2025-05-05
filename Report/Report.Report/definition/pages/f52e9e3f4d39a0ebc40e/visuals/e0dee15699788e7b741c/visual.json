@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "e0dee15699788e7b741c",
   "position": {
-    "x": 1077.7777777777778,
-    "y": 10,
-    "z": 0,
+    "x": 518.88888888888891,
+    "y": 0,
+    "z": 1000,
     "height": 94.444444444444443,
-    "width": 194.44444444444443,
+    "width": 186.66666666666666,
     "tabOrder": 0
   },
   "visual": {
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "CountNonNull(Freelancer.ID)",
-              "nativeQueryRef": "Count of ID1"
+              "nativeQueryRef": "Total Jobs",
+              "displayName": "Total Jobs"
             }
           ]
         }
@@ -208,5 +209,6 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  }
+  },
+  "parentGroupName": "9f23c49f206a59c01d93"
 }

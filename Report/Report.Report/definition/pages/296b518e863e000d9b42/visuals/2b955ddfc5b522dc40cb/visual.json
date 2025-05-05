@@ -87,6 +87,13 @@
             "overFlowStyle": {
               "expr": {
                 "Literal": {
+                  "Value": "1D"
+                }
+              }
+            },
+            "overFlowDirection": {
+              "expr": {
+                "Literal": {
                   "Value": "0D"
                 }
               }

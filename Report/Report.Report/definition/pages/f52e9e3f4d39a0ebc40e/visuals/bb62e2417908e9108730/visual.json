@@ -3,11 +3,11 @@
   "name": "bb62e2417908e9108730",
   "position": {
     "x": 827.77777777777771,
-    "y": 303.33333333333331,
-    "z": 4000,
-    "height": 408.88888888888886,
-    "width": 444.44444444444446,
-    "tabOrder": 4000
+    "y": 302.22222222222223,
+    "z": 1000,
+    "height": 398.88888888888886,
+    "width": 436.66666666666663,
+    "tabOrder": 2000
   },
   "visual": {
     "visualType": "barChart",
@@ -335,6 +335,13 @@
                   "Value": "'Arial'"
                 }
               }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top 10 Skills'"
+                }
+              }
             }
           }
         }
@@ -485,14 +492,14 @@
                         [
                           {
                             "Literal": {
-                              "Value": "'Other'"
+                              "Value": "null"
                             }
                           }
                         ],
                         [
                           {
                             "Literal": {
-                              "Value": "null"
+                              "Value": "'Other'"
                             }
                           }
                         ]

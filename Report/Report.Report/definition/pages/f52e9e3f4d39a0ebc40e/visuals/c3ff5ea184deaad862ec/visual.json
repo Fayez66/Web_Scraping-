@@ -2,12 +2,12 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "c3ff5ea184deaad862ec",
   "position": {
-    "x": 467.77777777777777,
-    "y": 502.22222222222223,
+    "x": 466.66666666666663,
+    "y": 464.44444444444446,
     "z": 3000,
-    "height": 210,
-    "width": 344.44444444444446,
-    "tabOrder": 3000
+    "height": 236.66666666666666,
+    "width": 345.55555555555554,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "donutChart",
@@ -88,6 +88,41 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Total Jobs by Type'"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'center'"
+                }
+              }
+            },
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
                 }
               }
             }

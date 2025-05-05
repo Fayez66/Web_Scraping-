@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "02c2e2a0709ce0da2008",
   "position": {
-    "x": 0,
+    "x": 400,
     "y": 10,
     "z": 0,
     "height": 113,
-    "width": 1063,
+    "width": 663,
     "tabOrder": 0
   },
   "visual": {
@@ -15,44 +15,6 @@
       "queryState": {
         "Data": {
           "projections": [
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mostaql"
-                        }
-                      },
-                      "Property": "Avg offer"
-                    }
-                  },
-                  "Function": 0
-                }
-              },
-              "queryRef": "Sum(Mostaql.Avg offer)2",
-              "nativeQueryRef": "Sum of Avg offer"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mostaql"
-                        }
-                      },
-                      "Property": "Avg offer"
-                    }
-                  },
-                  "Function": 4
-                }
-              },
-              "queryRef": "Sum(Mostaql.Avg offer)1",
-              "nativeQueryRef": "Max of Avg offer"
-            },
             {
               "field": {
                 "Aggregation": {
@@ -128,7 +90,7 @@
                     "Property": "Avg offer"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"
@@ -356,34 +318,6 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'مجموع العروض'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Avg offer)2"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'اكبر عرض '"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Avg offer)1"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
                   "Value": "'متوسط العروض'"
                 }
               }
@@ -474,10 +408,36 @@
             "id": "default"
           }
         }
+      ],
+      "overFlow": [
+        {
+          "properties": {
+            "overFlowStyle": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "visualContainerObjects": {
       "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "dropShadow": [
         {
           "properties": {
             "show": {

@@ -29,6 +29,47 @@
           }
         }
       }
+    ],
+    "displayArea": [
+      {
+        "properties": {
+          "verticalAlignment": {
+            "expr": {
+              "Literal": {
+                "Value": "'Middle'"
+              }
+            }
+          }
+        }
+      }
     ]
-  }
+  },
+  "type": "Tooltip",
+  "visualInteractions": [
+    {
+      "source": "0769397607aaa66e7e4e",
+      "target": "3125cec00b5d3106a905",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0769397607aaa66e7e4e",
+      "target": "ea5e5138cd0b190e934a",
+      "type": "NoFilter"
+    },
+    {
+      "source": "0769397607aaa66e7e4e",
+      "target": "c3ff5ea184deaad862ec",
+      "type": "DataFilter"
+    },
+    {
+      "source": "bb62e2417908e9108730",
+      "target": "0468dff256c0a4980dc2",
+      "type": "DataFilter"
+    },
+    {
+      "source": "0468dff256c0a4980dc2",
+      "target": "bb62e2417908e9108730",
+      "type": "DataFilter"
+    }
+  ]
 }

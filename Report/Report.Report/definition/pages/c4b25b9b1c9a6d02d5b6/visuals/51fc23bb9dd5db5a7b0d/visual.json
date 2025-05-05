@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "51fc23bb9dd5db5a7b0d",
   "position": {
-    "x": 918,
-    "y": 456,
+    "x": 918.00000000000011,
+    "y": 455.55555555555554,
     "z": 4000,
     "height": 246,
     "width": 354,
@@ -47,11 +47,11 @@
                       "Property": "Budget"
                     }
                   },
-                  "Function": 0
+                  "Function": 1
                 }
               },
               "queryRef": "Sum(Freelance_Yard.Budget)",
-              "nativeQueryRef": "Sum of Budget"
+              "nativeQueryRef": "Average of Budget"
             }
           ]
         }
@@ -71,7 +71,7 @@
                     "Property": "Budget"
                   }
                 },
-                "Function": 0
+                "Function": 1
               }
             },
             "direction": "Descending"

@@ -2,9 +2,9 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
   "name": "3125cec00b5d3106a905",
   "position": {
-    "x": 616.66666666666663,
-    "y": 10,
-    "z": 5000,
+    "x": 0,
+    "y": 0,
+    "z": 6000,
     "height": 94.444444444444443,
     "width": 211.11111111111111,
     "tabOrder": 5000
@@ -32,7 +32,8 @@
                 }
               },
               "queryRef": "CountNonNull(Freelancer.Price)",
-              "nativeQueryRef": "Average of Price"
+              "nativeQueryRef": "Average of Budget",
+              "displayName": "Average of Budget"
             }
           ]
         }
@@ -209,6 +210,7 @@
     },
     "drillFilterOtherVisuals": true
   },
+  "parentGroupName": "9f23c49f206a59c01d93",
   "filterConfig": {
     "filters": [
       {

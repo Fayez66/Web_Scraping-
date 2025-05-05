@@ -4606,6 +4606,16 @@ cultureInfo en-US
 			            },
 			            "Weight": 0.591
 			          }
+			        },
+			        {
+			          "Field": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
 			        }
 			      ]
 			    },
@@ -6265,108 +6275,654 @@ cultureInfo en-US
 			          }
 			        }
 			      ]
+			    },
+			    "up_work_skill.index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "UpWork_Skills",
+			          "ConceptualProperty": "index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "index": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "directory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalogue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalog": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "guide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "file": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "manifestation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indicator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "freelancer_skill": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Freelancer_Skills"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "freelancer skill": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "Freelancer_Skills": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "freelancer ability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer talent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer cleverness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer dexterity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer expertise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer proficiency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer skillfulness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer handiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer knack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "freelancer aptitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        }
+			      ]
+			    },
+			    "freelancer_skill.index": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Freelancer_Skills",
+			          "ConceptualProperty": "index"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "index": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "directory": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalogue": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "catalog": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "guide": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "file": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "key": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "manifestation": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "pointer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indication": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "indicator": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "freelancer_skill.ID": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Freelancer_Skills",
+			          "ConceptualProperty": "ID"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "ID": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.736
+			          }
+			        },
+			        {
+			          "credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.714
+			          }
+			        }
+			      ]
+			    },
+			    "freelancer_skill.skill": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Freelancer_Skills",
+			          "ConceptualProperty": "Skills"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "skill": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "ability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "talent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "cleverness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "dexterity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "expertise": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "proficiency": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "skillfulness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "handiness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "knack": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "aptitude": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        }
+			      ]
+			    },
+			    "freelancer.top_skill": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Freelancer",
+			          "ConceptualProperty": "Top skill"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "top skill": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "best skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "first skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "leading skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "maximum skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "peak skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "upper skill": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.582
+			          }
+			        },
+			        {
+			          "top ability": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "top talent": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "top cleverness": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "top dexterity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "Most in-demand skill": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "mostaql_posted_has_date_hierarchy": {
-			      "Binding": {
-			        "ConceptualEntity": "Mostaql"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mostaql.posted": {
-			          "Target": {
-			            "Entity": "mostaql.posted"
-			          }
-			        },
-			        "mostaql.posted.date_hierarchy": {
-			          "Target": {
-			            "Entity": "mostaql.posted.date_hierarchy"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mostaql.posted"
-			            },
-			            "Object": {
-			              "Role": "mostaql.posted.date_hierarchy"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "posted_have_posted_date_hierarchies"
-			        }
-			      ]
-			    },
-			    "freelance_yard_date_posted_date_hierarchy_has_freelance_yard_date_posted_day": {
-			      "Binding": {
-			        "ConceptualEntity": "Freelance_Yard"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "freelance_yard.date_posted.date_hierarchy": {
-			          "Target": {
-			            "Entity": "freelance_yard.date_posted.date_hierarchy"
-			          }
-			        },
-			        "freelance_yard.date_posted.day": {
-			          "Target": {
-			            "Entity": "freelance_yard.date_posted.day"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "freelance_yard.date_posted.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "freelance_yard.date_posted.day"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchy_posted_have_day_posted"
-			        }
-			      ]
-			    },
-			    "freelance_yard_date_posted_date_hierarchy_has_freelance_yard_date_posted_month": {
-			      "Binding": {
-			        "ConceptualEntity": "Freelance_Yard"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "freelance_yard.date_posted.date_hierarchy": {
-			          "Target": {
-			            "Entity": "freelance_yard.date_posted.date_hierarchy"
-			          }
-			        },
-			        "freelance_yard.date_posted.month": {
-			          "Target": {
-			            "Entity": "freelance_yard.date_posted.month"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "freelance_yard.date_posted.date_hierarchy"
-			            },
-			            "Object": {
-			              "Role": "freelance_yard.date_posted.month"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "date_hierarchy_posted_have_month_posted"
-			        }
-			      ]
-			    },
 			    "freelance_yard_date_posted_date_hierarchy_has_freelance_yard_date_posted_quarter": {
 			      "Binding": {
 			        "ConceptualEntity": "Freelance_Yard"
@@ -6627,7 +7183,86 @@ cultureInfo en-US
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "posted_have_posted_date_hierarchies1"
+			          "ID": "posted_have_posted_date_hierarchies"
+			        }
+			      ]
+			    },
+			    "freelancer_skill_has_freelancer": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelancer_Skills"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelancer_skill": {
+			          "Target": {
+			            "Entity": "freelancer_skill"
+			          }
+			        },
+			        "freelancer": {
+			          "Target": {
+			            "Entity": "freelancer"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelancer_skill"
+			            },
+			            "Object": {
+			              "Role": "freelancer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "freelancer_skills_have_freelancers"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelancer"
+			            },
+			            "Object": {
+			              "Role": "freelancer_skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "freelancers_have_freelancer_skills"
+			        }
+			      ]
+			    },
+			    "mostaql_skill_has_mostaql": {
+			      "Binding": {
+			        "ConceptualEntity": "Mostaql_Skills"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mostaql_skill": {
+			          "Target": {
+			            "Entity": "mostaql_skill"
+			          }
+			        },
+			        "mostaql": {
+			          "Target": {
+			            "Entity": "mostaql"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mostaql_skill"
+			            },
+			            "Object": {
+			              "Role": "mostaql"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mostaql_skills_have_mostaqls"
 			        }
 			      ]
 			    },
@@ -6740,6 +7375,171 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "all_data_have_all_data_skills"
+			        }
+			      ]
+			    },
+			    "mostaql_has_mostaql_skill": {
+			      "Binding": {
+			        "ConceptualEntity": "Mostaql"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mostaql": {
+			          "Target": {
+			            "Entity": "mostaql"
+			          }
+			        },
+			        "mostaql_skill": {
+			          "Target": {
+			            "Entity": "mostaql_skill"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mostaql"
+			            },
+			            "Object": {
+			              "Role": "mostaql_skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mostaqls_have_mostaql_skills"
+			        }
+			      ]
+			    },
+			    "freelancer_has_top_skill": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelancer"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelancer": {
+			          "Target": {
+			            "Entity": "freelancer"
+			          }
+			        },
+			        "freelancer.top_skill": {
+			          "Target": {
+			            "Entity": "freelancer.top_skill"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelancer"
+			            },
+			            "Object": {
+			              "Role": "freelancer.top_skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "freelancers_have_top_skill"
+			        }
+			      ]
+			    },
+			    "freelancer_skill_has_skill": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelancer_Skills"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelancer_skill": {
+			          "Target": {
+			            "Entity": "freelancer_skill"
+			          }
+			        },
+			        "freelancer_skill.skill": {
+			          "Target": {
+			            "Entity": "freelancer_skill.skill"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelancer_skill"
+			            },
+			            "Object": {
+			              "Role": "freelancer_skill.skill"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "freelancer_skills_have_skills"
+			        }
+			      ]
+			    },
+			    "freelancer_skill_has_index": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelancer_Skills"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelancer_skill": {
+			          "Target": {
+			            "Entity": "freelancer_skill"
+			          }
+			        },
+			        "freelancer_skill.index": {
+			          "Target": {
+			            "Entity": "freelancer_skill.index"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelancer_skill"
+			            },
+			            "Object": {
+			              "Role": "freelancer_skill.index"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "freelancer_skills_have_indices"
+			        }
+			      ]
+			    },
+			    "up_work_skill_has_index": {
+			      "Binding": {
+			        "ConceptualEntity": "UpWork_Skills"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "up_work_skill": {
+			          "Target": {
+			            "Entity": "up_work_skill"
+			          }
+			        },
+			        "up_work_skill.index": {
+			          "Target": {
+			            "Entity": "up_work_skill.index"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "up_work_skill"
+			            },
+			            "Object": {
+			              "Role": "up_work_skill.index"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "up_work_skill_have_indices"
 			        }
 			      ]
 			    },
@@ -6885,39 +7685,6 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "up_work_skill_have_tags"
-			        }
-			      ]
-			    },
-			    "up_work_skill_has_index": {
-			      "Binding": {
-			        "ConceptualEntity": "UpWork_Skills"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "up_work_skill": {
-			          "Target": {
-			            "Entity": "up_work_skill"
-			          }
-			        },
-			        "up_work_skill.index": {
-			          "Target": {
-			            "Entity": "up_work_skill.index"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "up_work_skill"
-			            },
-			            "Object": {
-			              "Role": "up_work_skill.index"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "up_work_skill_have_indices"
 			        }
 			      ]
 			    },
@@ -7948,6 +8715,33 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mostaqls_have_avg_offers"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "mostaql"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "mostaql.avg_offer"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "avg_offer_indicates_how_expensive_mostaqls_are"
 			        }
 			      ]
 			    },
@@ -8225,6 +9019,33 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "freelance_yards_have_budgets"
+			        },
+			        {
+			          "Adjective": {
+			            "Subject": {
+			              "Role": "freelance_yard"
+			            },
+			            "Adjectives": [
+			              {
+			                "expensive": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Antonyms": [
+			              {
+			                "cheap": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Measurement": {
+			              "Role": "freelance_yard.budget"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "budget_indicates_how_expensive_freelance_yards_are"
 			        }
 			      ]
 			    },
@@ -9126,6 +9947,105 @@ cultureInfo en-US
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "up_work_are_posted_on_posted"
+			        }
+			      ]
+			    },
+			    "freelance_yard_date_posted_date_hierarchy_has_freelance_yard_date_posted_month": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelance_Yard"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelance_yard.date_posted.date_hierarchy": {
+			          "Target": {
+			            "Entity": "freelance_yard.date_posted.date_hierarchy"
+			          }
+			        },
+			        "freelance_yard.date_posted.month": {
+			          "Target": {
+			            "Entity": "freelance_yard.date_posted.month"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelance_yard.date_posted.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "freelance_yard.date_posted.month"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_posted_have_month_posted"
+			        }
+			      ]
+			    },
+			    "freelance_yard_date_posted_date_hierarchy_has_freelance_yard_date_posted_day": {
+			      "Binding": {
+			        "ConceptualEntity": "Freelance_Yard"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "freelance_yard.date_posted.date_hierarchy": {
+			          "Target": {
+			            "Entity": "freelance_yard.date_posted.date_hierarchy"
+			          }
+			        },
+			        "freelance_yard.date_posted.day": {
+			          "Target": {
+			            "Entity": "freelance_yard.date_posted.day"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "freelance_yard.date_posted.date_hierarchy"
+			            },
+			            "Object": {
+			              "Role": "freelance_yard.date_posted.day"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "date_hierarchy_posted_have_day_posted"
+			        }
+			      ]
+			    },
+			    "mostaql_posted_has_date_hierarchy": {
+			      "Binding": {
+			        "ConceptualEntity": "Mostaql"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mostaql.posted": {
+			          "Target": {
+			            "Entity": "mostaql.posted"
+			          }
+			        },
+			        "mostaql.posted.date_hierarchy": {
+			          "Target": {
+			            "Entity": "mostaql.posted.date_hierarchy"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mostaql.posted"
+			            },
+			            "Object": {
+			              "Role": "mostaql.posted.date_hierarchy"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "posted_have_posted_date_hierarchies1"
 			        }
 			      ]
 			    },

@@ -1,6 +1,27 @@
 table Freelancer
 	lineageTag: f9111af4-c020-4d3d-b3ec-146d3b638aad
 
+	measure 'Top skill' = ```
+			
+			VAR SummaryTable =
+			    ADDCOLUMNS (
+			        SUMMARIZE ( 'Freelancer_Skills', 'Freelancer_Skills'[Skills] ),
+			        "TopSkill", CALCULATE ( count ( 'Freelancer_Skills'[Skills] ) )
+			    )
+			VAR TopProduct =
+			    TOPN ( 1, SummaryTable, [TopSkill] , DESC )
+			RETURN
+			    CONCATENATEX (
+			        TopProduct,
+			        'Freelancer_Skills'[Skills] & " " & FORMAT ([TopSkill], "#,##0" ),","
+			        
+			    )
+			
+			
+			
+			```
+		lineageTag: 15d52444-965d-4b44-b911-07d63a2f9e24
+
 	column ID
 		dataType: int64
 		formatString: 0
@@ -38,14 +59,12 @@ table Freelancer
 
 	column Price
 		dataType: double
-		formatString: 0
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 24d87b72-3bad-42c4-9fc0-6fb5acb10ea2
 		summarizeBy: none
 		sourceColumn: Price
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column Type
 		dataType: string
@@ -85,9 +104,10 @@ table Freelancer
 				let
 				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\freelancer\Cleaned.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Bids", Int64.Type}, {"Days Left to Bid", Int64.Type}, {"Price", type number}, {"Type", type text}, {"Skills", type text}, {"Link", type text}, {"Category", type text}})
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Bids", Int64.Type}, {"Days Left to Bid", Int64.Type}, {"Price", type number}, {"Type", type text}, {"Skills", type text}, {"Link", type text}, {"Category", type text}}),
+				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","Artificial Intelligence / Machine Learning","AI & ML",Replacer.ReplaceText,{"Category"})
 				in
-				    #"Changed Type"
+				    #"Replaced Value"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -1,6 +1,27 @@
 table Mostaql
 	lineageTag: 7e713b1b-9f09-4647-adeb-74e97d601186
 
+	measure 'Most skill' = ```
+			
+			VAR SummaryTable =
+			    ADDCOLUMNS (
+			        SUMMARIZE ( 'Mostaql_Skills', 'Mostaql_Skills'[Tags_en] ),
+			        "TopSkill", CALCULATE ( count ( 'Mostaql_Skills'[Tags_en] ) )
+			    )
+			VAR TopProduct =
+			    TOPN ( 1, SummaryTable, [TopSkill] , DESC )
+			RETURN
+			    CONCATENATEX (
+			        TopProduct,
+			        'Mostaql_Skills'[Tags_en] & ": " & FORMAT ([TopSkill], "#,##0" ),","
+			        
+			    )
+			
+			
+			
+			```
+		lineageTag: 472ce1ac-afdb-4580-bde8-7f22ed36b202
+
 	column ID
 		dataType: int64
 		formatString: 0
@@ -52,14 +73,12 @@ table Mostaql
 
 	column 'Avg offer'
 		dataType: double
-		formatString: 0
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: b24ae3de-74c9-41e9-8355-fdf5c4b289c9
 		summarizeBy: sum
 		sourceColumn: Avg offer
 
 		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isDecimal":true}
 
 	column Duration(Days)
 		dataType: int64
