@@ -39,7 +39,7 @@
               },
               "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Year",
               "nativeQueryRef": "Date Posted Year",
-              "active": false
+              "active": true
             },
             {
               "field": {
@@ -91,7 +91,7 @@
               },
               "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Month",
               "nativeQueryRef": "Date Posted Month",
-              "active": true
+              "active": false
             },
             {
               "field": {
