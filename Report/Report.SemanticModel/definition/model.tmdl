@@ -21,12 +21,12 @@ ref table Freelance_Yard
 ref table LocalDateTable_90ceed3a-51e2-4344-a376-4dc41c08675e
 ref table Mostaql
 ref table LocalDateTable_7f46b7f4-1943-4377-8086-f60de42d36bc
-ref table Mostaql_Skills
 ref table Freelancer
 ref table 'All Data'
 ref table LocalDateTable_b6bef76d-b067-4db2-a815-725007c62b4a
 ref table AllData_Skills
 ref table UpWork_Skills
+ref table Mostaql_Skills
 ref table Freelancer_Skills
 
 ref cultureInfo en-US

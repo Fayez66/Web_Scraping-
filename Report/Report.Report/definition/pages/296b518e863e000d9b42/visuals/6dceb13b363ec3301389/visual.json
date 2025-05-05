@@ -47,10 +47,10 @@
                       "Property": "ID"
                     }
                   },
-                  "Function": 2
+                  "Function": 5
                 }
               },
-              "queryRef": "Count(UpWork_Skills.ID)",
+              "queryRef": "CountNonNull(UpWork_Skills.ID)",
               "nativeQueryRef": "Count of ID1"
             }
           ]
@@ -71,7 +71,7 @@
                     "Property": "ID"
                   }
                 },
-                "Function": 2
+                "Function": 5
               }
             },
             "direction": "Descending"
