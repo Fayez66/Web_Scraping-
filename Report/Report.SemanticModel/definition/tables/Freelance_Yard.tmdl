@@ -44,13 +44,12 @@ table Freelance_Yard
 
 	column Budget
 		dataType: double
+		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 168e3edd-8aac-4f43-9cc2-380e20e1edc7
 		summarizeBy: sum
 		sourceColumn: Budget
 
 		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Category
 		dataType: string
