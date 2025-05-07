@@ -163,7 +163,3 @@ expanded.loc[:, 'ID'] = expanded['ID'] + 1
 
 expanded.index.name = 'index'
 expanded.to_csv("jobs_expanded.csv", index=True, encoding="utf-8-sig")
-
-
-
-

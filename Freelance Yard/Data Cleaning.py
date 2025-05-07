@@ -1,6 +1,6 @@
 import re
 import pandas as pd
-
+from AllData.functions import classify_job
 
 # Load the data
 df = pd.read_csv("job_listings.csv")
@@ -66,11 +66,11 @@ df = process_file(df)
 
 df['Category'] = df['Category'].str.strip(")")
 df['Category'] = df['Category'].str.strip("(")
-
+df['Category.1'] = df['Title'].apply(classify_job)
 # If it's a column in your DataFrame:
 df['Date Posted'] = df['Date Posted'].str.extract(r'(\d{2}-\d{2}-\d{4})')  # extract the date part
 df['Date Posted'] = pd.to_datetime(df['Date Posted'], format='%d-%m-%Y')
 
 # --- Save to CSV ---
-df.to_csv("job_listings_cleaned.csv", index=False, encoding="utf-8-sig")
+df.to_csv("test.csv", index=False, encoding="utf-8-sig")
 
