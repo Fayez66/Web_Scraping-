@@ -4,13 +4,16 @@ from selenium.webdriver.chrome.service import Service
 from dateutil.relativedelta import relativedelta
 from selenium.webdriver.common.by import By
 from selenium import webdriver
+from pathlib import Path
 import pandas as pd
 import datetime
 import time
 import re
 
+base_path = Path(__file__).resolve().parents[1]
 
-path = r"E:\Apps\chromedriver-win64\chromedriver.exe"
+path = base_path / r"chromedriver-win64\chromedriver.exe"
+
 categories = [531770282580668420,531770282580668418,531770282580668419]
 categories_name = {531770282580668420: "Data Science & Analytics", 531770282580668418: "Web, Mobile & Software Dev",
                    531770282580668419: "IT & NETWORKING"}
@@ -104,7 +107,6 @@ for category in categories:
 
         # Save incrementally after each page
         data = {
-            "ID": list(range(1, len(titles) + 1)),
             'Category': field,
             'job_type': job_type,
             "Title": titles,
@@ -114,16 +116,11 @@ for category in categories:
             'duration': duration,
             "Tags": [", ".join(tag_list) for tag_list in tags],
             "Link": links,
-        }
-        df = pd.DataFrame(data)
-        df.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Upwork\job_listings.csv", index=False, encoding="utf-8-sig")
-
-        desc_data = {
-            "ID": list(range(1, len(titles) + 1)),
             "Description": descriptions,
         }
-        df_desc = pd.DataFrame(desc_data)
-        df_desc.to_csv(r"E:\Apps\GItHubRebo\Web_Scraping-\Upwork\Description.csv", index=False, encoding="utf-8-sig")
+        df = pd.DataFrame(data)
+        df.to_csv("job_listings.csv", index=False, encoding="utf-8-sig")
+
 
         page_time = time.time() - page_start
         print(f"Category: {category_name} | Page {page} done in {page_time:.2f} seconds")
@@ -139,7 +136,6 @@ print(f"====> All Categories Done in {total_time:.2f} seconds")
 
 # Load the data
 data = {
-    "ID": list(range(1, len(titles) + 1)),
     'Category': field,
     'job_type': job_type,
     "Title": titles,
@@ -149,11 +145,11 @@ data = {
     'duration': duration,
     "Tags": [", ".join(tag_list) for tag_list in tags],
     "Link": links,
+    "Description": descriptions,
 }
 df = pd.DataFrame(data)
 # Remove duplicates and add ID
-df = df.drop_duplicates(subset=['Title'])
-df['ID'] = range(1, len(df) + 1)
+df = df.drop_duplicates(subset=['Title','Posted','Link'])
 
 # --- Utility Functions ---
 
@@ -270,7 +266,7 @@ def duration_numbers(text):
         if len(nums) == 1:
             return nums[0]
         elif len(nums) >= 2:
-            return f"{nums[0]} to {nums[1]}"  # average of first two numbers
+            return f"{nums[0]} - {nums[1]}"  # average of first two numbers
 
     return None
 # --- Normalize duration ---
@@ -287,7 +283,7 @@ def normalize_duration(text):
     return text
 
 df['duration'] = df['duration'].apply(normalize_duration)
-
+df['ID'] = range(1, len(df) + 1)
 # --- Save to CSV ---
 df.to_csv("job_listings_cleaned.csv", index=False, encoding="utf-8-sig")
 

@@ -156,6 +156,7 @@ df = df.explode('Tags').reset_index(drop=False)
 df.index = df.index + 1
 df = df.drop(columns=['ID'])
 df = df.rename(columns={'index': 'ID'})
+
 # Save to new file
 expanded = df[['ID' , 'Tags']]
 
