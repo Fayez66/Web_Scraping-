@@ -1,15 +1,11 @@
-from rapidfuzz import fuzz
-import json
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.chrome.service import Service
 from dateutil.relativedelta import relativedelta
-from selenium.webdriver.common.by import By
-from selenium import webdriver
+from deep_translator import GoogleTranslator
+from rapidfuzz import fuzz
 from pathlib import Path
 import pandas as pd
 import datetime
-import time
+import json
+import os
 import re
 
 base_path = Path(__file__).resolve().parents[1]
@@ -98,6 +94,48 @@ def parse_posted_date(text):
         return today - relativedelta(years=extract_numbers(text))
 
     return text
+
+
+map_file = "../AllData/AllData/translation_map.json"
+
+def translate_with_cache(text_series, target_lang):
+    # Load cache if available
+    if os.path.exists(map_file):
+        with open(map_file, "r", encoding="utf-8") as f:
+            word_map = json.load(f)
+    else:
+        word_map = {}
+
+    def translate(text):
+        try:
+            if text in word_map:
+                return word_map[text]  # use cached version
+            else:
+                # Automatically detect the source language
+                translation = GoogleTranslator(source='auto', target=target_lang).translate(text)
+                word_map[text] = translation
+                print(f"Translated '{text}' to {target_lang} as '{translation}' and cached it.")
+                return translation
+        except Exception as e:
+            print(f"Error translating '{text}': {e}")
+            return text
+
+    # Apply correction to old translations
+    for key in list(word_map):
+        value = word_map[key]
+        if 'site' in value:
+            word_map[key] = value.replace('site', 'web')
+
+    # Save updated cache
+    with open(map_file, "w", encoding="utf-8") as f:
+        json.dump(word_map, f, ensure_ascii=False, indent=2)
+
+    # Apply to series if needed
+    if isinstance(text_series, pd.Series):
+        return text_series.apply(translate)
+    else:
+        return translate(text_series)
+
 
 def process_file(df,column,function):
     df[f'{column}'] = df[f'{column}'].apply(function)

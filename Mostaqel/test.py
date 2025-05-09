@@ -1,15 +1,11 @@
 from selenium.webdriver.chrome.service import Service
-from deep_translator import GoogleTranslator
 from selenium.webdriver.common.by import By
 from selenium import webdriver
 from pathlib import Path
 import pandas as pd
-import datetime
-import json
-import os
-import re
 
-from AllData.functions import process_file, extract_numbers, parse_posted_date
+
+from AllData.functions import process_file, extract_numbers, parse_posted_date, translate_with_cache
 
 base_path = Path(__file__).resolve().parents[1]
 
@@ -126,27 +122,8 @@ data = {
 
 df = pd.DataFrame(data)
 
-map_file = "../AllData/AllData/translation_map.json"
 
-if os.path.exists(map_file):
-    with open(map_file, "r", encoding="utf-8") as f:
-        word_map = json.load(f)
-else:
-    word_map = {}
 
-def translate_with_cache(text, target_lang):
-    try:
-        if text in word_map:
-            return word_map[text]  # Use cached version
-        else:
-            # Automatically detect the source language
-            translation = GoogleTranslator(source='auto', target=target_lang).translate(text)
-            word_map[text] = translation
-            print(f"Translated '{text}' to {target_lang} as '{translation}' and cached it.")
-            return translation
-    except Exception as e:
-        print(f"Error translating '{text}': {e}")
-        return text
 
 # Remove duplicates and add ID
 df = df.drop_duplicates(subset=['Title', 'Posted', 'Avg offer', 'Duration', 'Number of Offers', 'Tags', 'Link'])
@@ -189,23 +166,5 @@ tags = tags[tags['Tags'].str.len() == tags['Tags_en'].str.len()]
 # Convert both columns to Series and explode together
 tags = tags.explode(['Tags', 'Tags_en']).reset_index(drop=True)
 
-
-
-# ---------- 6. Clean up translations (replace 'site' with 'web') ----------
-for key in list(word_map):
-    value = word_map[key]
-    if 'site' in value:
-        word_map[key] = value.replace('site', 'web')
-
-# ---------- 7. Save updated map ----------
-with open(map_file, "w", encoding="utf-8") as f:
-    json.dump(word_map, f, ensure_ascii=False, indent=2)
-# Save to new file
-
 tags.to_csv("jobs_expanded.csv", index=True, encoding="utf-8-sig")
-
-
-
-
-
 
