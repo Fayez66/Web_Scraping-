@@ -66,9 +66,9 @@ def extract_numbers(text):
         return text
 
     # Replace dash variants with a space to split properly
-    text = str(text).replace('–', '-').replace('—', '-').strip()
+    text = str(text).replace(',', '').replace('–', '-').replace('—', '-').strip()
 
-    # Explicitly match ranges like '2 - 3' or '2 to 3'
+    # Explicitly match ranges like '2 - 3' or '2 to 3' or '1,000 - 3,000'
     range_match = re.findall(r'\d+(?:\.\d+)?', text)
 
     if range_match:
@@ -138,7 +138,7 @@ import re
 from deep_translator import GoogleTranslator
 
 # ---------- 1. Load existing translation map ----------
-map_file = "translation_map.json"
+map_file = "../AllData/translation_map.json"
 
 if os.path.exists(map_file):
     with open(map_file, "r", encoding="utf-8") as f:

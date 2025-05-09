@@ -5,7 +5,7 @@ import re
 from deep_translator import GoogleTranslator
 
 # ---------- 1. Load existing translation map ----------
-map_file = "translation_map.json"
+map_file = "../AllData/translation_map.json"
 
 if os.path.exists(map_file):
     with open(map_file, "r", encoding="utf-8") as f:

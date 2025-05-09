@@ -156,6 +156,7 @@ df = df.explode('Tags').reset_index(drop=False)
 df.index = df.index + 1
 df = df.drop(columns=['ID'])
 df = df.rename(columns={'index': 'ID'})
+
 # Save to new file
 expanded = df[['ID' , 'Tags']]
 
@@ -163,7 +164,3 @@ expanded.loc[:, 'ID'] = expanded['ID'] + 1
 
 expanded.index.name = 'index'
 expanded.to_csv("jobs_expanded.csv", index=True, encoding="utf-8-sig")
-
-
-
-

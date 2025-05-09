@@ -1,0 +1,283 @@
+{
+  "Web Development": [
+      "web portal", "frontend layout", "html5", "cross-browser", "static site", "semantic markup", "html", "css",
+      "javascript", "react", "vue", "angular", "bootstrap", "web development", "frontend", "backend", "fullstack",
+      "web app", "website", "wordpress", "web design", "php", "laravel", "django", "flask", "node.js", "express",
+      "responsive design", "ECMAScript", "JSX", "TypeScript", "SASS", "SCSS", "LESS", "WebAssembly", "EJS", "Pug",
+      "Handlebars", "NPM", "Yarn", "Webpack", "Babel", "Gulp", "Grunt", "Vite", "Parcel", "ESLint", "Prettier",
+      "Husky", "Git", "GitHub", "GitLab", "Bitbucket", "CI/CD", "Docker", "Kubernetes", "Figma", "Sketch", "Adobe XD",
+      "Zeplin", "UI components", "UX testing", "Wireframes", "User flows",  "Prototypes", "Accessibility", "ARIA",
+      "Interaction design", "Microinteractions", "Mobile-first", "Svelte", "Alpine.js", "jQuery", "Redux", "Next.js",
+      "Nuxt.js", "Gatsby", "Astro", "Tailwind CSS", "Material UI", "Chakra UI", "Ant Design", "MVC", "ORM", "REST API",
+      "GraphQL", "WebSockets", "JWT", "OAuth", "API endpoints", "Microservices", "Serverless", "Firebase", "Supabase",
+      "Strapi", "Sanity.io", "Prisma", "Redis", "PostgreSQL", "MySQL", "SQLite", "MongoDB", "CRUD operations", "Caching",
+      "API rate limiting", "Joomla", "Drupal", "Magento", "Shopify", "WooCommerce", "Contentful", "Ghost", "Wix",
+      "Squarespace", "Netlify CMS", "Headless CMS", "SEO", "Core Web Vitals", "PageSpeed", "Lighthouse", "Lazy loading",
+      "Image optimization", "Minification", "Code splitting", "SSR", "SSG", "PWA", "CDN", "CORS", "Web workers",
+      "Critical CSS", "HTTPS", "SSL", "CSP", "XSS", "CSRF", "Input validation", "Secure headers", "Authentication",
+      "Authorization", "Hashing", "Encryption"
+    ],
+    "Mobile Development": [
+      "mobile app", "mobile development", "mobile design", "mobile ui", "mobile ux", "apk", "ipa", "mobile sdk",
+      "native performance", "gesture support", "accelerometer", "flutter widgets", "mobile app development", "ios app",
+      "android app", "mobile application", "android", "ios", "flutter", "react native", "swift", "kotlin", "xamarin",
+      "mobile app", "mobile developer", "play store", "app store", "cross-platform", "native mobile", "dart", "java",
+      "objective-c", "phonegap", "cordova", "unity mobile", "mobile backend", "firebase", "aws amplify",
+      "google mobile services", "huawei mobile services", "expo", "android studio", "xcode", "gradle", "proguard",
+      "adb", "ndk", "sdk manager", "emulator", "material design", "cupertino widgets", "mobile ui", "ui thread",
+      "mobile ux", "mobile testing", "unit tests", "integration tests", "appium", "espresso", "xctest", "instrumentation",
+      "push notifications", "fcm", "onesignal", "deeplinks", "universal links", "background tasks","foreground service",
+      "intent filters", "activity lifecycle", "fragment", "viewmodel", "mvvm", "bloc pattern", "provider", "getx",
+      "state management", "async tasks", "coroutines", "rxjava", "location services", "maps sdk", "gps tracking",
+      "bluetooth low energy", "nfc", "camera api", "media player", "video streaming", "offline sync", "sqlite",
+      "room database", "core data", "secure storage", "biometric auth", "face id", "touch id", "permissions", "sandboxing",
+      "in-app purchases", "subscriptions", "mobile payments", "apple pay", "google pay",
+      "crashlytics", "analytics sdk", "user onboarding", "splash screen", "app review", "mobile ci/cd", "fastlane",
+      "testflight", "google play console", "android jetpack", "hilt", "dagger", "lottie mobile", "svg support",
+      "responsive layout", "multi-device", "tablet optimization","backend"
+    ],
+    "Cyber Security": [
+        "penetration test", "malware analysis", "zero day", "phishing defense", "ransomware", "network vulnerability",
+        "penetration testing", "vulnerability", "soc", "firewall", "ids", "ips",
+        "security audit", "ethical hacking", "forensics", "malware", "owasp",
+        "cybersecurity", "network security", "siem", "zero trust"
+    ],
+    "Data Engineering": [
+        "data pipeline", "etl", "data lake", "data warehouse", "big data",
+        "spark", "hadoop", "data modeling", "data governance", "data quality",
+        "data integration", "data migration", "data transformation", "airflow",
+        "dbt", "sql", "nosql", "mongodb", "postgresql"
+    ],
+  "Data Analysis": [
+    "data analysis", "eda", "statistics", "regression", "classification",
+    "hypothesis testing", "anova", "chi-square test", "t-test", "z-test",
+    "correlation", "covariance", "linear regression", "logistic regression",
+    "ols", "multicollinearity", "normal distribution", "skewness", "kurtosis",
+    "outliers", "box plot", "histogram", "scatter plot", "bar chart",
+    "line chart", "pivot tables", "excel analysis", "tableau", "power bi",
+    "jupyter notebooks", "data cleaning", "missing values", "data preprocessing",
+    "data types", "string operations", "date parsing", "groupby", "merge",
+    "join", "pivot", "melt", "reshape", "descriptive statistics",
+    "summary statistics", "mean", "median", "mode", "standard deviation",
+    "variance", "percentile", "quantile", "interquartile range", "data trends",
+    "data patterns", "segmentation", "customer analysis", "sales analysis",
+    "time series", "moving average", "seasonality", "trend analysis",
+    "stationarity", "acf", "pacf", "arima", "forecasting", "data interpretation",
+    "insights generation", "report writing", "presentation", "dashboard",
+    "data querying", "sql queries", "grouped metrics", "aggregation",
+    "data tables", "raw data", "structured data", "semi-structured data",
+    "data quality", "data audit", "data governance", "data documentation",
+    "data dictionary", "business intelligence", "analytics", "kpi tracking",
+    "a/b testing", "conversion rate", "funnel analysis", "user behavior",
+    "churn analysis", "retention metrics", "financial analysis", "market analysis",
+    "product metrics", "data-driven decisions", "impact analysis"
+  ],
+  "Data Science": [
+    "feature engineering", "data wrangling", "outlier detection", "exploratory data", "data storytelling",
+    "data scientist", "pandas", "numpy", "scikit-learn", "seaborn", "matplotlib", "tensorflow", "pytorch",
+    "keras", "ml models", "pipeline", "machine learning", "supervised learning", "unsupervised learning",
+    "reinforcement learning", "data mining", "cross-validation", "grid search", "hyperparameter tuning",
+    "model selection", "bias-variance tradeoff", "overfitting", "underfitting", "k-means", "decision trees",
+    "random forest", "svm", "knn", "naive bayes", "xgboost", "lightgbm", "gradient boosting",
+    "neural networks", "cnn", "rnn", "lstm", "deep learning", "embedding", "dimensionality reduction",
+    "pca", "t-sne", "autoencoder", "anomaly detection", "clustering", "predictive modeling", "model drift",
+    "concept drift", "data pipelines", "big data", "spark", "hadoop", "data lakes", "data fabric",
+    "data mesh", "data engineer", "sql", "nosql", "mongodb", "etl", "elt", "airflow", "mlflow",
+    "experiment tracking", "reproducibility", "model monitoring", "data ethics", "fairness", "bias",
+    "model interpretability", "lime", "shap", "model explainability", "feature importance", "ensemble models",
+    "cross entropy", "log loss", "roc curve", "precision", "recall", "f1 score", "auc", "confusion matrix",
+    "bayesian methods", "markov chains", "monte carlo", "probabilistic programming", "data labeling",
+    "semi-supervised", "self-supervised", "meta-learning", "transfer learning", "active learning",
+    "data versioning", "dvc", "model deployment", "api model serving", "real-time inference"
+    ],
+  "Artificial Intelligence": [
+    "model tuning", "training set", "overfitting", "autoencoder", "decision boundary", "transfer learning",
+    "machine learning", "deep learning", "ai", "nlp", "computer vision", "tensorflow", "pytorch", "scikit-learn",
+    "opencv", "transformers", "predictive modeling", "training models", "ai engineer", "intelligent systems",
+    "generative models", "language models", "foundational models", "gpt", "chatbot", "stable diffusion",
+    "image generation", "text classification", "text summarization", "question answering", "image recognition",
+    "object detection", "semantic segmentation", "pose estimation", "speech recognition", "voice assistant",
+    "text-to-speech", "speech-to-text", "synthetic data", "self-supervised learning", "unsupervised learning",
+    "supervised learning", "label encoding", "tokenization", "attention mechanism", "multi-head attention",
+    "pos tagging", "ner", "word embeddings", "word2vec", "glove", "bert", "gpt-2", "gpt-3", "gpt-4", "llm",
+    "zero-shot learning", "few-shot learning", "contrastive learning", "knowledge graph", "ai ethics", "explainable ai",
+    "xai", "shap", "lime", "bias detection", "fairness in ai", "recurrent neural network",
+    "convolutional neural network", "lstm", "gru", "dnn", "rl", "reinforcement learning", "q-learning",
+    "policy gradient", "actor-critic", "monte carlo tree search", "alpha go", "autonomous agents", "robotics ai",
+    "ai planning", "heuristic search", "neuroevolution", "genetic algorithms", "evolutionary computing", "fuzzy logic",
+    "bayesian networks", "markov models", "hmm", "probabilistic reasoning", "ai pipeline", "inference engine",
+    "online learning", "real-time ai", "model compression", "quantization", "pruning", "neural architecture search",
+    "mlops", "ai deployment", "edge ai", "on-device learning", "tinyml", "ai chip", "hardware acceleration",
+    "tpu", "nvidia cuda", "onnx", "model serving", "ai api", "ai services", "computer vision api"
+    ],
+    "Software Engineering": [
+        "object-oriented", "design pattern", "versioning", "refactor", "software lifecycle", "uml",
+        "c++", "java", "c#", ".net", "software developer", "oop",
+        "design patterns", "architecture", "unit testing", "sdlc",
+        "agile", "scrum", "version control", "git", "ide"
+    ],
+    "Database Management": [
+        "sharding", "replication", "data warehouse", "table joins", "data schema", "rdbms",
+        "sql", "mysql", "postgresql", "mongodb", "database admin",
+        "data warehouse", "etl", "schemas", "nosql", "rdbms",
+        "stored procedure", "query optimization", "database design", "data integrity"
+    ],
+    "Cloud Computing": [
+        "cloud-native", "resource autoscaling", "multi-cloud", "iam roles", "serverless function",
+        "aws", "azure", "google cloud", "cloud engineer", "serverless",
+        "ec2", "s3", "lambda", "firebase", "cloud storage",
+        "cloud architecture", "cloud-native", "infrastructure as code"
+    ],
+    "Networking": [
+        "tcp/ip stack", "subnetting", "routing table", "dns config", "network topology", "firewall rule",
+        "ccna", "network engineer", "routing", "switching", "tcp/ip",
+        "lan", "wan", "vpn", "network protocols", "cisco",
+        "network monitoring", "voip", "nat", "subnetting"
+    ],
+    "DevOps": [
+        "ci/cd pipeline", "artifact repo", "container orchestration", "infrastructure code", "k8s cluster",
+        "ci/cd", "jenkins", "docker", "kubernetes", "ansible", "terraform",
+        "automation", "infrastructure", "gitops", "sre", "build pipeline",
+        "monitoring", "deployment", "containerization"
+    ],
+
+    "Game Development": [
+        "unity", "unreal engine", "game design", "gameplay", "level design",
+        "multiplayer game", "2d game", "3d game", "game engine", "mobile game"
+    ],
+    "Embedded Systems": [
+        "embedded", "firmware", "microcontroller", "arduino", "raspberry pi",
+        "iot", "sensor", "real-time system", "esp32", "mcu", "hardware interface"
+    ],
+    "Robotics": [
+        "robot", "ros", "path planning", "autonomous", "servo", "lidar",
+        "actuator", "mechatronics", "robotics engineer", "motion planning"
+    ],
+    "Blockchain": [
+        "blockchain", "web3", "solidity", "nft", "ethereum", "smart contract",
+        "decentralized", "dapp", "metamask", "crypto", "token"
+    ],
+    "AR / VR Development": [
+        "augmented reality", "virtual reality", "arcore", "arkit", "oculus",
+        "mixed reality", "xr", "hololens", "360 video", "vr game"
+    ],
+    "Automation": [
+        "scripting", "automation", "web scraping", "selenium", "bot", "macro",
+        "task automation", "process automation", "workflow automation", "headless browser"
+    ],
+    "ERP / CRM Systems": [
+        "sap", "oracle erp", "odoo", "salesforce", "zoho", "crm system",
+        "enterprise resource planning", "crm integration", "erp consultant", "business workflow"
+    ],
+    "Business Intelligence": [
+        "power bi", "tableau", "dashboards", "kpi", "lookml", "data studio",
+        "data visualization tool", "business insights", "report builder", "bi analyst"
+    ],
+    "Documentation": [
+        "technical writing", "api documentation", "developer guide", "manual writing",
+        "whitepaper", "specifications", "sdk documentation", "end-user guide"
+    ],
+    "E-commerce Development": [
+        "shopify", "woocommerce", "magento", "bigcommerce", "ecommerce site",
+        "payment gateway", "checkout system", "online store", "product catalog"
+    ],
+    "UI/UX and Graphic Design": [
+      "figma", "adobe xd", "wireframe", "prototyping", "sketch app", "UI/UX",
+      "visual design", "graphic design", "branding", "design system", "mockup",
+
+      "user interface", "user experience", "interaction design", "human-centered design",
+      "design thinking", "ui design", "ux design", "mobile-first design", "responsive design",
+      "adaptive design", "material design", "apple human interface", "ui kit", "style guide",
+      "component library", "figjam", "invision", "marvel app", "zeplin", "affinity designer",
+      "affinity photo", "coreldraw", "photoshop", "illustrator", "adobe creative cloud",
+      "font pairing", "color theory", "typography", "white space", "visual hierarchy",
+      "contrast ratio", "accessibility", "wcag", "a11y", "pixel perfect", "interaction flow",
+      "usability testing", "user testing", "heatmaps", "journey mapping", "persona mapping",
+      "customer persona", "information architecture", "sitemap", "user flow", "conversion flow",
+      "call to action", "hero section", "above the fold", "fold line", "hover effect",
+      "microinteractions", "transitions", "animations", "motion design", "iconography",
+      "svg", "png", "jpeg", "webp", "image optimization", "visual identity", "design assets",
+      "color palette", "contrast checker", "layout grid", "column grid", "golden ratio",
+      "rule of thirds", "grid system", "flex layout", "spacing system", "token-based design",
+      "responsive prototype", "high fidelity", "low fidelity", "interactive prototype",
+      "clickable prototype", "design sprint", "ui audit", "design critique", "design iteration",
+      "agile design", "atomic design", "design ops", "creative brief", "brand guidelines",
+      "logo design", "poster design", "web banner", "social media graphics", "dribbble",
+      "behance", "mockup generator", "print design", "infographic", "flat design", "3d design"
+    ],
+    "API Development": [
+        "rest api", "graphql", "api integration", "third-party api",
+        "api gateway", "soap", "webhooks", "openapi", "postman collection"
+    ],
+    "Testing": [
+        "qa", "unit testing", "integration testing", "test automation", "cypress",
+        "test case", "selenium webdriver", "junit", "load testing", "bug tracking"
+    ],
+    "Educational Technology": [
+        "moodle", "lms", "e-learning", "course platform", "edtech", "scorm",
+        "learning management", "online training", "educational platform"
+    ],
+    "Audio / Speech Processing": [
+        "speech recognition", "voice command", "audio signal", "asr", "speech synthesis",
+        "audio classification", "voice assistant", "microphone input", "sound detection"
+    ],
+    "Digital Signal Processing (DSP)": [
+        "fft", "digital signal", "signal processing", "filter design", 
+        "frequency analysis", "modulation", "dsp algorithm", "noise reduction"
+    ],
+    "Scientific Computing / Simulation": [
+        "matlab", "simulink", "comsol", "simulation", "numerical method", 
+        "finite element", "monte carlo", "modeling and simulation", "scientific computing"
+    ],
+    "Geospatial / GIS Development": [
+        "gis", "qgis", "arcgis", "geolocation", "geospatial", 
+        "mapbox", "leaflet", "spatial analysis", "shapefile", "cartography"
+    ],
+    "Computer Vision": [
+        "opencv", "image processing", "object detection", "face recognition", 
+        "image segmentation", "computer vision", "pose estimation", "image classification"
+    ],
+    "Bioinformatics / Computational Biology": [
+        "genomics", "bioinformatics", "sequence alignment", "protein folding", 
+        "genetic data", "rna", "blast", "computational biology", "biomedical data"
+    ],
+    "Augmented Data Annotation / Labeling": [
+        "data labeling", "bounding box", "image tagging", "dataset annotation", 
+        "video labeling", "annotation tool", "manual tagging", "label studio"
+    ],
+    "Quantum Computing": [
+        "quantum computing", "qiskit", "quantum circuit", "qubit", 
+        "quantum algorithm", "quantum entanglement", "ibmq", "quantum gate"
+    ],
+    "Accessibility / A11Y Engineering": [
+        "accessibility", "a11y", "aria", "screen reader", 
+        "wcag", "keyboard navigation", "accessible ui", "color contrast"
+    ],
+    "Low-Code / No-Code Development": [
+        "bubble.io", "webflow", "n8n", "power apps", 
+        "zapier", "low-code", "no-code", "workflow builder", "appgyver"
+    ],
+    "Search / Information Retrieval": [
+        "elasticsearch", "solr", "search engine", "ranking algorithm", 
+        "query parser", "document indexing", "inverted index", "retrieval system"
+    ],
+    "Custom Hardware / FPGA Programming": [
+        "fpga", "verilog", "vhdl", "hardware design", 
+        "synthesis", "rtl", "logic gate", "zync", "altera", "xilinx"
+    ],
+    "Digital Marketing Tech / Analytics": [
+        "utm tracking", "google tag manager", "marketing funnel", 
+        "heatmap", "conversion tracking", "event tracking", "gtm", "pixels"
+    ],
+    "Voice Interfaces / IVR Systems": [
+        "ivr", "voice bot", "twilio voice", "interactive voice", 
+        "voiceflow", "voice assistant", "dtmf", "call routing"
+    ],
+    "Marketplace / Booking Platform Development": [
+        "booking system", "appointment scheduling", "multi-vendor", 
+        "marketplace platform", "reservation engine", "availability calendar"
+    ],
+    "Other / Miscellaneous": [
+        "tech support", "system integration", "admin panel", "scripting task", "legacy system", "plugin customization"
+    ]
+}
