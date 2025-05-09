@@ -26,11 +26,11 @@ def classify_job(desc):
             score = fuzz.partial_ratio(keyword.lower(), desc)
 
             if score > threshold:
-                category_words =+ 1
+                category_words += 1
         if category_words > top_words:
             top_words = category_words
             best_category = category
-        print(f"Category: {category}, Keywords Matched: {category_words}, Best Category: {best_category}")
+        print(f"Keywords Matched: {top_words}, Best Category: {best_category}")
     if top_words != 0 :  # Adjust this threshold if needed
         return best_category
     else:
@@ -72,7 +72,7 @@ def parse_posted_date(text):
         return today
     elif 'yesterday' in text or 'يوم' in text:
         return today - datetime.timedelta(days=1)
-    elif 'يومين' in text :
+    elif 'يومين' in text:
         return today - datetime.timedelta(days=2)
     elif 'last week' in text:
         return today - datetime.timedelta(weeks=1)
@@ -82,60 +82,79 @@ def parse_posted_date(text):
         return today - relativedelta(months=3)
     elif 'last year' in text:
         return today - relativedelta(years=1)
-    elif 'days ago' or 'يوما' in text or 'أيام' in text in text:
-        return today - datetime.timedelta(days=extract_numbers(text))
+
+    elif 'days ago' in text or 'يوما' in text or 'أيام' in text:
+        num = extract_numbers(text)
+        if num is not None:
+            return today - datetime.timedelta(days=num)
+
     elif 'weeks ago' in text:
-        return today - datetime.timedelta(weeks=extract_numbers(text))
+        num = extract_numbers(text)
+        if num is not None:
+            return today - datetime.timedelta(weeks=num)
+
     elif 'months ago' in text:
-        return today - relativedelta(months=extract_numbers(text))
+        num = extract_numbers(text)
+        if num is not None:
+            return today - relativedelta(months=num)
+
     elif 'quarters ago' in text:
-        return today - relativedelta(months=extract_numbers(text) * 3)
+        num = extract_numbers(text)
+        if num is not None:
+            return today - relativedelta(months=num * 3)
+
     elif 'years ago' in text:
-        return today - relativedelta(years=extract_numbers(text))
+        num = extract_numbers(text)
+        if num is not None:
+            return today - relativedelta(years=num)
 
-    return text
+    return text  # fallback: return original if nothing matched
 
+file_path = base_path / "AllData/translation_map.json"
 
-map_file = "../AllData/AllData/translation_map.json"
-
-def translate_with_cache(text_series, target_lang):
-    # Load cache if available
-    if os.path.exists(map_file):
-        with open(map_file, "r", encoding="utf-8") as f:
+def translate_with_cache(text_series, target_lang, use_cache=True):
+    word_map = {}
+    if use_cache and os.path.exists(file_path):
+        with open(file_path, "r", encoding="utf-8") as f:
             word_map = json.load(f)
-    else:
-        word_map = {}
 
     def translate(text):
         try:
-            if text in word_map:
-                return word_map[text]  # use cached version
+            if use_cache and text in word_map:
+                return word_map[text]
             else:
-                # Automatically detect the source language
                 translation = GoogleTranslator(source='auto', target=target_lang).translate(text)
-                word_map[text] = translation
-                print(f"Translated '{text}' to {target_lang} as '{translation}' and cached it.")
+                if use_cache:
+                    word_map[text] = translation
+                    print(f"Translated '{text}' to {target_lang} as '{translation}' and cached it.")
+                else:
+                    print(f"Translated '{text}' to {target_lang} without caching.")
                 return translation
         except Exception as e:
             print(f"Error translating '{text}': {e}")
             return text
 
-    # Apply correction to old translations
-    for key in list(word_map):
-        value = word_map[key]
-        if 'site' in value:
-            word_map[key] = value.replace('site', 'web')
+    # Handle series or string
+    if isinstance(text_series, pd.Series):
+        result = text_series.apply(translate)
+    else:
+        result = translate(text_series)
 
-    # Save updated cache
-    with open(map_file, "w", encoding="utf-8") as f:
-        json.dump(word_map, f, ensure_ascii=False, indent=2)
+    # Save updated cache after translation
+    if use_cache:
+        for key in list(word_map):
+            value = word_map[key]
+            if 'site' in value:
+                word_map[key] = value.replace('site', 'web')
 
-    # Apply to series if needed
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(word_map, f, ensure_ascii=False, indent=2)
+
+    # Handle series or string
     if isinstance(text_series, pd.Series):
         return text_series.apply(translate)
     else:
         return translate(text_series)
-
 
 def process_file(df,column,function):
     df[f'{column}'] = df[f'{column}'].apply(function)

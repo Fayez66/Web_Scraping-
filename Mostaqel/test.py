@@ -5,7 +5,7 @@ from pathlib import Path
 import pandas as pd
 
 
-from AllData.functions import process_file, extract_numbers, parse_posted_date, translate_with_cache
+from AllData.functions import process_file, extract_numbers, parse_posted_date, translate_with_cache, classify_job
 
 base_path = Path(__file__).resolve().parents[1]
 
@@ -112,7 +112,7 @@ for page in range(7, 8):
 data = {
     "Title": titles,
     "Posted": times,
-    "Budget": budgets,
+    "Avg offer": budgets,
     "Duration": durations,
     "Number of Offers": number_of_offers,
     "Tags": [", ".join(tag_list) for tag_list in tags],
@@ -123,48 +123,44 @@ data = {
 df = pd.DataFrame(data)
 
 
-
-
 # Remove duplicates and add ID
 df = df.drop_duplicates(subset=['Title', 'Posted', 'Avg offer', 'Duration', 'Number of Offers', 'Tags', 'Link'])
 
-df['Duration'] = process_file(df, 'Duration', extract_numbers)
-df['Posted'] = process_file(df, 'Posted', parse_posted_date)
+df = process_file(df, 'Duration', extract_numbers)
+df = process_file(df, 'Posted', parse_posted_date)
 
-df["Tags_en"] = translate_with_cache(df["Tags"], target_lang="en")
-df["category_arabic"] = translate_with_cache(df["Category_English"], target_lang="ar")
-
-# Reorder columns to place 'category_arabic' right after 'Category_English'
-cols = list(tags.columns)
-idx = cols.index('Category_English')
-# Remove and reinsert at desired position
-cols.insert(idx + 1, cols.pop(cols.index('category_arabic')))
-tags = tags[cols]
+df['Description'] = translate_with_cache(df["Description"], target_lang="en", use_cache=False)
+df['Category_English'] = df['Description'].apply(classify_job)
+df["Category_Arabic"] = translate_with_cache(df["Category_English"], target_lang="ar")
 
 df['Avg offer'] = df['Avg offer'].str.strip('$')
 df.rename(columns={'Duration': 'Duration(Days)'}, inplace=True)
-df['Tags_en'] = df['Tags_en'].str.replace(r'[\u0600-\u06FF]', '', regex=True).str.strip()
 
-jobs = df.drop(columns=['Tags', 'Tags_en', 'Description', 'Tags_en'])
+
+jobs = df.drop(columns=['Tags', 'Description'])
 # --- Save to CSV ---
-df.to_csv("job_listings_cleaned.csv", index=True, encoding="utf-8-sig")
-tags = jobs['Tags', 'Tags_en']
+jobs.to_csv("test_cleaned.csv", index=True, encoding="utf-8-sig")
 
+# Correct column selection
+tags = df[['Tags']].copy()
+
+# Add ID safely
 tags["ID"] = range(1, len(tags) + 1)
 
-# Split both columns only if not null
+# Clean and split tags
 tags['Tags'] = tags['Tags'].apply(lambda x: x.split(',') if isinstance(x, str) else x)
-tags['Tags_en'] = tags['Tags_en'].apply(lambda x: x.split(',') if isinstance(x, str) else x)
-
-# Strip whitespace in both columns
 tags['Tags'] = tags['Tags'].apply(lambda x: [tag.strip() for tag in x] if isinstance(x, list) else x)
-tags['Tags_en'] = tags['Tags_en'].apply(lambda x: [skill.strip() for skill in x] if isinstance(x, list) else x)
 
-# Ensure both columns have the same number of elements per row
+tags = tags.explode(['Tags']).reset_index(drop=True)
+tags = tags.dropna()
+
+tags["Tags_en"] = translate_with_cache(tags["Tags"], target_lang="en")
+tags['Tags_en'] = tags['Tags_en'].str.replace(r'[\u0600-\u06FF]', '', regex=True).str.strip()
+# Filter rows where lists are of equal length
+
 tags = tags[tags['Tags'].str.len() == tags['Tags_en'].str.len()]
 
-# Convert both columns to Series and explode together
-tags = tags.explode(['Tags', 'Tags_en']).reset_index(drop=True)
+# Save to CSV
+tags.to_csv("test_expanded.csv", index=True, encoding="utf-8-sig")
 
-tags.to_csv("jobs_expanded.csv", index=True, encoding="utf-8-sig")
 
