@@ -47,11 +47,11 @@
                       "Property": "Budget"
                     }
                   },
-                  "Function": 1
+                  "Function": 0
                 }
               },
               "queryRef": "Avg(Freelance_Yard.Budget)",
-              "nativeQueryRef": "Average of Budget"
+              "nativeQueryRef": "Sum of Budget"
             }
           ]
         }
@@ -71,7 +71,7 @@
                     "Property": "Budget"
                   }
                 },
-                "Function": 1
+                "Function": 0
               }
             },
             "direction": "Descending"
@@ -536,8 +536,7 @@
             "Function": 0
           }
         },
-        "type": "Advanced",
-        "howCreated": "User"
+        "type": "Advanced"
       }
     ],
     "filterSortOrder": "Custom"
