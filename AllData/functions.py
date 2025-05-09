@@ -156,6 +156,53 @@ def translate_with_cache(text_series, target_lang, use_cache=True):
     else:
         return translate(text_series)
 
+# --- Utility Functions ---
+
+# Define your exchange rates (you can later fetch these live if needed)
+exchange_rates = {
+    "USD": 1.0,
+    "EGP": 0.032,  # example rate
+    "EUR": 1.07  # example rate
+}
+
+
+def extract_and_convert_budget(text):
+    """
+    Extracts numeric budget value from a text and converts to USD.
+    Handles ranges like '1 - 5 EGP', or fixed values like '10 EUR'.
+    """
+    if not isinstance(text, str):
+        return None
+
+    text = text.strip()
+    currency = None
+
+    # Detect currency in text
+    for cur in exchange_rates:
+        if cur in text:
+            currency = cur
+            break
+
+    if currency is None:
+        return None  # No recognized currency
+
+    # Remove everything except digits, dot, dash, and space
+    cleaned = re.sub(r'[^0-9\.\-\s]', '', text)
+
+    # Extract all numbers (for ranges or single values)
+    matches = re.findall(r'\d+(?:\.\d+)?', cleaned)
+
+    if not matches:
+        return None
+
+    nums = list(map(float, matches))
+
+    # Average if it's a range, or take the single number
+    value = sum(nums[:2]) / len(nums[:2])
+
+    # Convert to USD
+    return round(value * exchange_rates[currency], 2)
+
 def process_file(df,column,function):
     df[f'{column}'] = df[f'{column}'].apply(function)
     return df

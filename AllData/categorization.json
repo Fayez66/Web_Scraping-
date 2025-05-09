@@ -15,7 +15,7 @@
       "Squarespace", "Netlify CMS", "Headless CMS", "SEO", "Core Web Vitals", "PageSpeed", "Lighthouse", "Lazy loading",
       "Image optimization", "Minification", "Code splitting", "SSR", "SSG", "PWA", "CDN", "CORS", "Web workers",
       "Critical CSS", "HTTPS", "SSL", "CSP", "XSS", "CSRF", "Input validation", "Secure headers", "Authentication",
-      "Authorization", "Hashing", "Encryption"
+      "Authorization", "Hashing", "Encryption","Web pages", "Web applications", "Web APIs", "Web services", "site"
     ],
     "Mobile Development": [
       "mobile app", "mobile development", "mobile design", "mobile ui", "mobile ux", "apk", "ipa", "mobile sdk",
@@ -276,8 +276,5 @@
     "Marketplace / Booking Platform Development": [
         "booking system", "appointment scheduling", "multi-vendor", 
         "marketplace platform", "reservation engine", "availability calendar"
-    ],
-    "Other / Miscellaneous": [
-        "tech support", "system integration", "admin panel", "scripting task", "legacy system", "plugin customization"
     ]
 }
