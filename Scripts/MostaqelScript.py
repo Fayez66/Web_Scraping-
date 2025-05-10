@@ -15,7 +15,7 @@ def main():
     links = []
     times = []
     descriptions = []
-    budgets = []
+    budget_val = []
     durations = []
     number_of_offers = []
     tags = []
@@ -63,38 +63,41 @@ def main():
             duration = "N/A"
             offers = "N/A"
             avg_offer_val = "N/A"
-            budget_val = "N/A"
+            budget = "N/A"
 
             try:
-                table = driver.find_element(By.TAG_NAME, "tbody")
-                rows = table.find_elements(By.TAG_NAME, "tr")
+                # Find the container by a single class name
+                meta_rows_container = driver.find_element(By.CLASS_NAME, "meta-rows")
+                rows = meta_rows_container.find_elements(By.CLASS_NAME, "meta-row")
+
                 for row in rows:
-                    cols = row.find_elements(By.TAG_NAME, "td")
-                    if len(cols) == 2:
-                        label = cols[0].text.strip()
-                        value = cols[1].text.strip()
+                    try:
+                        label_elem = row.find_element(By.CLASS_NAME, "meta-label")
+                        value_elem = row.find_element(By.CLASS_NAME, "meta-value")
+                        label = label_elem.text.strip()
+                        value = value_elem.text.strip()
+
                         if label == "تاريخ النشر":
                             post_date = value
+                        elif label == "الميزانية":
+                            budget = value
                         elif label == "مدة التنفيذ":
                             duration = value
-                        elif label == "عدد العروض":
-                            offers = value
-                        elif label == "متوسط العروض":
-                            avg_offer_val = value
-                        elif label == "الميزانية":
-                            budget_val = value
+                        elif label == "حالة المشروع":
+                            project_status = value
+                    except:
+                        continue
             except:
-                pass
+                post_date = "N11111111/A"
+                duration = "N/11111A"
+                offers = "N/1111A"
+                avg_offer_val = "N/A111111"
+                budget = "1111N/A"
 
             times.append(post_date)
             durations.append(duration)
             number_of_offers.append(offers)
-
-            if avg_offer_val and avg_offer_val != "&0.00":
-                budgets.append(avg_offer_val)
-            else:
-                budgets.append(budget_val if budget_val != "N/A" else page_budget)
-
+            budget_val.append(budget if budget != "N/A" else page_budget)
             # Tags
             try:
                 skill_elements = driver.find_elements(By.CSS_SELECTOR, "ul.skills li.skills__item bdi")
@@ -111,9 +114,8 @@ def main():
     data = {
         "Title": titles,
         "Posted": times,
-        "Avg offer": budgets,
+        "Avg offer": budget_val,
         "Duration": durations,
-        "Number of Offers": number_of_offers,
         "Tags": [", ".join(tag_list) for tag_list in tags],
         "Link": links,
         "Description": descriptions,
@@ -121,9 +123,22 @@ def main():
 
     df = pd.DataFrame(data)
 
+    def extract_avg_offer(value):
+        try:
+            # Remove any currency symbols and whitespace
+            parts = value.replace('$', '').split('-')
+            if len(parts) == 2:
+                low, high = float(parts[0].strip()), float(parts[1].strip())
+                return round((low + high) / 2, 2)
+            else:
+                return float(parts[0].strip())  # Single value fallback
+        except:
+            return None
+
+    df["Avg offer"] = df["Avg offer"].apply(extract_avg_offer)
 
     # Remove duplicates and add ID
-    df = df.drop_duplicates(subset=['Title', 'Posted', 'Avg offer', 'Duration', 'Number of Offers', 'Tags', 'Link'])
+    df = df.drop_duplicates(subset=['Title', 'Posted', 'Avg offer', 'Duration',  'Tags', 'Link'])
 
     df = process_file(df, 'Duration', extract_numbers)
     df = process_file(df, 'Posted', parse_posted_date)
@@ -132,7 +147,6 @@ def main():
     df['Category_English'] = df['Description'].apply(classify_job)
     df["Category_Arabic"] = translate_with_cache(df["Category_English"], target_lang="ar")
 
-    df['Avg offer'] = df['Avg offer'].str.strip('$')
     df.rename(columns={'Duration': 'Duration(Days)'}, inplace=True)
 
 
