@@ -1,0 +1,232 @@
+﻿index,ID,Tags,WebSite
+1,1,,Upwork
+2,2,Data Visualization,Upwork
+3,2,Academic Writing,Upwork
+4,2,Quantitative Analysis,Upwork
+5,2,Editing & Proofreading,Upwork
+6,2,NVivo,Upwork
+7,2,Data Analysis,Upwork
+8,3,Data Science,Upwork
+9,3,Python,Upwork
+10,3,Machine Learning,Upwork
+11,3,Artificial Intelligence,Upwork
+12,3,Deep Learning,Upwork
+13,3,ETL Pipeline,Upwork
+14,4,Data Visualization,Upwork
+15,4,Infographic,Upwork
+16,4,Graphic Design,Upwork
+17,4,Presentation Design,Upwork
+18,4,Informational Infographic,Upwork
+19,5,Data Scraping,Upwork
+20,5,Data Entry,Upwork
+21,5,Data Mining,Upwork
+22,6,Google Sheets,Upwork
+23,6,Data Entry,Upwork
+24,6,Administrative Support,Upwork
+25,6,Google Ads,Upwork
+26,6,Facebook Ads Manager,Upwork
+27,6,Make.com,Upwork
+28,6,Zapier,Upwork
+29,7,Conversion Rate Optimization,Upwork
+30,7,A/B Testing,Upwork
+31,7,Google Tag Manager,Upwork
+32,7,Google Analytics,Upwork
+33,7,Website Optimization,Upwork
+34,8,Facebook Advertising,Upwork
+35,8,Twitter/X Marketing,Upwork
+36,8,Python,Upwork
+37,8,Social Media Content,Upwork
+38,8,Social Media Management,Upwork
+39,9,Google Tag Manager,Upwork
+40,9,Google Ads,Upwork
+41,9,Google Analytics,Upwork
+42,9,Search Engine Marketing,Upwork
+43,9,Google Analytics API,Upwork
+44,10,WordPress,Upwork
+45,10,HTML,Upwork
+46,10,PHP,Upwork
+47,10,Java,Upwork
+48,10,Python,Upwork
+49,10,WordPress Development,Upwork
+50,10,WordPress Backup,Upwork
+51,11,GIS,Upwork
+52,11,ArcGIS,Upwork
+53,11,QGIS,Upwork
+54,11,Digital Mapping,Upwork
+55,11,Python,Upwork
+56,11,JavaScript,Upwork
+57,11,Microsoft Excel,Upwork
+58,11,Data Entry,Upwork
+59,12,Data Science,Upwork
+60,12,Python,Upwork
+61,12,Machine Learning,Upwork
+62,12,Artificial Intelligence,Upwork
+63,12,Data Analysis,Upwork
+64,13,Artificial Intelligence,Upwork
+65,13,Python,Upwork
+66,13,Machine Learning,Upwork
+67,14,Microsoft Excel,Upwork
+68,14,Data Entry,Upwork
+69,14,Data Scraping,Upwork
+70,14,Data Mining,Upwork
+71,14,Data Extraction,Upwork
+72,15,Data Entry,Upwork
+73,15,Data Scraping,Upwork
+74,15,Data Mining,Upwork
+75,15,Lead Generation,Upwork
+76,15,List Building,Upwork
+77,16,Python,Upwork
+78,16,Machine Learning,Upwork
+79,16,Data Analysis,Upwork
+80,16,TensorFlow,Upwork
+81,16,Data Science,Upwork
+82,16,Deep Learning,Upwork
+83,17,Dashboard,Upwork
+84,17,Google Sheets,Upwork
+85,17,Microsoft Excel,Upwork
+86,18,Python,Upwork
+87,18,Microsoft Excel,Upwork
+88,18,Statistics,Upwork
+89,18,Data Analysis,Upwork
+90,18,R,Upwork
+91,19,Machine Learning,Upwork
+92,20,Microsoft Excel,Upwork
+93,20,Google Sheets,Upwork
+94,20,Data Visualization,Upwork
+95,20,Microsoft Power BI Data Visualization,Upwork
+96,20,Microsoft Power BI,Upwork
+97,21,Google Sheets,Upwork
+98,21,Microsoft Excel,Upwork
+99,21,Real Estate Investment Assistance,Upwork
+100,21,Business Modeling,Upwork
+101,21,Business Analysis,Upwork
+102,22,GIS,Upwork
+103,22,Data Analysis,Upwork
+104,22,ArcGIS,Upwork
+105,23,Data Extraction,Upwork
+106,23,Data Scraping,Upwork
+107,23,Data Mining,Upwork
+108,24,Data Visualization,Upwork
+109,24,Data Analysis,Upwork
+110,24,Looker Studio,Upwork
+111,24,Google Analytics,Upwork
+112,24,Marketing Analytics,Upwork
+113,25,Dashboard,Upwork
+114,25,Digital Mapping,Upwork
+115,25,ArcGIS,Upwork
+116,25,Power Query,Upwork
+117,25,SQL,Upwork
+118,25,Microsoft Power BI,Upwork
+119,25,Data Analysis,Upwork
+120,26,Big Data,Upwork
+121,26,BigQuery,Upwork
+122,26,Looker Studio,Upwork
+123,26,Domo,Upwork
+124,26,Snowflake,Upwork
+125,26,SQL,Upwork
+126,26,Google Analytics,Upwork
+127,26,Analytics,Upwork
+128,26,Tableau,Upwork
+129,26,ETL,Upwork
+130,27,Python,Upwork
+131,27,Machine Learning,Upwork
+132,27,TensorFlow,Upwork
+133,27,Data Science,Upwork
+134,27,Deep Learning,Upwork
+135,28,API,Upwork
+136,28,Slack,Upwork
+137,28,Python,Upwork
+138,28,Chatbot Development,Upwork
+139,28,API Integration,Upwork
+140,29,US English Dialect,Upwork
+141,29,Communications,Upwork
+142,29,Artificial Intelligence,Upwork
+143,29,English,Upwork
+144,29,Female,Upwork
+145,30,Microsoft Power BI,Upwork
+146,30,Data Visualization,Upwork
+147,30,Data Analysis,Upwork
+148,30,Business Intelligence,Upwork
+149,31,Marketing Analytics,Upwork
+150,31,Dashboard,Upwork
+151,31,Data Visualization,Upwork
+152,31,YouTube Marketing,Upwork
+153,31,Looker Studio,Upwork
+154,31,Facebook,Upwork
+155,32,List Building,Upwork
+156,32,Data Entry,Upwork
+157,32,Microsoft Excel,Upwork
+158,32,Lead Generation,Upwork
+159,32,Data Collection,Upwork
+160,32,Data Extraction,Upwork
+161,32,Email List,Upwork
+162,33,Data Scraping,Upwork
+163,33,Data Entry,Upwork
+164,34,Python,Upwork
+165,34,Data Scraping,Upwork
+166,34,Data Entry,Upwork
+167,35,Python,Upwork
+168,35,Machine Learning,Upwork
+169,35,Artificial Intelligence,Upwork
+170,35,JavaScript,Upwork
+171,36,Dashboard,Upwork
+172,36,Data Analysis,Upwork
+173,36,Google Tag Manager,Upwork
+174,36,Marketing Analytics,Upwork
+175,36,Google Analytics,Upwork
+176,36,Analytics,Upwork
+177,37,IBM SPSS,Upwork
+178,37,Statistics,Upwork
+179,37,Data Analysis,Upwork
+180,37,Quantitative Analysis,Upwork
+181,37,R,Upwork
+182,38,Data Scraping,Upwork
+183,38,Data Entry,Upwork
+184,39,Data Integration,Upwork
+185,39,Data Migration,Upwork
+186,39,Data Transformation,Upwork
+187,39,SQL,Upwork
+188,39,Python,Upwork
+189,39,Data Science,Upwork
+190,39,Data Scraping,Upwork
+191,40,SQL,Upwork
+192,40,Analytics,Upwork
+193,40,Etherscan,Upwork
+194,41,Python,Upwork
+195,41,Data Scraping,Upwork
+196,41,Data Mining,Upwork
+197,41,Scrapy,Upwork
+198,42,Hypothesis Testing,Upwork
+199,42,Conversion Rate Optimization,Upwork
+200,42,Shopify,Upwork
+201,42,Landing Page,Upwork
+202,42,A/B Testing,Upwork
+203,42,Google Analytics,Upwork
+204,43,Python,Upwork
+205,43,Machine Learning,Upwork
+206,43,TensorFlow,Upwork
+207,43,Deep Learning,Upwork
+208,44,Data Scraping,Upwork
+209,44,Python,Upwork
+210,44,Data Mining,Upwork
+211,45,Artificial Intelligence,Upwork
+212,45,Machine Learning,Upwork
+213,45,Deep Learning,Upwork
+214,45,Data Science,Upwork
+215,45,Artificial Neural Network,Upwork
+216,46,Data Scraping,Upwork
+217,47,Digital Signal Processing,Upwork
+218,47,GitHub,Upwork
+219,47,Algorithm Development,Upwork
+220,48,Image Segmentation,Upwork
+221,49,Artificial Intelligence,Upwork
+222,49,Python,Upwork
+223,49,3D Modeling,Upwork
+224,49,TensorFlow,Upwork
+225,49,Machine Learning,Upwork
+226,50,Machine Learning Model,Upwork
+227,50,Python,Upwork
+228,50,Machine Learning,Upwork
+229,50,Amazon Web Services,Upwork
+230,50,JavaScript,Upwork
+231,50,TensorFlow,Upwork
