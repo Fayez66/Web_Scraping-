@@ -1,223 +1,219 @@
 ﻿index,ID,Skills
-1,1,Graphic Design
-2,1,Illustration
-3,1,Illustrator
-4,1,Logo Design
-5,1,Photoshop
-6,2,Data Mining
-7,2,Linux
-8,2,Machine Learning (ML)
-9,2,Python
-10,2,Software Architecture
-11,3,Article Writing
-12,3,Content Writing
-13,3,Ghostwriting
-14,3,Research Writing
-15,3,Technical Writing
-16,4,Education & Tutoring
-17,4,Interviewing
-18,4,Management
-19,4,Project Management
-20,4,Technical Writing
-21,5,Adobe InDesign
-22,5,Brochure Design
-23,5,Corporate Identity
-24,5,Graphic Design
-25,5,Photoshop
-26,6,Copywriting
-27,6,Editing
-28,6,Proofreading
-29,6,Resumes
-30,7,After Effects
-31,7,Video Editing
-32,7,Video Production
-33,7,Video Services
-34,7,Videography
-35,8,Audio Production
-36,8,Audio Services
-37,8,English (US) Translator
-38,8,Transcription
-39,8,Voice Talent
-40,9,Audio Production
-41,9,Audio Services
-42,9,English (US) Translator
-43,9,Transcription
-44,9,Voice Talent
-45,10,After Effects
-46,10,Animation
-47,10,Motion Graphics
-48,10,Video Editing
-49,10,Video Services
-50,11,Audio Production
-51,11,Audio Services
-52,11,Editing
-53,11,Music
-54,11,Voice Talent
-55,12,Facebook Marketing
-56,12,Internet Marketing
-57,12,Pinterest
-58,12,Social Media Marketing
-59,12,Twitter
-60,13,Abnormal Psychology
-61,13,Acting
-62,13,Book Writing
-63,13,Psychology
-64,13,Screenwriting
-65,14,Accounting
-66,14,Business Analysis
-67,14,Finance
-68,14,Financial Analysis
-69,14,Financial Research
-70,15,Communications
-71,15,Investigative Journalism
-72,16,Facebook Marketing
-73,16,Google Plus
-74,16,Social Media Marketing
-75,16,Twitter
-76,16,Virtual Assistant
-77,17,Business Development
-78,17,Canva
-79,17,Data Entry
-80,17,Google Sheets
-81,17,Virtual Assistant
-82,19,3D Modelling
-83,19,3D Rendering
-84,19,Building Architecture
-85,19,Home Design
-86,19,Interior Design
-87,20,Google Maps API
-88,20,Graphic Design
-89,20,HTML
-90,20,PHP
-91,20,Website Design
-92,21,Facebook Marketing
-93,21,Internet Marketing
-94,21,Marketing
-95,21,Social Media Marketing
-96,21,Social Networking
-97,22,Data Entry
-98,22,HTML
-99,22,PHP
-100,22,Website Design
-101,22,WordPress
-102,23,API
-103,23,Flutter
-104,23,Google APIs
-105,23,Laravel
-106,23,PHP
-107,24,Article Writing
-108,24,Content Writing
-109,24,Copywriting
-110,24,Ghostwriting
-111,24,Research Writing
-112,25,Fashion Design
-113,25,Fashion Modeling
-114,26,Video Production
-115,26,Videography
-116,27,Photo Editing
-117,27,Photoshop
-118,28,Graphic Design
-119,28,HTML
-120,28,MySQL
-121,28,PHP
-122,28,Website Design
-123,29,Advertising
-124,29,Facebook Marketing
-125,29,Internet Marketing
-126,29,Marketing
-127,29,Social Media Marketing
-128,30,Accounting
-129,30,Excel
-130,30,Finance
-131,30,Financial Analysis
-132,30,Financial Research
-133,31,Adobe InDesign
-134,31,Data Entry
-135,31,Excel
-136,31,PDF
-137,31,Word
-138,32,English (US) Translator
-139,32,Portuguese (Brazil) Translator
-140,32,Portuguese Translator
-141,32,Spanish Translator
-142,32,Translation
-143,33,Advertising
-144,33,Facebook Marketing
-145,33,Internet Marketing
-146,33,Marketing
-147,33,Social Media Marketing
-148,34,English (US) Translator
-149,34,French Translator
-150,34,Proofreading
-151,34,Transcription
-152,34,Virtual Assistant
-153,35,Odoo
-154,35,PHP
-155,35,PostgreSQL
-156,35,Python
-157,35,Software Architecture
-158,36,Graphic Design
-159,36,Website Design
-160,37,Amazon Web Services
-161,37,eCommerce
-162,37,Internet Marketing
-163,37,SEO
-164,38,Castilian Spanish Translator
-165,38,English (US) Translator
-166,38,Proofreading
-167,38,Spanish Translator
-168,38,Translation
-169,39,Graphic Design
-170,39,Illustrator
-171,39,Logo Design
-172,39,Photoshop
-173,39,Photoshop Design
-174,40,Contracts
-175,40,Employment Law
-176,40,Legal
-177,40,Legal Research
-178,40,Legal Writing
-179,41,Business Development
-180,41,Digital Marketing
-181,41,Sales
-182,41,Telemarketing
-183,41,Virtual Assistant
-184,42,Customer Support
-185,42,Instagram
-186,42,System Admin
-187,42,Technical Support
-188,43,Email Handling
-189,43,Google Search
-190,43,Infrastructure Architecture
-191,43,Virtual Assistant
-192,44,Administrative Support
-193,44,Project Management
-194,44,Property Management
-195,44,Virtual Assistant
-196,45,Human Resources
-197,45,Recruitment
-198,45,Talent Acquisition
-199,45,Technical Recruiter
-200,46,Graphic Design
-201,46,Illustration
-202,46,Illustrator
-203,46,Logo Design
-204,46,Photoshop
-205,47,Human Resources
-206,47,Linkedin
-207,47,LinkedIn Recruiting
-208,47,Talent Acquisition
-209,47,Technical Recruiter
-210,48,Article Writing
-211,48,Blog
-212,48,Content Writing
-213,48,Copywriting
-214,48,Ghostwriting
-215,49,Human Resources
-216,49,Recruitment
-217,49,Talent Acquisition
-218,49,Technical Recruiter
-219,50,Human Resources
-220,50,Recruitment
-221,50,Talent Acquisition
-222,50,Technical Recruiter
+1,1,Business Consulting
+2,1,Business Management
+3,1,Legal
+4,1,Legal Consultation
+5,1,Legal Research
+6,2,Graphic Design
+7,2,HTML
+8,2,Photoshop
+9,2,User Interface / IA
+10,2,Website Design
+11,3,Customer Service
+12,3,Telemarketing
+13,4,iPhone
+14,4,Mobile App Development
+15,5,After Effects
+16,5,Video Editing
+17,5,Video Production
+18,5,Video Services
+19,5,Videography
+20,6,Graphic Design
+21,6,Illustration
+22,6,Illustrator
+23,6,Logo Design
+24,6,Photoshop
+25,7,Data Mining
+26,7,Linux
+27,7,Machine Learning (ML)
+28,7,Python
+29,7,Software Architecture
+30,8,Education & Tutoring
+31,8,Interviewing
+32,8,Management
+33,8,Project Management
+34,8,Technical Writing
+35,9,Adobe InDesign
+36,9,Brochure Design
+37,9,Corporate Identity
+38,9,Graphic Design
+39,9,Photoshop
+40,10,Copywriting
+41,10,Editing
+42,10,Proofreading
+43,10,Resumes
+44,11,After Effects
+45,11,Video Editing
+46,11,Video Production
+47,11,Video Services
+48,11,Videography
+49,12,Audio Production
+50,12,Audio Services
+51,12,English (US) Translator
+52,12,Transcription
+53,12,Voice Talent
+54,13,Audio Production
+55,13,Audio Services
+56,13,English (US) Translator
+57,13,Transcription
+58,13,Voice Talent
+59,14,After Effects
+60,14,Animation
+61,14,Motion Graphics
+62,14,Video Editing
+63,14,Video Services
+64,15,Audio Production
+65,15,Audio Services
+66,15,Editing
+67,15,Music
+68,15,Voice Talent
+69,16,Facebook Marketing
+70,16,Internet Marketing
+71,16,Pinterest
+72,16,Social Media Marketing
+73,16,Twitter
+74,17,Abnormal Psychology
+75,17,Acting
+76,17,Book Writing
+77,17,Psychology
+78,17,Screenwriting
+79,18,Accounting
+80,18,Business Analysis
+81,18,Finance
+82,18,Financial Analysis
+83,18,Financial Research
+84,19,Communications
+85,19,Investigative Journalism
+86,20,Facebook Marketing
+87,20,Google Plus
+88,20,Social Media Marketing
+89,20,Twitter
+90,20,Virtual Assistant
+91,21,Business Development
+92,21,Canva
+93,21,Data Entry
+94,21,Google Sheets
+95,21,Virtual Assistant
+96,23,3D Modelling
+97,23,3D Rendering
+98,23,Building Architecture
+99,23,Home Design
+100,23,Interior Design
+101,24,Google Maps API
+102,24,Graphic Design
+103,24,HTML
+104,24,PHP
+105,24,Website Design
+106,25,Facebook Marketing
+107,25,Internet Marketing
+108,25,Marketing
+109,25,Social Media Marketing
+110,25,Social Networking
+111,26,Data Entry
+112,26,HTML
+113,26,PHP
+114,26,Website Design
+115,26,WordPress
+116,27,API
+117,27,Flutter
+118,27,Google APIs
+119,27,Laravel
+120,27,PHP
+121,28,Article Writing
+122,28,Content Writing
+123,28,Copywriting
+124,28,Ghostwriting
+125,28,Research Writing
+126,29,Fashion Design
+127,29,Fashion Modeling
+128,30,Video Production
+129,30,Videography
+130,31,Photo Editing
+131,31,Photoshop
+132,32,Graphic Design
+133,32,HTML
+134,32,MySQL
+135,32,PHP
+136,32,Website Design
+137,33,Advertising
+138,33,Facebook Marketing
+139,33,Internet Marketing
+140,33,Marketing
+141,33,Social Media Marketing
+142,34,Accounting
+143,34,Excel
+144,34,Finance
+145,34,Financial Analysis
+146,34,Financial Research
+147,35,Adobe InDesign
+148,35,Data Entry
+149,35,Excel
+150,35,PDF
+151,35,Word
+152,36,English (US) Translator
+153,36,Portuguese (Brazil) Translator
+154,36,Portuguese Translator
+155,36,Spanish Translator
+156,36,Translation
+157,37,Advertising
+158,37,Facebook Marketing
+159,37,Internet Marketing
+160,37,Marketing
+161,37,Social Media Marketing
+162,38,English (US) Translator
+163,38,French Translator
+164,38,Proofreading
+165,38,Transcription
+166,38,Virtual Assistant
+167,39,Odoo
+168,39,PHP
+169,39,PostgreSQL
+170,39,Python
+171,39,Software Architecture
+172,40,Graphic Design
+173,40,Website Design
+174,41,Amazon Web Services
+175,41,eCommerce
+176,41,Internet Marketing
+177,41,SEO
+178,42,Castilian Spanish Translator
+179,42,English (US) Translator
+180,42,Proofreading
+181,42,Spanish Translator
+182,42,Translation
+183,43,Graphic Design
+184,43,Illustrator
+185,43,Logo Design
+186,43,Photoshop
+187,43,Photoshop Design
+188,44,Contracts
+189,44,Employment Law
+190,44,Legal
+191,44,Legal Research
+192,44,Legal Writing
+193,45,Business Development
+194,45,Digital Marketing
+195,45,Sales
+196,45,Telemarketing
+197,45,Virtual Assistant
+198,46,Customer Support
+199,46,Instagram
+200,46,System Admin
+201,46,Technical Support
+202,47,Email Handling
+203,47,Google Search
+204,47,Infrastructure Architecture
+205,47,Virtual Assistant
+206,48,Administrative Support
+207,48,Project Management
+208,48,Property Management
+209,48,Virtual Assistant
+210,49,Human Resources
+211,49,Recruitment
+212,49,Talent Acquisition
+213,49,Technical Recruiter
+214,50,Graphic Design
+215,50,Illustration
+216,50,Illustrator
+217,50,Logo Design
+218,50,Photoshop
