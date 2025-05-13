@@ -1,0 +1,103 @@
+table Mostaqel
+	lineageTag: 9d874891-dc0e-47b3-a680-3347040e8e9e
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 80dd2ec5-22ad-4327-a519-6e20272b90de
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: e06bbc8c-05b9-4cb0-abd7-0052809b3087
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posted
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: d4826102-2fb7-4304-8e35-e5c35d8566c9
+		summarizeBy: none
+		sourceColumn: Posted
+
+		variation Variation
+			isDefault
+			relationship: f91fed89-b449-4ee9-857f-69831dbaf828
+			defaultHierarchy: LocalDateTable_b71d0f9e-6951-4181-91fe-3de684b979ac.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Budget
+		dataType: double
+		lineageTag: 5ea23e0c-6001-45d2-a3cb-edaafc5b3f7b
+		summarizeBy: sum
+		sourceColumn: Budget
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column Duration(Days)
+		dataType: int64
+		formatString: 0
+		lineageTag: 60e533eb-4735-4acd-bc7f-5d8fb0b1db43
+		summarizeBy: sum
+		sourceColumn: Duration(Days)
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'number of offers'
+		dataType: int64
+		formatString: 0
+		lineageTag: bc47cb0a-aeb7-42e1-881d-701e539000c5
+		summarizeBy: sum
+		sourceColumn: number of offers
+
+		annotation SummarizationSetBy = Automatic
+
+	column Link
+		dataType: string
+		lineageTag: 2b3be772-7419-4be8-b30b-a153c20eeeef
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category_English
+		dataType: string
+		lineageTag: 08923e42-fe63-46fa-a54a-7dfcbf9ba706
+		summarizeBy: none
+		sourceColumn: Category_English
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category_Arabic
+		dataType: string
+		lineageTag: 5308a849-0a6a-41ab-8d10-921efc082eab
+		summarizeBy: none
+		sourceColumn: Category_Arabic
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Mostaqel = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\Mostaqel.csv"),[Delimiter=",", Columns=9, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"Title", type text}, {"Posted", type date}, {"Budget", type number}, {"Duration(Days)", Int64.Type}, {"number of offers", Int64.Type}, {"Link", type text}, {"Category_English", type text}, {"Category_Arabic", type text}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{"", "ID"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

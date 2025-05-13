@@ -1,229 +1,413 @@
-﻿,Tags,ID,Tags_en
-7,,1,
-8,,1,
-9,,1,
-10,,1,
-11,,1,
-12,,1,
-13,,1,
-14,جافا سكريبت,2,Java Script
-16,PHP,2,PHP
-17,HTML,2,HTML
-20,,2,
-21,,2,
-22,,2,
-23,,2,
-24,,2,
-25,,2,
-28,مايكروسوفت إكسل,3,Microsoft Excel
-33,,3,
-34,,3,
-35,,3,
-36,,3,
-37,,3,
-38,,3,
-39,,3,
-48,,4,
-49,,4,
-50,,4,
-51,,4,
-52,,4,
-53,,4,
-54,,4,
-55,,4,
-57,Figma,5,FIGMA
-58,PHP,5,PHP
-59,HTML,5,HTML
-60,CSS,5,CSS
-62,اللغة الإنجليزية,5,english language
-64,,5,
-65,,5,
-66,,5,
-67,,5,
-68,,5,
-69,,5,
-70,,5,
-71,,5,
-79,,6,
-80,,6,
-81,,6,
-82,,6,
-83,,6,
-84,,6,
-85,,6,
-90,بايثون,7,Python
-91,PHP,7,PHP
-92,CSS,7,CSS
-93,جافا سكريبت,7,Java Script
-94,Back End,7,Back End
-95,,7,
-96,,7,
-97,,7,
-98,,7,
-99,,7,
-100,,7,
-101,,7,
-102,,7,
-103,,7,
-106,برمجة قواعد البيانات,8,Database programming
-107,معالجة البيانات,8,Data processing
-112,مايكروسوفت إكسل,8,Microsoft Excel
-113,مايكروسوفت أوفيس,8,Microsoft Office
-114,,8,
-115,,8,
-116,,8,
-117,,8,
-118,,8,
-119,,8,
-120,,8,
-121,,8,
-122,,8,
-123,,8,
-131,,9,
-132,,9,
-133,,9,
-134,,9,
-135,,9,
-136,,9,
-137,,9,
-146,,10,
-147,,10,
-148,,10,
-149,,10,
-150,,10,
-151,,10,
-152,,10,
-153,,10,
-154,Swift,11,Swift
-155,Ionic,11,Ionic
-157,جافا,11,Java
-163,,11,
-164,,11,
-165,,11,
-166,,11,
-167,,11,
-168,,11,
-169,,11,
-170,,11,
-171,,11,
-182,,12,
-183,,12,
-184,,12,
-185,,12,
-186,,12,
-187,,12,
-188,,12,
-189,,12,
-190,,12,
-191,,12,
-198,,13,
-199,,13,
-200,,13,
-201,,13,
-202,,13,
-203,,13,
-204,Firebase Cloud Firestore,14,Firebase Cloud Firestore
-206,جافا سكريبت,14,Java Script
-209,برمجة قواعد البيانات,14,Database programming
-213,,14,
-214,,14,
-215,,14,
-216,,14,
-217,,14,
-218,,14,
-219,,14,
-220,,14,
-221,,14,
-222,PHP,15,PHP
-223,HTML,15,HTML
-225,CSS,15,CSS
-226,جافا سكريبت,15,Java Script
-230,,15,
-231,,15,
-232,,15,
-233,,15,
-234,,15,
-235,,15,
-236,,15,
-237,,15,
-241,adobe xd,16,Adobe xD
-248,,16,
-249,,16,
-250,,16,
-251,,16,
-252,,16,
-253,,16,
-254,,16,
-255,,16,
-256,,16,
-257,,16,
-267,,17,
-268,,17,
-269,,17,
-270,,17,
-271,,17,
-272,,17,
-273,,17,
-274,,17,
-275,,17,
-283,,18,
-284,,18,
-285,,18,
-286,,18,
-287,,18,
-288,,18,
-289,,18,
-298,,19,
-299,,19,
-300,,19,
-301,,19,
-302,,19,
-303,,19,
-304,,19,
-305,,19,
-308,Back End,20,Back End
-312,,20,
-313,,20,
-314,,20,
-315,,20,
-316,,20,
-317,,20,
-318,برمجة قواعد البيانات,21,Database programming
-325,,21,
-326,,21,
-327,,21,
-328,,21,
-329,,21,
-330,,21,
-331,,21,
-333,جافا,22,Java
-334,HTML,22,HTML
-335,تصميم مواقع,22,Site design
-339,,22,
-340,,22,
-341,,22,
-342,,22,
-343,,22,
-344,,22,
-345,,22,
-349,برمجة قواعد البيانات,23,Database programming
-350,,23,
-351,,23,
-352,,23,
-353,,23,
-357,تصميم مواقع,24,Site design
-358,HTML,24,HTML
-359,جافا,24,Java
-361,,24,
-362,,24,
-363,,24,
-364,,24,
-365,,24,
-366,,24,
-367,,24,
-374,,25,
-375,,25,
-376,,25,
-377,,25,
-378,,25,
-379,,25,
+﻿index,ID,Tags,Tags_en
+0,2,vuejs,vuejs
+1,3,vuetify,vuetify
+2,4,جافا سكريبت,Java Script
+3,5,CSS3,CSS3
+4,6,html5,html9
+5,7,بوتستراب 5,Potterb 5
+6,8,,
+7,9,,
+8,10,,
+9,11,,
+10,12,,
+11,13,,
+12,14,برمجة ألعاب الجوال,Mobile games programming
+13,15,Unity 3D,Unity 3D
+14,16,برمجة,programming
+15,17,تطوير البرمجيات,Software development
+16,18,تطوير الألعاب,Games development
+17,19,,
+18,20,,
+19,21,,
+20,22,,
+21,23,,
+22,24,تطوير الويب,Web development
+23,25,برمجة مواقع,Site programming
+24,26,إدارة المواقع,Site management
+25,27,إنشاء موقع إلكتروني,Create a webweb
+26,28,Back End,Back End
+27,29,Front End,Front End
+28,30,لغة Sass,SASS language
+29,31,برمجة قواعد البيانات,Database programming
+30,32,تصميم موقع إلكتروني,Design a webweb
+31,33,HTML,HTML
+32,34,لارافيل,Laraville
+33,35,,
+34,36,,
+35,37,,
+36,38,,
+37,39,,
+38,40,,
+39,41,,
+40,42,,
+41,43,,
+42,44,,
+43,45,,
+44,46,البرمجة بطريقة MVC,MVC programming manner
+45,47,واجهة برمجة التطبيقات,Application programming interface
+46,48,برمجة ألعاب الجوال,Mobile games programming
+47,49,برمجة تطبيقات أيفون,IPhone applications programming
+48,50,برمجة iOS,IOS programming
+49,51,برمجة التطبيقات,Application programming
+50,52,برمجة مواقع,Site programming
+51,53,برمجة قواعد البيانات,Database programming
+52,54,برمجة,programming
+53,55,برمجة أندرويد,Android programming
+54,56,,
+55,57,,
+56,58,,
+57,59,,
+58,60,,
+59,61,,
+60,62,,
+61,63,,
+62,64,,
+63,65,,
+64,66,Back End,Back End
+65,67,واجهة برمجة التطبيقات,Application programming interface
+66,68,Paypal API,Paypal API
+67,69,برمجة,programming
+68,70,برمجة مواقع,Site programming
+69,71,اختبار البرمجيات,Software test
+70,72,استكشاف الأخطاء وإصلاحها,Explining and repairing errors
+71,73,اختبار المواقع,Site test
+72,74,تطوير الويب الكامل,Full web development
+73,75,PHP,PHP
+74,76,لارافيل,Laraville
+75,77,جافا سكريبت,Java Script
+76,78,node.js,node.js
+77,79,React,React
+78,80,أنجولار,Annar
+79,81,,
+80,82,,
+81,83,,
+82,84,,
+83,85,,
+84,86,,
+85,87,,
+86,88,,
+87,89,,
+88,90,,
+89,91,,
+90,92,,
+91,93,,
+92,94,,
+93,95,,
+94,96,مونجو دي بي,Monarch de b
+95,97,Angular.js,Angular.js
+96,98,برمجة,programming
+97,99,برمجة مواقع,Site programming
+98,100,برمجة iOS,IOS programming
+99,101,برمجة تطبيقات أيفون,IPhone applications programming
+100,102,برمجة أندرويد,Android programming
+101,103,برمجة قواعد البيانات,Database programming
+102,104,,
+103,105,,
+104,106,,
+105,107,,
+106,108,,
+107,109,,
+108,110,,
+109,111,,
+110,112,تطوير البرمجيات,Software development
+111,113,برمجة,programming
+112,114,برمجة قواعد البيانات,Database programming
+113,115,برمجة مواقع,Site programming
+114,116,برمجة التطبيقات,Application programming
+115,117,هندسة البرمجيات,Software engineering
+116,118,flutter,flutter
+117,119,,
+118,120,,
+119,121,,
+120,122,,
+121,123,,
+122,124,,
+123,125,,
+124,126,إنشاء متجر إلكتروني,Create an electronic store
+125,127,برمجة مواقع,Site programming
+126,128,تطوير البرمجيات,Software development
+127,129,هندسة البرمجيات,Software engineering
+128,130,بايثون,Python
+129,131,PHP,PHP
+130,132,جافا سكريبت,Java Script
+131,133,CSS,CSS
+132,134,HTML,HTML
+133,135,برمجة,programming
+134,136,برمجة قواعد البيانات,Database programming
+135,137,flutter,flutter
+136,138,برمجة تطبيقات أيفون,IPhone applications programming
+137,139,,
+138,140,,
+139,141,,
+140,142,,
+141,143,,
+142,144,,
+143,145,,
+144,146,,
+145,147,,
+146,148,,
+147,149,,
+148,150,,
+149,151,,
+150,152,CSS,CSS
+151,153,React Native,React Native
+152,154,جافا سكريبت,Java Script
+153,155,برمجة,programming
+154,156,تطوير البرمجيات,Software development
+155,157,برمجة قواعد البيانات,Database programming
+156,158,برمجة مواقع,Site programming
+157,159,برمجة التطبيقات,Application programming
+158,160,هندسة البرمجيات,Software engineering
+159,161,flutter,flutter
+160,162,,
+161,163,,
+162,164,,
+163,165,,
+164,166,,
+165,167,,
+166,168,,
+167,169,,
+168,170,,
+169,171,,
+170,172,تصميم متجر إلكتروني,Electronic store design
+171,173,التصميم الإبداعي,Creative design
+172,174,تصميم واجهة المستخدم,User interface design
+173,175,تصميم UI UX,UI UX design
+174,176,تصميم تجربة المستخدم,User experience design
+175,177,adobe xd,Adobe xD
+176,178,Adobe Illustrator,Adobe Illustrator
+177,179,,
+178,180,,
+179,181,,
+180,182,,
+181,183,,
+182,184,,
+183,185,,
+184,186,تصميم صفحات الهبوط,Design landing pages
+185,187,إنشاء صفحة هبوط,Create a landing page
+186,188,برمجة,programming
+187,189,برمجة مواقع,Site programming
+188,190,تصميم مواقع,Site design
+189,191,تطوير البرمجيات,Software development
+190,192,HTML,HTML
+191,193,CSS,CSS
+192,194,بوتستراب,Potterb
+193,195,,
+194,196,,
+195,197,,
+196,198,,
+197,199,,
+198,200,,
+199,201,,
+200,202,,
+201,203,,
+202,204,برمجة التطبيقات,Application programming
+203,205,الذكاء الاصطناعي,artificial intelligence
+204,206,برمجة,programming
+205,207,تطوير البرمجيات,Software development
+206,208,flutter,flutter
+207,209,تطوير التطبيقات,Application development
+208,210,,
+209,211,,
+210,212,,
+211,213,,
+212,214,,
+213,215,,
+214,216,تصميم موقع إلكتروني,Design a webweb
+215,217,برمجة,programming
+216,218,تطوير البرمجيات,Software development
+217,219,برمجة قواعد البيانات,Database programming
+218,220,برمجة مواقع,Site programming
+219,221,هندسة البرمجيات,Software engineering
+220,222,برمجة التطبيقات,Application programming
+221,223,,
+222,224,,
+223,225,,
+224,226,,
+225,227,,
+226,228,,
+227,229,,
+228,230,تصميم موقع إلكتروني,Design a webweb
+229,231,تصميم,design
+230,232,اللغة العربية,Arabic
+231,233,إنشاء موقع إلكتروني,Create a webweb
+232,234,برمجة,programming
+233,235,تطوير البرمجيات,Software development
+234,236,برمجة مواقع,Site programming
+235,237,,
+236,238,,
+237,239,,
+238,240,,
+239,241,,
+240,242,,
+241,243,,
+242,244,برمجة,programming
+243,245,برمجة مواقع,Site programming
+244,246,إنشاء موقع إلكتروني,Create a webweb
+245,247,أمن وحماية المواقع,Security and protection of webs
+246,248,بايثون,Python
+247,249,PHP,PHP
+248,250,CSS,CSS
+249,251,جافا سكريبت,Java Script
+250,252,,
+251,253,,
+252,254,,
+253,255,,
+254,256,,
+255,257,,
+256,258,,
+257,259,,
+258,260,ماتلاب,The odd
+259,261,الهندسة الميكانيكية,mechanical engineering
+260,262,برمجة,programming
+261,263,تطوير البرمجيات,Software development
+262,264,الهندسة,Engineering
+263,265,هندسة البرمجيات,Software engineering
+264,266,,
+265,267,,
+266,268,,
+267,269,,
+268,270,,
+269,271,,
+270,272,HTML,HTML
+271,273,جافا سكريبت,Java Script
+272,274,PHP,PHP
+273,275,تصميم موقع إلكتروني,Design a webweb
+274,276,,
+275,277,,
+276,278,,
+277,279,,
+278,280,لارافيل,Laraville
+279,281,React,React
+280,282,Next.js,Next.js
+281,283,MySQL,MySQL
+282,284,تطوير البرمجيات,Software development
+283,285,برمجة قواعد البيانات,Database programming
+284,286,برمجة مواقع,Site programming
+285,287,برمجة التطبيقات,Application programming
+286,288,برمجة,programming
+287,289,هندسة البرمجيات,Software engineering
+288,290,,
+289,291,,
+290,292,,
+291,293,,
+292,294,,
+293,295,,
+294,296,,
+295,297,,
+296,298,,
+297,299,,
+298,300,مايكروسوفت إكسل,Microsoft Excel
+299,301,تطوير البرمجيات,Software development
+300,302,هندسة البرمجيات,Software engineering
+301,303,مايكروسوفت أوفيس,Microsoft Office
+302,304,إدخال بيانات,Enter data
+303,305,برمجة قواعد البيانات,Database programming
+304,306,معالجة البيانات,Data processing
+305,307,تحليل البيانات,Data analysis
+306,308,تطوير قاعدة بيانات,Development of a database
+307,309,كتابة التقارير,Writing reports
+308,310,,
+309,311,,
+310,312,,
+311,313,,
+312,314,,
+313,315,,
+314,316,,
+315,317,,
+316,318,,
+317,319,,
+318,320,Tailwind CSS,Tailwind CSS
+319,321,جافا سكريبت,Java Script
+320,322,React,React
+321,323,Next.js,Next.js
+322,324,,
+323,325,,
+324,326,,
+325,327,,
+326,328,تصميم UI UX,UI UX design
+327,329,الذكاء الاصطناعي,artificial intelligence
+328,330,تصميم شعار,Logo design
+329,331,برمجة,programming
+330,332,برمجة ألعاب الجوال,Mobile games programming
+331,333,تصميم جرافيك,Graphic design
+332,334,Swift,Swift
+333,335,Ionic,Ionic
+334,336,كوتلن,Kotlan
+335,337,جافا,Java
+336,338,برمجة iOS,IOS programming
+337,339,برمجة التطبيقات,Application programming
+338,340,برمجة أندرويد,Android programming
+339,341,,
+340,342,,
+341,343,,
+342,344,,
+343,345,,
+344,346,,
+345,347,,
+346,348,,
+347,349,,
+348,350,,
+349,351,,
+350,352,,
+351,353,,
+352,354,flutter,flutter
+353,355,برمجة التطبيقات,Application programming
+354,356,برمجة,programming
+355,357,تطوير البرمجيات,Software development
+356,358,برمجة أندرويد,Android programming
+357,359,برمجة قواعد البيانات,Database programming
+358,360,برمجة مواقع,Site programming
+359,361,,
+360,362,,
+361,363,,
+362,364,,
+363,365,,
+364,366,,
+365,367,,
+366,368,إنشاء صفحة هبوط,Create a landing page
+367,369,برمجة,programming
+368,370,برمجة مواقع,Site programming
+369,371,تطوير البرمجيات,Software development
+370,372,تطوير الويب,Web development
+371,373,هندسة البرمجيات,Software engineering
+372,374,,
+373,375,,
+374,376,,
+375,377,,
+376,378,,
+377,379,,
+378,380,تصميم UI UX,UI UX design
+379,381,HTML,HTML
+380,382,CSS,CSS
+381,383,جافا سكريبت,Java Script
+382,384,PHP,PHP
+383,385,بايثون,Python
+384,386,MySQL,MySQL
+385,387,لارافيل,Laraville
+386,388,PostgreSQL,PostgreSQL
+387,389,Front End,Front End
+388,390,بوتستراب,Potterb
+389,391,web scraping,web scraping
+390,392,,
+391,393,,
+392,394,,
+393,395,,
+394,396,,
+395,397,,
+396,398,,
+397,399,,
+398,400,,
+399,401,,
+400,402,,
+401,403,,
+402,404,HTML,HTML
+403,405,ووردبريس,WordPress
+404,406,تصميم صفحات الهبوط,Design landing pages
+405,407,إنشاء صفحة هبوط,Create a landing page
+406,408,برمجة,programming
+407,409,,
+408,410,,
+409,411,,
+410,412,,
+411,413,,

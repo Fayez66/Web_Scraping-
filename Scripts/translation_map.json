@@ -257,5 +257,20 @@
   "Ionic": "Ionic",
   "Figma": "FIGMA",
   "Other": "آخر",
-  "": ""
+  "": "",
+  "Unity 3D": "Unity 3D",
+  "Restful API": "Restful API",
+  "Adobe Illustrator": "Adobe Illustrator",
+  "MySQL": "MySQL",
+  "مونجو دي بي": "Monarch de b",
+  "Angular.js": "Angular.js",
+  "React Native": "React Native",
+  "ماتلاب": "The odd",
+  "vuejs": "vuejs",
+  "vuetify": "vuetify",
+  "html5": "html9",
+  "PostgreSQL": "PostgreSQL",
+  "web scraping": "web scraping",
+  "Tailwind CSS": "Tailwind CSS",
+  "Paypal API": "Paypal API"
 }

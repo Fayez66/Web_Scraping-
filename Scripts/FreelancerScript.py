@@ -186,6 +186,7 @@ def main():
         Cleans a price string by removing currency symbols and text.
         If the string contains a range, returns the average of the two numbers.
         """
+
         cleaned = re.sub(r'[^0-9\-.]', '', str(value))
         if '-' in cleaned:
             parts = cleaned.split('-')

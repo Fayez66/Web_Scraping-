@@ -20,13 +20,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mostaql"
+                      "Entity": "Mostaqel"
                     }
                   },
                   "Property": "Category_Arabic"
                 }
               },
-              "queryRef": "Mostaql.Category_Arabic",
+              "queryRef": "Mostaqel.Category_Arabic",
               "nativeQueryRef": "Category_Arabic",
               "active": true
             }
@@ -41,7 +41,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
                       "Property": "Category_Arabic"
@@ -50,7 +50,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.Category_Arabic)",
+              "queryRef": "CountNonNull(Mostaqel.Category_Arabic)",
               "nativeQueryRef": "Count of Category_Arabic"
             }
           ]
@@ -65,7 +65,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Mostaql"
+                        "Entity": "Mostaqel"
                       }
                     },
                     "Property": "Category_Arabic"
@@ -84,10 +84,10 @@
       "categoryAxis": [
         {
           "properties": {
-            "switchAxisPosition": {
+            "titleText": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "'المجالات'"
                 }
               }
             },
@@ -112,6 +112,17 @@
                 }
               }
             },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
+                }
+              }
+            },
             "titleFontFamily": {
               "expr": {
                 "Literal": {
@@ -133,17 +144,6 @@
                 }
               }
             },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
-                }
-              }
-            },
             "titleColor": {
               "solid": {
                 "color": {
@@ -155,10 +155,10 @@
                 }
               }
             },
-            "titleText": {
+            "switchAxisPosition": {
               "expr": {
                 "Literal": {
-                  "Value": "'المجالات'"
+                  "Value": "true"
                 }
               }
             }
@@ -168,6 +168,13 @@
       "valueAxis": [
         {
           "properties": {
+            "titleText": {
+              "expr": {
+                "Literal": {
+                  "Value": "'عدد الوظائف'"
+                }
+              }
+            },
             "invertAxis": {
               "expr": {
                 "Literal": {
@@ -189,6 +196,17 @@
                 }
               }
             },
+            "labelColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#644F22'"
+                    }
+                  }
+                }
+              }
+            },
             "titleFontFamily": {
               "expr": {
                 "Literal": {
@@ -200,17 +218,6 @@
               "expr": {
                 "Literal": {
                   "Value": "14D"
-                }
-              }
-            },
-            "labelColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#644F22'"
-                    }
-                  }
                 }
               }
             },
@@ -233,13 +240,6 @@
                       "Value": "'#3C2F13'"
                     }
                   }
-                }
-              }
-            },
-            "titleText": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الوظائف'"
                 }
               }
             }
@@ -506,10 +506,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Mostaql"
+                                  "Entity": "Mostaqel"
                                 }
                               },
-                              "Property": "category_arabic"
+                              "Property": "Category_Arabic"
                             }
                           },
                           "Function": 5
@@ -560,14 +560,14 @@
       "legend": [
         {
           "properties": {
-            "showGradientLegend": {
+            "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "show": {
+            "showGradientLegend": {
               "expr": {
                 "Literal": {
                   "Value": "false"
@@ -602,21 +602,14 @@
       "title": [
         {
           "properties": {
-            "fontFamily": {
+            "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Arial'"
+                  "Value": "'عدد الوظائف  في مجال'"
                 }
               }
             },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "bold": {
+            "titleWrap": {
               "expr": {
                 "Literal": {
                   "Value": "true"
@@ -641,10 +634,24 @@
                 }
               }
             },
-            "text": {
+            "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "'عدد الوظائف  في مجال'"
+                  "Value": "14D"
+                }
+              }
+            },
+            "bold": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Arial'"
                 }
               }
             }
@@ -713,114 +720,28 @@
             }
           }
         }
+      ],
+      "background": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            }
+          }
+        }
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "8c1560933299ae403b41",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mostaql"
-              }
-            },
-            "Property": "Category_English"
-          }
-        },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "Mostaql",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "m"
-                            }
-                          },
-                          "Property": "Category_English"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Aggregation": {
-                            "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "m"
-                                  }
-                                },
-                                "Property": "Category_English"
-                              }
-                            },
-                            "Function": 5
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 9
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "m",
-              "Entity": "Mostaql",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "Category_English"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      }
-    ]
   }
 }

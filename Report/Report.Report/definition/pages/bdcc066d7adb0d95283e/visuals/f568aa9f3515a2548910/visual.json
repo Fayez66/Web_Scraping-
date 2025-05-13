@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mostaql"
+                      "Entity": "Mostaqel"
                     }
                   },
                   "Property": "Category_Arabic"
                 }
               },
-              "queryRef": "Mostaql.Category_Arabic",
-              "nativeQueryRef": "Category_Arabic",
+              "queryRef": "Mostaqel.Category_Arabic",
+              "nativeQueryRef": "Category_Arabic1",
               "active": true
             }
           ]
@@ -41,17 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
-                      "Property": "Avg offer"
+                      "Property": "Budget"
                     }
                   },
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(Mostaql.Avg offer)",
-              "nativeQueryRef": "Average of Avg offer"
+              "queryRef": "Sum(Mostaqel.Budget)",
+              "nativeQueryRef": "Average of Budget"
             }
           ]
         }
@@ -65,10 +65,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Mostaql"
+                        "Entity": "Mostaqel"
                       }
                     },
-                    "Property": "Avg offer"
+                    "Property": "Budget"
                   }
                 },
                 "Function": 1
@@ -506,10 +506,10 @@
                             "Column": {
                               "Expression": {
                                 "SourceRef": {
-                                  "Entity": "Mostaql"
+                                  "Entity": "Mostaqel"
                                 }
                               },
-                              "Property": "Avg offer"
+                              "Property": "Budget"
                             }
                           },
                           "Function": 1
@@ -743,184 +743,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "70962dea92a80639e730",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mostaql"
-              }
-            },
-            "Property": "category_arabic"
-          }
-        },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "Mostaql",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "m"
-                            }
-                          },
-                          "Property": "category_arabic"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Aggregation": {
-                            "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "m"
-                                  }
-                                },
-                                "Property": "Avg offer"
-                              }
-                            },
-                            "Function": 5
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 9
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "m",
-              "Entity": "Mostaql",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "category_arabic"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User"
-      },
-      {
-        "name": "61762fc0174ee0e34106",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mostaql"
-              }
-            },
-            "Property": "category_arabic"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "m",
-              "Entity": "Mostaql",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "m"
-                              }
-                            },
-                            "Property": "category_arabic"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'غير معروف'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
   }
 }

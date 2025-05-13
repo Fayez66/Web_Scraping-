@@ -187,23 +187,11 @@
                         }
                       },
                       "FillRule": {
-                        "linearGradient3": {
+                        "linearGradient2": {
                           "min": {
                             "color": {
                               "Literal": {
                                 "Value": "'#70DA45'"
-                              }
-                            }
-                          },
-                          "mid": {
-                            "color": {
-                              "Literal": {
-                                "Value": "'#008300'"
-                              }
-                            },
-                            "value": {
-                              "Literal": {
-                                "Value": "4000D"
                               }
                             }
                           },

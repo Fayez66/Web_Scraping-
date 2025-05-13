@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
                       "Property": "Duration(Days)"
@@ -31,7 +31,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.Duration(Days))",
+              "queryRef": "CountNonNull(Mostaqel.Duration(Days))",
               "nativeQueryRef": "عدد الوظائف",
               "displayName": "عدد الوظائف"
             },
@@ -40,13 +40,13 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Mostaql"
+                      "Entity": "Mostaqel"
                     }
                   },
                   "Property": "Duration(Days)"
                 }
               },
-              "queryRef": "Mostaql.Duration(Days)",
+              "queryRef": "Sum(Mostaqel.Duration(Days))",
               "nativeQueryRef": "الايام المطلوبه",
               "displayName": "الايام المطلوبه"
             }
@@ -57,16 +57,21 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Mostaql"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Mostaqel"
+                      }
+                    },
+                    "Property": "Duration(Days)"
                   }
                 },
-                "Property": "Duration(Days)"
+                "Function": 5
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ]
       }
@@ -75,7 +80,7 @@
       "grid": [
         {
           "properties": {
-            "gridHorizontalColor": {
+            "outlineColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -104,7 +109,7 @@
                 }
               }
             },
-            "outlineColor": {
+            "gridHorizontalColor": {
               "solid": {
                 "color": {
                   "expr": {
@@ -160,24 +165,6 @@
       "columnHeaders": [
         {
           "properties": {
-            "fontColor": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "'#3C2F13'"
-                    }
-                  }
-                }
-              }
-            },
-            "alignment": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Right'"
-                }
-              }
-            },
             "fontFamily": {
               "expr": {
                 "Literal": {
@@ -192,6 +179,17 @@
                 }
               }
             },
+            "fontColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#3C2F13'"
+                    }
+                  }
+                }
+              }
+            },
             "backColor": {
               "solid": {
                 "color": {
@@ -200,6 +198,13 @@
                       "Value": "'#FEA9BA'"
                     }
                   }
+                }
+              }
+            },
+            "alignment": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Right'"
                 }
               }
             }
@@ -232,6 +237,34 @@
           },
           "selector": {
             "metadata": "CountNonNull(Mostaql.Duration(Days))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "82.22221223807544D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "CountNonNull(Mostaqel.Duration(Days))"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "111.55555128929933D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Sum(Mostaqel.Duration(Days))"
           }
         }
       ]
@@ -367,112 +400,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "6050e40e5a400e05ee70",
-        "ordinal": 1,
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Mostaql"
-              }
-            },
-            "Property": "Duration(Days)"
-          }
-        },
-        "type": "TopN",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "subquery",
-              "Expression": {
-                "Subquery": {
-                  "Query": {
-                    "Version": 2,
-                    "From": [
-                      {
-                        "Name": "m",
-                        "Entity": "Mostaql",
-                        "Type": 0
-                      }
-                    ],
-                    "Select": [
-                      {
-                        "Column": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Source": "m"
-                            }
-                          },
-                          "Property": "Duration(Days)"
-                        },
-                        "Name": "field"
-                      }
-                    ],
-                    "OrderBy": [
-                      {
-                        "Direction": 2,
-                        "Expression": {
-                          "Aggregation": {
-                            "Expression": {
-                              "Column": {
-                                "Expression": {
-                                  "SourceRef": {
-                                    "Source": "m"
-                                  }
-                                },
-                                "Property": "Duration(Days)"
-                              }
-                            },
-                            "Function": 5
-                          }
-                        }
-                      }
-                    ],
-                    "Top": 10
-                  }
-                }
-              },
-              "Type": 2
-            },
-            {
-              "Name": "m",
-              "Entity": "Mostaql",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "In": {
-                  "Expressions": [
-                    {
-                      "Column": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Source": "m"
-                          }
-                        },
-                        "Property": "Duration(Days)"
-                      }
-                    }
-                  ],
-                  "Table": {
-                    "SourceRef": {
-                      "Source": "subquery"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
-    ],
-    "filterSortOrder": "Custom"
   }
 }

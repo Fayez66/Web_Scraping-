@@ -27,3 +27,8 @@ relationship 26f66443-8dec-4f30-92c4-bfcad7a1f9f0
 	fromColumn: Freelance_Yard.'Date Posted'
 	toColumn: LocalDateTable_a37f4102-01d8-4aa6-b141-64d2620f833a.Date
 
+relationship f91fed89-b449-4ee9-857f-69831dbaf828
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Mostaqel.Posted
+	toColumn: LocalDateTable_b71d0f9e-6951-4181-91fe-3de684b979ac.Date
+

@@ -22,17 +22,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
-                      "Property": "Avg offer"
+                      "Property": "Budget"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(Mostaql.Avg offer)2",
-              "nativeQueryRef": "Sum of Avg offer"
+              "queryRef": "Sum(Mostaqel.Budget)",
+              "nativeQueryRef": "Sum of Budget"
             },
             {
               "field": {
@@ -41,36 +41,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
-                      "Property": "Avg offer"
-                    }
-                  },
-                  "Function": 3
-                }
-              },
-              "queryRef": "Min(Mostaql.Avg offer)",
-              "nativeQueryRef": "First Avg offer"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Mostaql"
-                        }
-                      },
-                      "Property": "Avg offer"
+                      "Property": "Budget"
                     }
                   },
                   "Function": 4
                 }
               },
-              "queryRef": "Sum(Mostaql.Avg offer)1",
-              "nativeQueryRef": "Max of Avg offer"
+              "queryRef": "Max(Mostaqel.Budget)",
+              "nativeQueryRef": "Max of Budget"
             },
             {
               "field": {
@@ -79,17 +60,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
-                      "Property": "Avg offer"
+                      "Property": "Budget"
                     }
                   },
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(Mostaql.Avg offer)",
-              "nativeQueryRef": "Average of Avg offer"
+              "queryRef": "Avg(Mostaqel.Budget)",
+              "nativeQueryRef": "Average of Budget"
             },
             {
               "field": {
@@ -98,17 +79,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
-                      "Property": "Number of Offers"
+                      "Property": "number of offers"
                     }
                   },
                   "Function": 1
                 }
               },
-              "queryRef": "Sum(Mostaql.Number of Offers)",
-              "nativeQueryRef": "Average of Number of Offers"
+              "queryRef": "Sum(Mostaqel.number of offers)",
+              "nativeQueryRef": "Average of number of offers"
             },
             {
               "field": {
@@ -117,7 +98,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Mostaql"
+                          "Entity": "Mostaqel"
                         }
                       },
                       "Property": "ID"
@@ -126,7 +107,7 @@
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.ID)",
+              "queryRef": "CountNonNull(Mostaqel.ID)",
               "nativeQueryRef": "Count of ID"
             }
           ]
@@ -141,16 +122,16 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Mostaql"
+                        "Entity": "Mostaqel"
                       }
                     },
-                    "Property": "Avg offer"
+                    "Property": "Budget"
                   }
                 },
                 "Function": 0
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -158,34 +139,6 @@
     },
     "objects": {
       "value": [
-        {
-          "properties": {
-            "labelPrecision": {
-              "expr": {
-                "Literal": {
-                  "Value": "0L"
-                }
-              }
-            },
-            "fontFamily": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Arial'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "25D"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Number of Offers)"
-          }
-        },
         {
           "properties": {
             "fontFamily": {
@@ -368,90 +321,6 @@
           },
           "selector": {
             "id": "default"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'متوسط الميزانية'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Avg offer)"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'متوسط عدد العروض'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Number of Offers)"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'عدد الوظائف'"
-                }
-              }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "14D"
-                }
-              }
-            },
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "CountNonNull(Mostaql.ID)"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'أكبر عرض'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Avg offer)1"
-          }
-        },
-        {
-          "properties": {
-            "text": {
-              "expr": {
-                "Literal": {
-                  "Value": "'مجموع الميزانية'"
-                }
-              }
-            }
-          },
-          "selector": {
-            "metadata": "Sum(Mostaql.Avg offer)2"
           }
         }
       ],
