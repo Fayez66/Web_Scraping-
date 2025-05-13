@@ -266,6 +266,5 @@ def main():
     Tags.index.name = 'index'
     Tags.to_csv(base_path/"Data/UpWorkSkills.csv", index=True, encoding="utf-8-sig")
 
-'''df.to_csv('your_file.csv', mode='a', index=False, header=False, encoding='utf-8-sig')'''
 if __name__ == "__main__":
     main()

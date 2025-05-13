@@ -28,12 +28,11 @@
                       "Property": "Price"
                     }
                   },
-                  "Function": 1
+                  "Function": 0
                 }
               },
               "queryRef": "CountNonNull(Freelancer.Price)",
-              "nativeQueryRef": "Average of Budget",
-              "displayName": "Average of Budget"
+              "nativeQueryRef": "Sum of Price"
             }
           ]
         }
@@ -53,7 +52,7 @@
                     "Property": "Price"
                   }
                 },
-                "Function": 1
+                "Function": 0
               }
             },
             "direction": "Descending"
@@ -270,79 +269,6 @@
           "general": [
             {
               "properties": {}
-            }
-          ]
-        }
-      },
-      {
-        "name": "2b73221ed30e7e5bc3bb",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Freelancer"
-              }
-            },
-            "Property": "Category"
-          }
-        },
-        "type": "Categorical",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "Freelancer",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Not": {
-                  "Expression": {
-                    "In": {
-                      "Expressions": [
-                        {
-                          "Column": {
-                            "Expression": {
-                              "SourceRef": {
-                                "Source": "f"
-                              }
-                            },
-                            "Property": "Category"
-                          }
-                        }
-                      ],
-                      "Values": [
-                        [
-                          {
-                            "Literal": {
-                              "Value": "'Other'"
-                            }
-                          }
-                        ]
-                      ]
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {
-                "isInvertedSelectionMode": {
-                  "expr": {
-                    "Literal": {
-                      "Value": "true"
-                    }
-                  }
-                }
-              }
             }
           ]
         }

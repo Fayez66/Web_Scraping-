@@ -25,25 +25,6 @@
                           "Entity": "Freelance_Yard"
                         }
                       },
-                      "Property": "ID"
-                    }
-                  },
-                  "Function": 5
-                }
-              },
-              "queryRef": "CountNonNull(Freelance_Yard.ID)",
-              "nativeQueryRef": "Count of ID"
-            },
-            {
-              "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Freelance_Yard"
-                        }
-                      },
                       "Property": "Budget"
                     }
                   },
@@ -68,10 +49,10 @@
                         "Entity": "Freelance_Yard"
                       }
                     },
-                    "Property": "ID"
+                    "Property": "Budget"
                   }
                 },
-                "Function": 5
+                "Function": 1
               }
             },
             "direction": "Descending"

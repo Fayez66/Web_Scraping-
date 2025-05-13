@@ -17,54 +17,17 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Mostaql"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "Mostaql"
                     }
                   },
-                  "Level": "Month"
+                  "Property": "Posted"
                 }
               },
               "queryRef": "Mostaql.Posted.Variation.Date Hierarchy.Month",
               "nativeQueryRef": "First Date Hierarchy Month",
-              "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Mostaql"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
-                    }
-                  },
-                  "Level": "Day"
-                }
-              },
-              "queryRef": "Mostaql.Posted.Variation.Date Hierarchy.Day",
-              "nativeQueryRef": "Posted Day",
               "active": true
             }
           ]
@@ -97,48 +60,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Column": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Mostaql"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Posted"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
+                  "SourceRef": {
+                    "Entity": "Mostaql"
                   }
                 },
-                "Level": "Month"
-              }
-            },
-            "direction": "Descending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Mostaql"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Posted"
-                      }
-                    },
-                    "Hierarchy": "Date Hierarchy"
-                  }
-                },
-                "Level": "Day"
+                "Property": "Posted"
               }
             },
             "direction": "Descending"

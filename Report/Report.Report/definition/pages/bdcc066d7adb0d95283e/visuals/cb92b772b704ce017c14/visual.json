@@ -23,11 +23,11 @@
                       "Entity": "Mostaql"
                     }
                   },
-                  "Property": "category_arabic"
+                  "Property": "Category_Arabic"
                 }
               },
-              "queryRef": "Mostaql.category_arabic",
-              "nativeQueryRef": "category_arabic",
+              "queryRef": "Mostaql.Category_Arabic",
+              "nativeQueryRef": "Category_Arabic",
               "active": true
             }
           ]
@@ -44,14 +44,14 @@
                           "Entity": "Mostaql"
                         }
                       },
-                      "Property": "category_arabic"
+                      "Property": "Category_Arabic"
                     }
                   },
                   "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Mostaql.category_arabic)",
-              "nativeQueryRef": "Count of category_arabic"
+              "queryRef": "CountNonNull(Mostaql.Category_Arabic)",
+              "nativeQueryRef": "Count of Category_Arabic"
             }
           ]
         }
@@ -68,7 +68,7 @@
                         "Entity": "Mostaql"
                       }
                     },
-                    "Property": "category_arabic"
+                    "Property": "Category_Arabic"
                   }
                 },
                 "Function": 5

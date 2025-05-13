@@ -98,7 +98,7 @@ table 'All Data'
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\All data\All Data Combined.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\All Data Combined.csv"),[Delimiter=",", Columns=10, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
 				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Posted", type date}, {"Budget", type number}, {"est. budget", type number}, {"hours/week", type text}, {"duration", type text}, {"UpWork", type text}})
 				in

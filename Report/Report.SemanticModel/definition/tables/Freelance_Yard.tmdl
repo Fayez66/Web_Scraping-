@@ -1,15 +1,6 @@
 table Freelance_Yard
 	lineageTag: ee207195-6c3f-4814-a5f8-fe972b49312b
 
-	column ID
-		dataType: int64
-		formatString: 0
-		lineageTag: e640c5a9-5816-40dd-83ad-3837cdf43b59
-		summarizeBy: count
-		sourceColumn: ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column Title
 		dataType: string
 		lineageTag: f5b125f2-7914-4250-accc-eb58e741f5b1
@@ -26,14 +17,6 @@ table Freelance_Yard
 
 		annotation SummarizationSetBy = Automatic
 
-	column 'client name'
-		dataType: string
-		lineageTag: b12c28d9-d192-4059-aed2-602a9af80015
-		summarizeBy: none
-		sourceColumn: client name
-
-		annotation SummarizationSetBy = Automatic
-
 	column Type
 		dataType: string
 		lineageTag: 9e10a70a-9c62-4f80-a8c0-f38c061bc276
@@ -44,12 +27,13 @@ table Freelance_Yard
 
 	column Budget
 		dataType: double
-		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: 168e3edd-8aac-4f43-9cc2-380e20e1edc7
 		summarizeBy: sum
 		sourceColumn: Budget
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Category
 		dataType: string
@@ -68,20 +52,37 @@ table Freelance_Yard
 
 		variation Variation
 			isDefault
-			relationship: 65edaad1-a5e8-446c-9508-9c94331ef92f
-			defaultHierarchy: LocalDateTable_90ceed3a-51e2-4344-a376-4dc41c08675e.'Date Hierarchy'
+			relationship: 26f66443-8dec-4f30-92c4-bfcad7a1f9f0
+			defaultHierarchy: LocalDateTable_a37f4102-01d8-4aa6-b141-64d2620f833a.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	column 'client name'
+		dataType: string
+		lineageTag: 6a623e79-c718-418e-afd7-27b8f77fcd04
+		summarizeBy: none
+		sourceColumn: client name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Category.1'
+		dataType: string
+		lineageTag: 1a16cf41-c145-4dac-86b3-d0326009d968
+		summarizeBy: none
+		sourceColumn: Category.1
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Freelance_Yard = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Freelance Yard\job_listings_cleaned.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\FreelanceYard.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Link", type text}, {"client name", type text}, {"Type", type text}, {"Budget", type number}, {"Category", type text}, {"Date Posted", type date}})
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers",{{"Client", "client name"}}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Renamed Columns",{{"Budget", type number}, {"Date Posted", type date}})
 				in
 				    #"Changed Type"
 

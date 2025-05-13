@@ -23,11 +23,11 @@
                       "Entity": "Mostaql"
                     }
                   },
-                  "Property": "category_arabic"
+                  "Property": "Category_Arabic"
                 }
               },
-              "queryRef": "Mostaql.category_arabic",
-              "nativeQueryRef": "category_arabic",
+              "queryRef": "Mostaql.Category_Arabic",
+              "nativeQueryRef": "Category_Arabic",
               "active": true
             }
           ]
@@ -845,7 +845,8 @@
               }
             }
           ]
-        }
+        },
+        "howCreated": "User"
       },
       {
         "name": "61762fc0174ee0e34106",

@@ -72,8 +72,8 @@ table UpWork
 
 		variation Variation
 			isDefault
-			relationship: 4d09756a-c1e8-40ff-a8d6-c478499f80ea
-			defaultHierarchy: LocalDateTable_cf6888e5-b6c7-448a-8109-1e2e53c496a8.'Date Hierarchy'
+			relationship: 899512c5-3c8e-443e-b040-13cd212ddd7f
+			defaultHierarchy: LocalDateTable_bbeefd70-92fb-4e35-8c81-3fbdf6b4fbed.'Date Hierarchy'
 
 		annotation SummarizationSetBy = Automatic
 
@@ -89,21 +89,23 @@ table UpWork
 
 	column Budget
 		dataType: double
-		formatString: #,0.00
 		lineageTag: 33fd576e-d5d0-40b6-9568-e3d55c78b278
 		summarizeBy: sum
 		sourceColumn: Budget
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	column 'est. budget'
 		dataType: double
-		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
 		lineageTag: 0edf3fb5-393d-45c3-afec-8ded9f1422a5
 		summarizeBy: sum
 		sourceColumn: est. budget
 
 		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'est. time'
 		dataType: string
@@ -129,14 +131,6 @@ table UpWork
 
 		annotation SummarizationSetBy = Automatic
 
-	column Tags
-		dataType: string
-		lineageTag: b9170ed1-3968-4ddd-a591-3cac21b17715
-		summarizeBy: none
-		sourceColumn: Tags
-
-		annotation SummarizationSetBy = Automatic
-
 	column Link
 		dataType: string
 		lineageTag: d915e1f8-ae17-4bef-8103-55fb3f98aeca
@@ -149,12 +143,14 @@ table UpWork
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\job_listings_cleaned.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\UpWork.csv"),[Delimiter=",", Columns=14, Encoding=65001, QuoteStyle=QuoteStyle.Csv]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Category", type text}, {"Category.1", type text}, {"job_type", type text}, {"Title", type text}, {"Posted", type date}, {"Experience Level", type text}, {"Budget", type number}, {"est. budget", type number}, {"est. time", type text}, {"hours/week", type text}, {"duration", type text}, {"Tags", type text}, {"Link", type text}}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type",".0","",Replacer.ReplaceText,{"duration"})
+				    #"Replaced Value" = Table.ReplaceValue(#"Promoted Headers",".0","",Replacer.ReplaceText,{"duration"}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Replaced Value",{"ID", "Category.1", "Category", "job_type", "Title", "Posted", "Experience Level", "Budget", "est. budget", "est. time", "hours/week", "duration", "Link", ""}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Reordered Columns",{{"est. budget", type number}, {"Budget", type number}, {"Posted", type date}, {"ID", Int64.Type}}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Changed Type",{""})
 				in
-				    #"Replaced Value"
+				    #"Removed Columns"
 
 	annotation PBI_NavigationStepName = Navigation
 

@@ -2,7 +2,8 @@ table UpWork_Skills
 	lineageTag: 3c0945db-dad1-410f-b595-7d0fa3b5a065
 
 	column ID
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: a9ef25a9-b073-4b0d-a091-1680a34181dc
 		summarizeBy: none
 		sourceColumn: ID
@@ -18,9 +19,10 @@ table UpWork_Skills
 		annotation SummarizationSetBy = Automatic
 
 	column index
-		dataType: string
+		dataType: int64
+		formatString: 0
 		lineageTag: 24c823a4-1b8f-4d84-ab9c-fec73b571d09
-		summarizeBy: none
+		summarizeBy: sum
 		sourceColumn: index
 
 		annotation SummarizationSetBy = Automatic
@@ -29,10 +31,11 @@ table UpWork_Skills
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Upwork\jobs_expanded.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\UpWorkSkills.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"index", Int64.Type}, {"ID", Int64.Type}})
 				in
-				    #"Promoted Headers"
+				    #"Changed Type"
 
 	annotation PBI_NavigationStepName = Navigation
 

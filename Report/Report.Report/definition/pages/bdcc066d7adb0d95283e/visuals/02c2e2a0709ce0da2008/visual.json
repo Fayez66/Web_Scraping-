@@ -47,6 +47,25 @@
                       "Property": "Avg offer"
                     }
                   },
+                  "Function": 3
+                }
+              },
+              "queryRef": "Min(Mostaql.Avg offer)",
+              "nativeQueryRef": "First Avg offer"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "Mostaql"
+                        }
+                      },
+                      "Property": "Avg offer"
+                    }
+                  },
                   "Function": 4
                 }
               },
@@ -131,7 +150,7 @@
                 "Function": 0
               }
             },
-            "direction": "Descending"
+            "direction": "Ascending"
           }
         ],
         "isDefaultSort": true

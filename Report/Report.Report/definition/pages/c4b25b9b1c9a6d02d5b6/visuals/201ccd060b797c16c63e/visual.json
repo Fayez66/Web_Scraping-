@@ -17,107 +17,18 @@
           "projections": [
             {
               "field": {
-                "HierarchyLevel": {
+                "Column": {
                   "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Freelance_Yard"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
+                    "SourceRef": {
+                      "Entity": "Freelance_Yard"
                     }
                   },
-                  "Level": "Year"
+                  "Property": "Date Posted"
                 }
               },
               "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Year",
               "nativeQueryRef": "Date Posted Year",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Freelance_Yard"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
-                    }
-                  },
-                  "Level": "Quarter"
-                }
-              },
-              "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Quarter",
-              "nativeQueryRef": "Date Posted Quarter",
-              "active": false
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Freelance_Yard"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
-                    }
-                  },
-                  "Level": "Month"
-                }
-              },
-              "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Month",
-              "nativeQueryRef": "Date Posted Month",
               "active": true
-            },
-            {
-              "field": {
-                "HierarchyLevel": {
-                  "Expression": {
-                    "Hierarchy": {
-                      "Expression": {
-                        "PropertyVariationSource": {
-                          "Expression": {
-                            "SourceRef": {
-                              "Entity": "Freelance_Yard"
-                            }
-                          },
-                          "Name": "Variation",
-                          "Property": "Date Posted"
-                        }
-                      },
-                      "Hierarchy": "Date Hierarchy"
-                    }
-                  },
-                  "Level": "Day"
-                }
-              },
-              "queryRef": "Freelance_Yard.Date Posted.Variation.Date Hierarchy.Day",
-              "nativeQueryRef": "Date Posted Day",
-              "active": false
             }
           ]
         },
@@ -577,79 +488,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "0f533ae4a493d814e196",
-        "field": {
-          "HierarchyLevel": {
-            "Expression": {
-              "Hierarchy": {
-                "Expression": {
-                  "PropertyVariationSource": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Freelance_Yard"
-                      }
-                    },
-                    "Name": "Variation",
-                    "Property": "Date Posted"
-                  }
-                },
-                "Hierarchy": "Date Hierarchy"
-              }
-            },
-            "Level": "Year"
-          }
-        },
-        "type": "Advanced",
-        "filter": {
-          "Version": 2,
-          "From": [
-            {
-              "Name": "f",
-              "Entity": "Freelance_Yard",
-              "Type": 0
-            }
-          ],
-          "Where": [
-            {
-              "Condition": {
-                "Comparison": {
-                  "ComparisonKind": 1,
-                  "Left": {
-                    "HierarchyLevel": {
-                      "Expression": {
-                        "Hierarchy": {
-                          "Expression": {
-                            "PropertyVariationSource": {
-                              "Expression": {
-                                "SourceRef": {
-                                  "Source": "f"
-                                }
-                              },
-                              "Name": "Variation",
-                              "Property": "Date Posted"
-                            }
-                          },
-                          "Hierarchy": "Date Hierarchy"
-                        }
-                      },
-                      "Level": "Year"
-                    }
-                  },
-                  "Right": {
-                    "Literal": {
-                      "Value": "2023L"
-                    }
-                  }
-                }
-              }
-            }
-          ]
-        }
-      }
-    ]
   }
 }

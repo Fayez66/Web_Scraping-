@@ -22,15 +22,6 @@ table Mostaql
 			```
 		lineageTag: 472ce1ac-afdb-4580-bde8-7f22ed36b202
 
-	column ID
-		dataType: int64
-		formatString: 0
-		lineageTag: 507f7e0d-4a88-40d3-8f0c-1ae2b6d9dfa0
-		summarizeBy: none
-		sourceColumn: ID
-
-		annotation SummarizationSetBy = Automatic
-
 	column Title
 		dataType: string
 		lineageTag: 32074696-cade-4a3a-a159-3bf107d71cc2
@@ -47,38 +38,25 @@ table Mostaql
 
 		annotation SummarizationSetBy = Automatic
 
-	column category_arabic
-		dataType: string
-		lineageTag: b6ce289d-c44a-4373-bcc8-41090795b0b2
-		summarizeBy: none
-		sourceColumn: category_arabic
-
-		annotation SummarizationSetBy = Automatic
-
 	column Posted
-		dataType: dateTime
-		formatString: Long Date
+		dataType: string
 		lineageTag: 9c80ea7e-7544-496b-9f6f-764a4ae14373
 		summarizeBy: none
 		sourceColumn: Posted
 
-		variation Variation
-			isDefault
-			relationship: 67088b2a-8e64-44ab-92b3-1ea34a84ba8a
-			defaultHierarchy: LocalDateTable_7f46b7f4-1943-4377-8086-f60de42d36bc.'Date Hierarchy'
-
 		annotation SummarizationSetBy = Automatic
-
-		annotation UnderlyingDateTimeDataType = Date
 
 	column 'Avg offer'
 		dataType: double
-		formatString: \$#,0;(\$#,0);\$#,0
 		lineageTag: b24ae3de-74c9-41e9-8355-fdf5c4b289c9
 		summarizeBy: sum
 		sourceColumn: Avg offer
 
-		annotation SummarizationSetBy = User
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Duration(Days)
 		dataType: int64
@@ -96,21 +74,7 @@ table Mostaql
 		summarizeBy: sum
 		sourceColumn: Number of Offers
 
-		annotation SummarizationSetBy = Automatic
-
-	column Tags
-		dataType: string
-		lineageTag: 58859c30-0e0f-495f-8034-b1326e281a25
-		summarizeBy: none
-		sourceColumn: Tags
-
-		annotation SummarizationSetBy = Automatic
-
-	column Tags_en
-		dataType: string
-		lineageTag: cf38755c-07dc-4c3f-9008-545a4b41e331
-		summarizeBy: none
-		sourceColumn: Tags_en
+		changedProperty = DataType
 
 		annotation SummarizationSetBy = Automatic
 
@@ -122,16 +86,36 @@ table Mostaql
 
 		annotation SummarizationSetBy = Automatic
 
+	column Category_Arabic
+		dataType: string
+		lineageTag: 42a9525f-aeda-49ec-b6a1-cffda6bff0c3
+		summarizeBy: none
+		sourceColumn: Category_Arabic
+
+		annotation SummarizationSetBy = Automatic
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: 98a415bf-7f86-4810-a177-3eb8bd2ac33a
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
 	partition Mostaql = m
 		mode: import
 		source =
 				let
-				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Mostaqel\job_listings_cleaned.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\Mostaqel.csv"),[Delimiter=",", Columns=11, Encoding=65001, QuoteStyle=QuoteStyle.None]),
 				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Title", type text}, {"Category_English", type text}, {"category_arabic", type text}, {"Posted", type date}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}, {"Tags", type text}, {"Tags_en", type text}, {"Link", type text}}),
-				    #"Replaced Value" = Table.ReplaceValue(#"Changed Type","الذكاء الاصطناعي / تعلم الآلة","الذكاء الاصطناعي",Replacer.ReplaceText,{"category_arabic"})
+				    #"Renamed Columns" = Table.RenameColumns(#"Promoted Headers",{{"", "ID"}}),
+				    #"Reordered Columns" = Table.ReorderColumns(#"Renamed Columns",{"ID", "Title", "Category_English", "Category_Arabic", "Posted", "Avg offer", "Duration(Days)", "Number of Offers", "Link", "_1", "_2"}),
+				    #"Removed Columns" = Table.RemoveColumns(#"Reordered Columns",{"_1", "_2"}),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Removed Columns",{{"ID", Int64.Type}, {"Posted", type text}, {"Avg offer", type number}, {"Duration(Days)", Int64.Type}, {"Number of Offers", Int64.Type}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"Avg offer", type text}, {"Number of Offers", type text}})
 				in
-				    #"Replaced Value"
+				    #"Changed Type1"
 
 	annotation PBI_NavigationStepName = Navigation
 

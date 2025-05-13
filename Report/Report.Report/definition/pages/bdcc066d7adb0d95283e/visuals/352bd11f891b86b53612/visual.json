@@ -27,7 +27,7 @@
                 }
               },
               "queryRef": "Mostaql_Skills.Tags_en",
-              "nativeQueryRef": "Count of Tags_en",
+              "nativeQueryRef": "Tags_en",
               "active": true
             }
           ]
@@ -51,7 +51,7 @@
                 }
               },
               "queryRef": "CountNonNull(Mostaql_Skills.Tags_en)",
-              "nativeQueryRef": "Count of Tags_en1"
+              "nativeQueryRef": "Count of Tags_en"
             }
           ]
         }
