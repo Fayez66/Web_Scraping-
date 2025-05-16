@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "3125cec00b5d3106a905",
+  "name": "2022a855030b0e4a35de",
   "position": {
-    "x": 0,
-    "y": 0,
-    "z": 6000,
-    "height": 94.444444444444443,
-    "width": 211.11111111111111,
-    "tabOrder": 5000
+    "x": 108.42252145398729,
+    "y": 13.0890253261704,
+    "z": 8000,
+    "height": 59.999999999999993,
+    "width": 59.999999999999993,
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "card",
@@ -22,17 +22,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "Freelancer"
+                          "Entity": "ALL_DATA"
                         }
                       },
-                      "Property": "Price"
+                      "Property": "ID"
                     }
                   },
-                  "Function": 1
+                  "Function": 5
                 }
               },
-              "queryRef": "CountNonNull(Freelancer.Price)",
-              "nativeQueryRef": "Average of Price"
+              "queryRef": "CountNonNull(ALL_DATA.ID)",
+              "nativeQueryRef": "Count of ID"
             }
           ]
         }
@@ -46,13 +46,13 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "Freelancer"
+                        "Entity": "ALL_DATA"
                       }
                     },
-                    "Property": "Price"
+                    "Property": "ID"
                   }
                 },
-                "Function": 1
+                "Function": 5
               }
             },
             "direction": "Descending"
@@ -75,7 +75,7 @@
             "fontSize": {
               "expr": {
                 "Literal": {
-                  "Value": "25D"
+                  "Value": "20D"
                 }
               }
             }
@@ -85,10 +85,10 @@
       "categoryLabels": [
         {
           "properties": {
-            "bold": {
+            "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
                 }
               }
             }
@@ -120,18 +120,6 @@
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
             "transparency": {
               "expr": {
                 "Literal": {
@@ -145,61 +133,10 @@
       "border": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
-                }
-              }
-            },
-            "radius": {
-              "expr": {
-                "Literal": {
-                  "Value": "15D"
-                }
-              }
-            },
             "width": {
               "expr": {
                 "Literal": {
-                  "Value": "2D"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "dropShadow": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
+                  "Value": "1D"
                 }
               }
             }
@@ -209,16 +146,16 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9f23c49f206a59c01d93",
+  "parentGroupName": "afef45eac69394e6ab53",
   "filterConfig": {
     "filters": [
       {
-        "name": "2a4e8c5003d033e0857b",
+        "name": "a35a3c15c5254d50a301",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Freelancer"
+                "Entity": "ALL_DATA"
               }
             },
             "Property": "Type"
@@ -229,8 +166,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "Freelancer",
+              "Name": "a",
+              "Entity": "ALL_DATA",
               "Type": 0
             }
           ],
@@ -243,7 +180,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "f"
+                            "Source": "a"
                           }
                         },
                         "Property": "Type"
@@ -254,7 +191,7 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Fixed'"
+                          "Value": "'Fixed price'"
                         }
                       }
                     ]
@@ -264,14 +201,7 @@
             }
           ]
         },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
-            }
-          ]
-        }
+        "howCreated": "User"
       }
     ]
   }

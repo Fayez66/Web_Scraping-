@@ -54,6 +54,13 @@
                               "Value": "'Social Enterprise'"
                             }
                           }
+                        ],
+                        [
+                          {
+                            "Literal": {
+                              "Value": "null"
+                            }
+                          }
                         ]
                       ]
                     }

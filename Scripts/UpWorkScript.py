@@ -14,8 +14,9 @@ def main():
 
     path = base_path / r"chromedriver-win64\chromedriver.exe"
 
-    categories = [531770282580668420]
-    ''',531770282580668418,531770282580668419]'''
+    categories = [531770282580668420
+                ,531770282580668418,
+                531770282580668419]
     categories_name = {531770282580668420: "Data Science & Analytics", 531770282580668418: "Web, Mobile & Software Dev",
                        531770282580668419: "IT & NETWORKING"}
     i = 0
@@ -44,8 +45,10 @@ def main():
 
     for category in categories:
         category_start = time.time()
-        for page in range(1, 2):  # you can increase this safely now
+        for page in range(1, 99):
             try:
+                if category == 531770282580668419 and page == 81:
+                    break
                 url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={category}&nbs=1&per_page=50&sort=recency&page={page}"
                 driver.get(url)
                 time.sleep(random.uniform(3, 6))  # simulate human delay

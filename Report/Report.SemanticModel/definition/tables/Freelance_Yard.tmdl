@@ -35,14 +35,6 @@ table Freelance_Yard
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column Category
-		dataType: string
-		lineageTag: 838d848d-e73b-42e4-9acc-4751189c7ca1
-		summarizeBy: none
-		sourceColumn: Category
-
-		annotation SummarizationSetBy = Automatic
-
 	column 'Date Posted'
 		dataType: dateTime
 		formatString: Long Date
@@ -72,6 +64,14 @@ table Freelance_Yard
 		lineageTag: 1a16cf41-c145-4dac-86b3-d0326009d968
 		summarizeBy: none
 		sourceColumn: Category.1
+
+		annotation SummarizationSetBy = Automatic
+
+	column Column1
+		dataType: string
+		lineageTag: edc1b42d-ae70-4fd5-b3ab-8539fe307516
+		summarizeBy: none
+		sourceColumn: Column1
 
 		annotation SummarizationSetBy = Automatic
 

@@ -459,7 +459,7 @@
                 "Entity": "Mostaql_Skills"
               }
             },
-            "Property": "Tags_en"
+            "Property": "Tags"
           }
         },
         "type": "Categorical",
@@ -486,7 +486,7 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "Tags_en"
+                            "Property": "Tags"
                           }
                         }
                       ],

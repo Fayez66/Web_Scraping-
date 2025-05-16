@@ -23,7 +23,7 @@
                       "Entity": "Mostaql_Skills"
                     }
                   },
-                  "Property": "Tags_en"
+                  "Property": "Tags"
                 }
               },
               "queryRef": "Mostaql_Skills.Tags_en",
@@ -44,7 +44,7 @@
                           "Entity": "Mostaql_Skills"
                         }
                       },
-                      "Property": "Tags_en"
+                      "Property": "Tags"
                     }
                   },
                   "Function": 5
@@ -68,7 +68,7 @@
                         "Entity": "Mostaql_Skills"
                       }
                     },
-                    "Property": "Tags_en"
+                    "Property": "Tags"
                   }
                 },
                 "Function": 5
@@ -283,7 +283,7 @@
                                   "Entity": "Mostaql_Skills"
                                 }
                               },
-                              "Property": "Tags_en"
+                              "Property": "Tags"
                             }
                           },
                           "Function": 5
@@ -755,7 +755,7 @@
                 "Entity": "Mostaql_Skills"
               }
             },
-            "Property": "Tags_en"
+            "Property": "Tags"
           }
         },
         "type": "TopN",
@@ -783,7 +783,7 @@
                               "Source": "m"
                             }
                           },
-                          "Property": "Tags_en"
+                          "Property": "Tags"
                         },
                         "Name": "field"
                       }
@@ -800,7 +800,7 @@
                                     "Source": "m"
                                   }
                                 },
-                                "Property": "Tags_en"
+                                "Property": "Tags"
                               }
                             },
                             "Function": 5
@@ -832,7 +832,7 @@
                             "Source": "m"
                           }
                         },
-                        "Property": "Tags_en"
+                        "Property": "Tags"
                       }
                     }
                   ],
@@ -856,7 +856,7 @@
                 "Entity": "Mostaql_Skills"
               }
             },
-            "Property": "Tags_en"
+            "Property": "Tags"
           }
         },
         "type": "Categorical",
@@ -883,7 +883,7 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "Tags_en"
+                            "Property": "Tags"
                           }
                         }
                       ],

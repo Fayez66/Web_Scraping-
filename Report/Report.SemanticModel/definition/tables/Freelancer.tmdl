@@ -55,8 +55,6 @@ table Freelancer
 		summarizeBy: sum
 		sourceColumn: Price
 
-		changedProperty = DataType
-
 		annotation SummarizationSetBy = User
 
 	column Type

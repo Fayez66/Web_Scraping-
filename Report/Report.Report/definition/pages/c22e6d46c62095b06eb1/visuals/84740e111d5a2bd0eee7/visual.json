@@ -1,68 +1,88 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/1.7.0/schema.json",
-  "name": "3125cec00b5d3106a905",
+  "name": "84740e111d5a2bd0eee7",
   "position": {
     "x": 0,
     "y": 0,
-    "z": 6000,
-    "height": 94.444444444444443,
-    "width": 211.11111111111111,
-    "tabOrder": 5000
+    "z": 7000,
+    "height": 86.446661550268644,
+    "width": 389.00997697620875,
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "card",
+    "visualType": "advancedSlicerVisual",
     "query": {
       "queryState": {
         "Values": {
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Column": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "Freelancer"
-                        }
-                      },
-                      "Property": "Price"
+                    "SourceRef": {
+                      "Entity": "ALL_DATA"
                     }
                   },
-                  "Function": 1
+                  "Property": "Type"
                 }
               },
-              "queryRef": "CountNonNull(Freelancer.Price)",
-              "nativeQueryRef": "Average of Price"
+              "queryRef": "ALL_DATA.Type",
+              "nativeQueryRef": "Type"
             }
           ]
         }
-      },
-      "sortDefinition": {
-        "sort": [
-          {
-            "field": {
-              "Aggregation": {
-                "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "Freelancer"
-                      }
-                    },
-                    "Property": "Price"
-                  }
-                },
-                "Function": 1
-              }
-            },
-            "direction": "Descending"
-          }
-        ],
-        "isDefaultSort": true
       }
     },
     "objects": {
-      "labels": [
+      "layout": [
+        {
+          "properties": {
+            "rowCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            },
+            "columnCount": {
+              "expr": {
+                "Literal": {
+                  "Value": "2L"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "general": [
+        {
+          "properties": {}
+        }
+      ],
+      "shapeCustomRectangle": [
+        {
+          "properties": {
+            "tileShape": {
+              "expr": {
+                "Literal": {
+                  "Value": "'rectangleRoundedByPixel'"
+                }
+              }
+            },
+            "rectangleRoundedCurve": {
+              "expr": {
+                "Literal": {
+                  "Value": "15L"
+                }
+              }
+            }
+          },
+          "selector": {
+            "id": "default"
+          }
+        }
+      ],
+      "value": [
         {
           "properties": {
             "fontFamily": {
@@ -71,27 +91,10 @@
                   "Value": "'Arial'"
                 }
               }
-            },
-            "fontSize": {
-              "expr": {
-                "Literal": {
-                  "Value": "25D"
-                }
-              }
             }
-          }
-        }
-      ],
-      "categoryLabels": [
-        {
-          "properties": {
-            "bold": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
+          },
+          "selector": {
+            "id": "default"
           }
         }
       ]
@@ -104,6 +107,13 @@
               "expr": {
                 "Literal": {
                   "Value": "true"
+                }
+              }
+            },
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
                 }
               }
             }
@@ -120,18 +130,6 @@
                 }
               }
             },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 0,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
-            },
             "transparency": {
               "expr": {
                 "Literal": {
@@ -145,22 +143,17 @@
       "border": [
         {
           "properties": {
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
+                }
+              }
+            },
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "true"
-                }
-              }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 2,
-                      "Percent": -0.5
-                    }
-                  }
                 }
               }
             },
@@ -171,10 +164,14 @@
                 }
               }
             },
-            "width": {
-              "expr": {
-                "Literal": {
-                  "Value": "2D"
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#E6BF48'"
+                    }
+                  }
                 }
               }
             }
@@ -190,18 +187,6 @@
                   "Value": "true"
                 }
               }
-            },
-            "color": {
-              "solid": {
-                "color": {
-                  "expr": {
-                    "ThemeDataColor": {
-                      "ColorId": 1,
-                      "Percent": 0
-                    }
-                  }
-                }
-              }
             }
           }
         }
@@ -209,16 +194,16 @@
     },
     "drillFilterOtherVisuals": true
   },
-  "parentGroupName": "9f23c49f206a59c01d93",
+  "parentGroupName": "afef45eac69394e6ab53",
   "filterConfig": {
     "filters": [
       {
-        "name": "2a4e8c5003d033e0857b",
+        "name": "3325633ed1000cb42b32",
         "field": {
           "Column": {
             "Expression": {
               "SourceRef": {
-                "Entity": "Freelancer"
+                "Entity": "ALL_DATA"
               }
             },
             "Property": "Type"
@@ -229,8 +214,8 @@
           "Version": 2,
           "From": [
             {
-              "Name": "f",
-              "Entity": "Freelancer",
+              "Name": "a",
+              "Entity": "ALL_DATA",
               "Type": 0
             }
           ],
@@ -243,7 +228,7 @@
                       "Column": {
                         "Expression": {
                           "SourceRef": {
-                            "Source": "f"
+                            "Source": "a"
                           }
                         },
                         "Property": "Type"
@@ -254,21 +239,20 @@
                     [
                       {
                         "Literal": {
-                          "Value": "'Fixed'"
+                          "Value": "'Fixed price'"
+                        }
+                      }
+                    ],
+                    [
+                      {
+                        "Literal": {
+                          "Value": "'Hourly'"
                         }
                       }
                     ]
                   ]
                 }
               }
-            }
-          ]
-        },
-        "howCreated": "User",
-        "objects": {
-          "general": [
-            {
-              "properties": {}
             }
           ]
         }

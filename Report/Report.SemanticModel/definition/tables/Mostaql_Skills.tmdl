@@ -2,27 +2,25 @@ table Mostaql_Skills
 	lineageTag: 0185cfd3-517a-4361-b408-4b1d3cf9eb42
 
 	column ID
-		dataType: int64
-		formatString: 0
+		dataType: string
 		lineageTag: abd2d142-e544-4a34-b2a4-f7519116d2e0
-		summarizeBy: count
+		summarizeBy: none
 		sourceColumn: ID
 
 		annotation SummarizationSetBy = Automatic
 
-	column Tags_en
+	column Tags
 		dataType: string
 		lineageTag: 123057fe-c76d-4366-bb4d-83dae152f1a7
 		summarizeBy: none
-		sourceColumn: Tags_en
+		sourceColumn: Tags
 
 		annotation SummarizationSetBy = Automatic
 
 	column index
-		dataType: int64
-		formatString: 0
-		lineageTag: f984255d-96af-4c6b-aae3-b0f9eb762f25
-		summarizeBy: sum
+		dataType: string
+		lineageTag: d904829b-3333-4f67-97fe-dca5bdbe35d1
+		summarizeBy: none
 		sourceColumn: index
 
 		annotation SummarizationSetBy = Automatic
@@ -32,12 +30,9 @@ table Mostaql_Skills
 		source =
 				let
 				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\MostaqelSkills.csv"),[Delimiter=",", Columns=3, Encoding=65001, QuoteStyle=QuoteStyle.None]),
-				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"", Int64.Type}, {"ID", Int64.Type}}),
-				    #"Reordered Columns" = Table.ReorderColumns(#"Changed Type",{"", "ID", "Tags"}),
-				    #"Renamed Columns" = Table.RenameColumns(#"Reordered Columns",{{"Tags", "Tags_en"}, {"", "index"}})
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true])
 				in
-				    #"Renamed Columns"
+				    #"Promoted Headers"
 
 	annotation PBI_ResultType = Table
 

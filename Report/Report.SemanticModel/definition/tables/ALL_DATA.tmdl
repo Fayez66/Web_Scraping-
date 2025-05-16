@@ -1,0 +1,93 @@
+table ALL_DATA
+	lineageTag: 5ca7d495-e1dc-4212-a583-d8b58bb9efb7
+
+	column ID
+		dataType: int64
+		formatString: 0
+		lineageTag: acef7c6d-10da-4694-a6a0-dfc470ef721b
+		summarizeBy: count
+		sourceColumn: ID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Website
+		dataType: string
+		lineageTag: 5d2d6f66-1dc4-485b-8de9-960b595e127f
+		summarizeBy: none
+		sourceColumn: Website
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: 0f2ec64c-4f12-45cd-a497-c909320496aa
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		lineageTag: bbc21540-bd7c-438c-9f6f-f4dac1ef112b
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Type
+		dataType: string
+		lineageTag: 0e4eca9e-a1a2-464c-ade6-eaab4a959dde
+		summarizeBy: none
+		sourceColumn: Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Budget
+		dataType: int64
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 942bd3a0-1cfd-44f2-b98f-aef9e3a9e941
+		summarizeBy: sum
+		sourceColumn: Budget
+
+		annotation SummarizationSetBy = Automatic
+
+	column Posted
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 0879fd89-d401-4beb-8465-0e8b619d24ea
+		summarizeBy: none
+		sourceColumn: Posted
+
+		variation Variation
+			isDefault
+			relationship: b2097a88-c8f1-4b31-a187-8c4d51ea69e5
+			defaultHierarchy: LocalDateTable_3caa2a29-2696-4395-8f1d-3738ea8bc69e.'Date Hierarchy'
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Link
+		dataType: string
+		lineageTag: 0b2db105-6e7f-4bcc-871d-ad798cb07b94
+		summarizeBy: none
+		sourceColumn: Link
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ALL_DATA = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(File.Contents("E:\Apps\GItHubRebo\Web_Scraping-\Data\ALL_DATA.csv"),[Delimiter=",", Columns=8, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Promoted Headers" = Table.PromoteHeaders(Source, [PromoteAllScalars=true]),
+				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"ID", Int64.Type}, {"Website", type text}, {"Category", type text}, {"Title", type text}, {"Type", type text}, {"Budget", type text}, {"Posted", type date}, {"Link", type text}}),
+				    #"Changed Type1" = Table.TransformColumnTypes(#"Changed Type",{{"Budget", Int64.Type}}),
+				    #"Replaced Errors" = Table.ReplaceErrorValues(#"Changed Type1", {{"Budget", 0}})
+				in
+				    #"Replaced Errors"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
