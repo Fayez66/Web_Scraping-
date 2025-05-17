@@ -45,17 +45,17 @@ def main():
 
     for category in categories:
         category_start = time.time()
-        for page in range(1, 99):
+        for page in range(80, 99):
             try:
                 if category == 531770282580668419 and page == 81:
                     break
                 url = f"https://www.upwork.com/nx/search/jobs/?category2_uid={category}&nbs=1&per_page=50&sort=recency&page={page}"
                 driver.get(url)
-                time.sleep(random.uniform(3, 6))  # simulate human delay
+                # time.sleep(random.uniform(3, 6))  # simulate human delay
 
                 # Optional scroll to trigger dynamic content
                 driver.execute_script("window.scrollTo(0, document.body.scrollHeight / 2);")
-                time.sleep(random.uniform(1, 3))
+                # time.sleep(random.uniform(1, 3))
 
                 wait = WebDriverWait(driver, 10)
                 job_tiles = wait.until(EC.presence_of_all_elements_located((By.CSS_SELECTOR, 'article[data-test="JobTile"]')))

@@ -14,15 +14,9 @@ def main():
     base_path = Path(__file__).resolve().parents[1]
     path = base_path / r"chromedriver-win64\chromedriver.exe"
 
-    splits = ['/?hourly=true']
+    splits = ['/?hourly=true', '/?fixed=true&fixed_min=0&fixed_max=100', '/?fixed=true&fixed_min=100&fixed_max=500'  ,'/?fixed=true&fixed_min=500',]
 
-    '''they are put on order please don't change the order'''
-    #['/?fixed=true&fixed_min=0&fixed_max=100', '/?fixed=true&fixed_min=100&fixed_max=500'  ,'/?fixed=true&fixed_min=500',]
-
-    pages=[ 37]
-
-    '''they are put on order please don't change the order'''
-    #[56, 57,25,]
+    pages=[ 37, 56, 57, 25]
 
     # Containers for data
     titles = []
@@ -36,8 +30,9 @@ def main():
 
     for split in splits:
         index = pages[int(splits.index(split))]
-        """change the page number here"""
-        for page in range(1,2):
+        page = 1
+        while page <= index:
+        # for page in range(1,2):
             page_start = time.time()
             url = f"https://www.freelancer.com/jobs/{page}{split}"
             service = Service(executable_path=path)
@@ -63,7 +58,6 @@ def main():
                     titles.append("Blank")
                     links.append("Blank")
 
-
                 # Days left
                 try:
                     left = job.find_element(By.CLASS_NAME, "JobSearchCard-primary-heading-days")
@@ -71,14 +65,12 @@ def main():
                 except:
                     days_left.append("Blank")
 
-
                 #description
                 try:
                     desc = job.find_element(By.CLASS_NAME, 'JobSearchCard-primary-description').text
                     descriptions.append(desc.strip())
                 except:
                     descriptions.append("Blank")
-
 
                 #price & job type
                 try:
@@ -94,14 +86,12 @@ def main():
                     prices.append("Blank")
                     job_type.append("Blank")
 
-
                 # Bids
                 try:
                     bid = job.find_element(By.CLASS_NAME, "JobSearchCard-secondary-entry").text
                     bids.append(bid)
                 except:
                     bids.append("Blank")
-
 
                 #tags
                 try:
@@ -128,7 +118,7 @@ def main():
 
             page_time = time.time() - page_start
             print(f"Scraped page {page} with {len(jobs)} jobs in time {page_time:.2f} seconds.")
-
+            page += 1
             driver.quit()
         print(f"==> Finished\n")
 

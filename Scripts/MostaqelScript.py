@@ -23,8 +23,9 @@ def main():
 
 
     #---- Web Scraping ---------
-
-    for page in range(0, 1):
+    # P = Total pages to scrap max 36      + 1
+    p = 37
+    for page in range(1, 37):
         url = f"https://mostaql.com/projects?page={page}&category=development&budget_max=10000&sort=latest"
         service = Service(executable_path=path)
         driver = webdriver.Chrome(service=service)
@@ -32,7 +33,6 @@ def main():
         driver.maximize_window()
 
         # Collect project links
-
         project_links = driver.find_elements(By.CSS_SELECTOR, "h2.mrg--bt-reset a")
         unique_links = set(link.get_attribute("href") for link in project_links if link.get_attribute("href"))
 
@@ -79,6 +79,7 @@ def main():
             avg_offer_val = "N/A"
             budget = "N/A"
 
+            #Details
             try:
                 # Find the container by a single class name
                 meta_rows_container = driver.find_element(By.CLASS_NAME, "meta-rows")
@@ -115,7 +116,7 @@ def main():
                 project_tags = []
             tags.append(project_tags)
 
-        print(f"Finished page {page} - Total titles: {len(titles)}")
+        print(f"Finished page {page} - Total titles: {len(project_links)}")
 
         driver.quit()
 

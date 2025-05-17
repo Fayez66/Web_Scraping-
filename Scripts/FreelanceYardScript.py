@@ -26,9 +26,9 @@ def main():
     driver = webdriver.Chrome(service=service)
     driver.get('https://www.freelanceyard.com/en/jobs?filter[category_id]=2&page=1')
     driver.maximize_window()
-
+    should_break = False
     # Loop through pages
-    for page in range(1, 2):  # 455 pages total
+    for page in range(1, 469):  # 469 pages total
         print(f"Scraping page {page}...")
 
         jobs = driver.find_elements(By.CSS_SELECTOR, 'div.h-full.p-4.mb-4.bg-white.border.rounded-lg')
@@ -89,7 +89,7 @@ def main():
 
         # Try clicking next
         try:
-            next_button = WebDriverWait(driver, 0).until(
+            next_button = WebDriverWait(driver, 0.5).until(
                 EC.element_to_be_clickable((By.XPATH, '//button[@dusk="nextPage" and contains(text(), "next")]'))
             )
             next_button.click()
